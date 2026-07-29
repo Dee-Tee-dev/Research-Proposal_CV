@@ -97,6 +97,16 @@ Outputs are written to:
 
 The first model run downloads pretrained weights from Hugging Face.
 
+## Current project status
+
+- The fixed 168-image subset has been downloaded and validated locally.
+- All six fast repository tests pass.
+- A four-image end-to-end smoke test was completed on 2026-07-29.
+- Full balanced evaluation and blinded caption review are still pending.
+
+See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
+and their interpretation limits.
+
 ## Launch the early demo
 
 ```bash
