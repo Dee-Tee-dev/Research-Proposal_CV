@@ -1,0 +1,17 @@
+.DS_Store
+*.swp
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Downloaded data and generated outputs
+data/images/*
+!data/images/.gitkeep
+results/*
+!results/.gitkeep
+
+# Model caches and local notebooks
+.cache/
+notebooks/.ipynb_checkpoints/
