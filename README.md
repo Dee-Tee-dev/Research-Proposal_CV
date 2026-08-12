@@ -1,24 +1,29 @@
 # Socioeconomic and Regional Performance Gaps in Vision-Language Models
 
 This repository contains the code, proposal, and reproducible data split for a
-Computer Vision course project. The study compares CLIP zero-shot
-classification and BLIP image captioning on household-object images from Dollar
-Street.
+Computer Vision course project. The study compares contrastive, generative,
+and detection baselines on household-object images from Dollar Street.
 
 The main comparison is across four income quartiles. Regional results are
 secondary because the available images are not balanced equally across regions.
 
 ## Study design
 
-- Models: `openai/clip-vit-base-patch32` and
-  `Salesforce/blip-image-captioning-base`
+- Models: CLIP, BLIP, Qwen2.5-VL-3B, InternVL3.5-2B, and YOLO-World
 - Categories: roof, light source, stove, trash container, switch, footwear
 - Sample: 168 unique images
 - Balance: 7 images per category in each of 4 income quartiles
 - CLIP metrics: top-1 accuracy and correct-label rank
-- BLIP metrics: accepted-term recall and a later blinded manual review
+- BLIP/Qwen/InternVL caption metric: accepted-term recall plus blinded review
+- Qwen/InternVL classification metric: forced-choice top-1 accuracy
+- YOLO-World metric: image-level correct-class detection rate
 - BLIP intervention: the label-free prefix
   `the main household object in this image is`
+
+The general-purpose VLMs use the same forced-choice instruction and
+deterministic decoding. YOLO-World uses the same six text categories. Because
+Dollar Street does not include bounding boxes, detections are evaluated at the
+image level; mAP and IoU are deliberately not reported.
 
 The category names used for evaluation are intentionally broader than some
 ImageNet labels. For example, a correct caption containing "lantern" should not
@@ -36,6 +41,7 @@ src/vlm_gap/       Reusable data, model, and metric code
 scripts/           Download, validation, and evaluation commands
 tests/             Fast tests that do not download models
 results/           Generated predictions and summaries (ignored by Git)
+docs/              Experiment log, method notes, and literature review
 ```
 
 ## Setup
@@ -47,6 +53,12 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m pip install -e .
+```
+
+To run Qwen, InternVL, or YOLO-World, install the optional model packages:
+
+```bash
+python -m pip install -r requirements-models.txt
 ```
 
 On Apple Silicon, PyTorch will use MPS when it is available. The code also
@@ -83,29 +95,52 @@ requirements.
 python scripts/run_evaluation.py --limit 4
 ```
 
-Then run the full fixed subset:
+This legacy command runs the original CLIP/BLIP experiment. The expanded
+benchmark can be checked with selected models before a full run:
 
 ```bash
-python scripts/run_evaluation.py
+python scripts/run_benchmark.py --models clip blip --limit 4
+python scripts/run_benchmark.py --models yolo_world --limit 4
+python scripts/run_benchmark.py --models qwen internvl --limit 1
+```
+
+YOLO-World uses a predeclared confidence threshold of 0.25. Optional threshold
+sensitivity checks can be run with `--yolo-confidence 0.05` or `0.50`; they
+must be reported separately from the primary result.
+
+Then run the full fixed subset. A CUDA machine or Colab runtime is recommended
+for Qwen and InternVL:
+
+```bash
+python scripts/run_benchmark.py \
+  --models clip blip qwen internvl yolo_world
 ```
 
 Outputs are written to:
 
-- `results/predictions.csv`
-- `results/summary_by_income.csv`
-- `results/summary_by_category.csv`
+- `results/benchmark_predictions.csv`
+- `results/benchmark_by_income.csv`
+- `results/benchmark_by_category.csv`
+- `results/income_gap_estimates.csv`
+- `results/failure_cases.csv`
+- `results/run_metadata.json`
 
-The first model run downloads pretrained weights from Hugging Face.
+The first run of each model downloads its pretrained weights. Generated files
+remain ignored until the full run and manual quality checks are complete.
 
 ## Current project status
 
 - The fixed 168-image subset has been downloaded and validated locally.
 - All six fast repository tests pass.
 - A four-image end-to-end smoke test was completed on 2026-07-29.
-- Full balanced evaluation and blinded caption review are still pending.
+- The expanded benchmark code now covers five model families and three tasks.
+- Full balanced evaluation and blinded caption review are still pending; the
+  repository does not present smoke-test numbers as research findings.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
-and their interpretation limits.
+and their interpretation limits. See
+[`docs/literature_review.md`](docs/literature_review.md) for the baseline
+background and the difference from the closest Dollar Street study.
 
 ## Launch the early demo
 
@@ -113,9 +148,10 @@ and their interpretation limits.
 python app.py
 ```
 
-The initial demo supports an uploaded image and displays the CLIP prediction,
-an unprompted BLIP caption, and the prompted BLIP caption side by side.
-Aggregate charts will be added after the full evaluation has been run.
+The demo supports an uploaded image and a selectable comparison of all five
+baselines. Qwen, InternVL, and YOLO-World require the optional model packages.
+Aggregate charts will be added only after the full evaluation has passed its
+quality checks.
 
 ## Reproducibility notes
 
