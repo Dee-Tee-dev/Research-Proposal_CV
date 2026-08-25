@@ -20,6 +20,8 @@ from vlm_gap.config import (  # noqa: E402
     DEFAULT_RESULTS_DIR,
     INTERNVL_MODEL_NAME,
     QWEN_MODEL_NAME,
+    QWEN_MAX_PIXELS,
+    QWEN_MIN_PIXELS,
     YOLO_WORLD_MODEL_NAME,
 )
 from vlm_gap.data import load_manifest, validate_manifest  # noqa: E402
@@ -109,6 +111,8 @@ def main() -> None:
         "rows_evaluated": len(rows),
         "bootstrap_seed": 2026,
         "bootstrap_samples": 2000,
+        "qwen_min_pixels": QWEN_MIN_PIXELS,
+        "qwen_max_pixels": QWEN_MAX_PIXELS,
         "yolo_world_confidence_threshold": args.yolo_confidence,
     }
     (args.output_dir / "run_metadata.json").write_text(

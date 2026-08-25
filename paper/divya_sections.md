@@ -73,8 +73,10 @@ Qwen2.5-VL-3B-Instruct is evaluated on both classification and captioning. For
 classification, it receives the image and the same fixed list of six candidate
 labels and must return one label only. For captioning, it receives a short
 instruction to describe the main household object without guessing location or
-income. Greedy decoding is used for reproducibility. No model is trained or
-fine-tuned on the study images.
+income. Greedy decoding is used for reproducibility. Following the model's
+documented resolution controls, image inputs are restricted to 256–1,280 visual
+tokens (200,704–1,003,520 pixels) to keep inference reproducible and feasible.
+No model is trained or fine-tuned on the study images.
 
 ### 3.2 Evaluation
 
@@ -99,26 +101,47 @@ names, predictions, and run metadata are saved for reproducibility.
 > **Do not submit this section with placeholders.** Populate it from
 > `results/divya/analysis/` after validating the full run.
 
-Table 1 compares the primary score of each Divya baseline across all 168
-images. CLIP achieved **[CLIP overall accuracy]** top-1 accuracy. Qwen achieved
-**[Qwen overall accuracy]** on the same classification task. For captioning,
-BLIP's accepted-term recall changed from **[BLIP baseline recall]** without the
-prompt to **[BLIP prompted recall]** with the label-free prompt, while Qwen
-reached **[Qwen caption recall]**.
+The completed CLIP and BLIP runs each evaluated all 168 images. CLIP correctly
+classified 143 images, giving an overall top-1 accuracy of **85.1%**. BLIP's
+accepted-term recall was **53.0%** (89/168) without the prompt and **51.2%**
+(86/168) with the label-free object prompt. The prompt therefore produced a
+small overall decrease of 1.8 percentage points rather than an improvement.
+Qwen values remain **pending** and will be inserted only after its full run has
+passed the same row-count and metadata checks.
 
-Across income quartiles, **[state the observed direction without causal
-language]**. The Q4–Q1 difference was **[gap]** for CLIP and **[gap]** for Qwen
-classification. Their 95% bootstrap intervals were **[interval]** and
-**[interval]**, respectively. An interval containing zero is reported as an
-uncertain difference in this sample, not as proof that the groups perform
-identically.
+| Model and task | Q1 | Q2 | Q3 | Q4 | Overall |
+|---|---:|---:|---:|---:|---:|
+| CLIP classification accuracy | 71.4% | 83.3% | 92.9% | 92.9% | 85.1% |
+| BLIP baseline caption recall | 28.6% | 52.4% | 54.8% | 76.2% | 53.0% |
+| BLIP prompted caption recall | 26.2% | 54.8% | 45.2% | 78.6% | 51.2% |
+| Qwen classification accuracy | pending | pending | pending | pending | pending |
+| Qwen caption recall | pending | pending | pending | pending | pending |
 
-Category-level results show that **[best-supported category finding]**. The
-largest variation occurred for **[category]**, whereas **[category]** was more
-consistent across quartiles. These results are important because an aggregate
-income score can hide category-specific behaviour even in a balanced design.
-Figure 1 shows scores by income quartile, and Figure 2 presents the category
-breakdown.
+For all three completed conditions, the primary score was higher in Q4 than in
+Q1. The Q4–Q1 difference was **21.4 percentage points** for CLIP classification
+(95% category-stratified bootstrap interval: 7.1 to 35.7), **47.6 points** for
+BLIP baseline caption recall (31.0 to 64.3), and **52.4 points** for BLIP
+prompted caption recall (38.1 to 66.7). These are observed differences within
+the selected, balanced subset. They do not by themselves show that income
+caused the errors or that the values generalise to all households.
+
+CLIP's category accuracy ranged from **67.9% for light sources** to **100% for
+footwear**. For BLIP, baseline object recall was highest for stoves (75.0%) and
+lowest for trash containers (21.4%). The prompt improved recall for switches
+from 57.1% to 75.0% but reduced it for roofs from 46.4% to 32.1% and for trash
+containers from 21.4% to 10.7%. This mixed pattern explains why the prompt did
+not improve the overall caption score. Figure 1 shows the income-quartile
+scores, and Figure 2 presents the category breakdown.
+
+![CLIP and BLIP scores across the four income quartiles](assets/divya/clip_blip_scores_by_income.png)
+
+*Figure 1. CLIP top-1 accuracy and BLIP accepted-term recall by income
+quartile. Each quartile contains 42 images.*
+
+![CLIP and BLIP scores across the six object categories](assets/divya/clip_blip_scores_by_category.png)
+
+*Figure 2. CLIP top-1 accuracy and BLIP accepted-term recall by object
+category. Each category contains 28 images.*
 
 The automatic caption metric was checked against Divya's assigned manual-review
 half. **[number]** automatic matches were judged incorrect, and **[number]**
@@ -128,9 +151,11 @@ recall rather than silently changing the term list after seeing the results.
 
 ### Quantitative-results checklist
 
-- [ ] Confirm all 168 images were evaluated by CLIP, BLIP, and Qwen.
+- [ ] Confirm all 168 images were evaluated by CLIP, BLIP, and Qwen. CLIP and
+      BLIP are complete; Qwen is pending.
 - [ ] Confirm expected row counts: CLIP 168, Qwen classification 168, Qwen
-      captioning 168, BLIP baseline 168, BLIP prompted 168.
+      captioning 168, BLIP baseline 168, BLIP prompted 168. Current verified
+      counts are CLIP 168, BLIP baseline 168, and BLIP prompted 168.
 - [ ] Fill every bracketed value from saved CSV files.
 - [ ] Refer to every included table and figure in the text.
 - [ ] Report sample counts with quartile and category scores.

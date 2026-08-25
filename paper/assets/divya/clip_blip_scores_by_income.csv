@@ -1,0 +1,13 @@
+model,model_label,task,income_quartile,n,score
+clip,CLIP,classification,Q1,42,0.7142857142857143
+blip_baseline,BLIP baseline,captioning,Q1,42,0.2857142857142857
+blip_prompted,BLIP prompted,captioning,Q1,42,0.2619047619047619
+clip,CLIP,classification,Q2,42,0.8333333333333334
+blip_baseline,BLIP baseline,captioning,Q2,42,0.5238095238095238
+blip_prompted,BLIP prompted,captioning,Q2,42,0.5476190476190477
+clip,CLIP,classification,Q3,42,0.9285714285714286
+blip_baseline,BLIP baseline,captioning,Q3,42,0.5476190476190477
+blip_prompted,BLIP prompted,captioning,Q3,42,0.4523809523809524
+clip,CLIP,classification,Q4,42,0.9285714285714286
+blip_baseline,BLIP baseline,captioning,Q4,42,0.7619047619047619
+blip_prompted,BLIP prompted,captioning,Q4,42,0.7857142857142857

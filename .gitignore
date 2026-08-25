@@ -1,6 +1,7 @@
 .DS_Store
 *.swp
 .venv/
+.qwen-deps/
 __pycache__/
 *.py[cod]
 .pytest_cache/

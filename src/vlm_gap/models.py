@@ -15,6 +15,8 @@ from .config import (
     CLIP_MODEL_NAME,
     CLIP_PROMPT_TEMPLATE,
     INTERNVL_MODEL_NAME,
+    QWEN_MAX_PIXELS,
+    QWEN_MIN_PIXELS,
     QWEN_MODEL_NAME,
     YOLO_WORLD_MODEL_NAME,
 )
@@ -140,13 +142,16 @@ class QwenVisionLanguageModel:
         from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
         self.device = device or choose_device()
-        dtype = torch.bfloat16 if self.device == "cuda" else torch.float32
         self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_name,
-            torch_dtype=dtype,
+            torch_dtype="auto",
             low_cpu_mem_usage=True,
         ).to(self.device).eval()
-        self.processor = AutoProcessor.from_pretrained(model_name)
+        self.processor = AutoProcessor.from_pretrained(
+            model_name,
+            min_pixels=QWEN_MIN_PIXELS,
+            max_pixels=QWEN_MAX_PIXELS,
+        )
 
     def _generate(self, image, prompt: str, max_new_tokens: int) -> str:
         try:

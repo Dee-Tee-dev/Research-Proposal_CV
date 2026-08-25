@@ -11,6 +11,10 @@ os.environ.setdefault(
     str(Path(tempfile.gettempdir()) / "vlm-gap-matplotlib"),
 )
 
+import matplotlib
+
+matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -66,30 +70,51 @@ def _score_table(frame: pd.DataFrame, group: str) -> pd.DataFrame:
 
 
 def _plot_income(table: pd.DataFrame, output: Path) -> None:
-    pivot = table.pivot(index="income_quartile", columns="model_label", values="score")
-    pivot = pivot.reindex(QUARTILE_ORDER)
-    axis = pivot.plot(marker="o", linewidth=2, figsize=(8, 4.8))
-    axis.set_xlabel("Income quartile")
-    axis.set_ylabel("Primary task score")
-    axis.set_ylim(0, 1)
-    axis.set_title("Divya baselines by income quartile")
-    axis.grid(axis="y", alpha=0.25)
-    axis.legend(title="Model", bbox_to_anchor=(1.02, 1), loc="upper left")
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4.4), sharey=True)
+    for axis, task, title, ylabel in (
+        (axes[0], "classification", "Classification", "Top-1 accuracy"),
+        (axes[1], "captioning", "Captioning", "Accepted-term recall"),
+    ):
+        task_table = table[table["task"] == task]
+        pivot = task_table.pivot(
+            index="income_quartile",
+            columns="model_label",
+            values="score",
+        ).reindex(QUARTILE_ORDER)
+        pivot.plot(marker="o", linewidth=2, ax=axis)
+        axis.set_xlabel("Income quartile")
+        axis.set_ylabel(ylabel)
+        axis.set_ylim(0, 1)
+        axis.set_title(title)
+        axis.grid(axis="y", alpha=0.25)
+        axis.legend(title="Model", loc="best")
+    figure.suptitle("Performance by income quartile")
     plt.tight_layout()
     plt.savefig(output, dpi=220, bbox_inches="tight")
     plt.close()
 
 
 def _plot_category(table: pd.DataFrame, output: Path) -> None:
-    pivot = table.pivot(index="study_label", columns="model_label", values="score")
-    axis = pivot.plot(kind="bar", figsize=(10, 5))
-    axis.set_xlabel("Object category")
-    axis.set_ylabel("Primary task score")
-    axis.set_ylim(0, 1)
-    axis.set_title("Divya baselines by object category")
-    axis.tick_params(axis="x", rotation=25)
-    axis.grid(axis="y", alpha=0.25)
-    axis.legend(title="Model", bbox_to_anchor=(1.02, 1), loc="upper left")
+    figure, axes = plt.subplots(1, 2, figsize=(12, 4.8), sharey=True)
+    for axis, task, title, ylabel in (
+        (axes[0], "classification", "Classification", "Top-1 accuracy"),
+        (axes[1], "captioning", "Captioning", "Accepted-term recall"),
+    ):
+        task_table = table[table["task"] == task]
+        pivot = task_table.pivot(
+            index="study_label",
+            columns="model_label",
+            values="score",
+        )
+        pivot.plot(kind="bar", ax=axis)
+        axis.set_xlabel("Object category")
+        axis.set_ylabel(ylabel)
+        axis.set_ylim(0, 1)
+        axis.set_title(title)
+        axis.tick_params(axis="x", rotation=30)
+        axis.grid(axis="y", alpha=0.25)
+        axis.legend(title="Model", loc="best")
+    figure.suptitle("Performance by object category")
     plt.tight_layout()
     plt.savefig(output, dpi=220, bbox_inches="tight")
     plt.close()
