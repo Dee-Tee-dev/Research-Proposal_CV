@@ -143,11 +143,22 @@ quartile. Each quartile contains 42 images.*
 *Figure 2. CLIP top-1 accuracy and BLIP accepted-term recall by object
 category. Each category contains 28 images.*
 
-The automatic caption metric was checked against Divya's assigned manual-review
-half. **[number]** automatic matches were judged incorrect, and **[number]**
-automatic misses still described the correct object using wording absent from
-the accepted-term list. These cases are considered when interpreting caption
-recall rather than silently changing the term list after seeing the results.
+The automatic caption metric was checked on Divya's deterministic half of the
+data: 84 images and 168 BLIP captions. No automatic match was a clear semantic
+false positive. However, **19 automatic misses were clear false negatives**—10
+baseline and 9 prompted captions—because they used valid wording such as
+`flip-flops`, `Crocs`, `bucket`, `basket`, `garbage bag`, or a misspelled form
+of `chandelier`. Twelve additional captions were marked uncertain because the
+image or source label did not show one clear trash container or because the
+caption named a related electrical object.
+
+Counting only clear `yes` decisions, semantic target recall on the reviewed
+half was **65.5%** (55/84) for baseline BLIP and **61.9%** (52/84) for prompted
+BLIP. If uncertain cases are included as an upper bound, the values are 72.6%
+and 69.0%. Thus, the narrow accepted-term metric underestimates both systems,
+but the review does not reverse the finding that the prompt failed to improve
+caption performance. One prompted caption correctly identified Crocs but was
+marked disfluent because it repeated the word many times.
 
 ### Quantitative-results checklist
 
@@ -160,4 +171,4 @@ recall rather than silently changing the term list after seeing the results.
 - [ ] Refer to every included table and figure in the text.
 - [ ] Report sample counts with quartile and category scores.
 - [ ] Describe associations, not causes or universal fairness conclusions.
-- [ ] Record the completed manual-review counts.
+- [x] Record the completed manual-review counts.

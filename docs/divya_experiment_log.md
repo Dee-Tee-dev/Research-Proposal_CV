@@ -43,3 +43,20 @@ The prompt did not improve BLIP's overall accepted-term recall. It reduced the
 score by 1.8 percentage points, with effects varying by object category. This
 result should be reported as observed rather than rewritten as a successful
 intervention.
+
+## 2026-08-25 — Divya caption semantic audit
+
+The deterministic Divya half contains 84 images and two BLIP captions per
+image. All 168 captions were checked in context, and automatic misses were
+visually compared with their source images.
+
+| Condition | Automatic matches | Clear semantic matches | Uncertain | Semantic upper bound |
+|---|---:|---:|---:|---:|
+| BLIP baseline | 45/84 (53.6%) | 55/84 (65.5%) | 6 | 61/84 (72.6%) |
+| BLIP prompted | 43/84 (51.2%) | 52/84 (61.9%) | 6 | 58/84 (69.0%) |
+
+The audit found 19 clear automatic false negatives in total and no clear false
+positives. The prompted condition remained below the baseline under the strict
+semantic decision and the upper-bound treatment of uncertain cases. The audit
+therefore supports the main interpretation while demonstrating that accepted-
+term recall is a conservative measure of object mention quality.
