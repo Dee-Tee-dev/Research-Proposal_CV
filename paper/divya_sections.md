@@ -33,7 +33,12 @@ across tasks and model designs.
 
 ## 2. Dataset
 
-We use images and metadata from the Dollar Street test split. The fixed study
+We use images and metadata from the 1,600-row Dollar Street test split exposed
+by the Hugging Face dataset viewer. Dollar Street's income value represents
+monthly consumption per adult equivalent in PPP-adjusted US dollars rather
+than reported salary. After excluding 45 multi-class rows and records without
+the required fields, quartiles were calculated over 1,555 eligible records:
+Q1 ≤ 210.67, Q2 ≤ 685.00, Q3 ≤ 1,841.00, and Q4 > 1,841.00. The fixed study
 subset contains 168 unique images from 44 countries. It covers six household
 object categories: roof, light source, stove, trash container, switch, and
 footwear. Income values are divided into four quartiles, Q1 to Q4. Each
@@ -61,13 +66,16 @@ CLIP (`openai/clip-vit-base-patch32`) is used for six-way zero-shot
 classification. Each image is compared with the six text prompts using the
 template `a photo of a household {label}`. The label with the highest
 probability is the top-1 prediction, and the rank of the correct label is also
-saved.
+saved. Its standard processor resizes the shorter edge to 224 pixels, applies a
+224 × 224 centre crop, and uses the checkpoint's channel normalisation.
 
 BLIP (`Salesforce/blip-image-captioning-base`) generates two captions per
 image. The baseline caption is unprompted. The second uses the prefix `the main
 household object in this image is`. This prompt does not reveal the correct
 category, income, country, or region. Comparing the two outputs tests whether a
-small, training-free prompt helps the model mention the main object.
+small, training-free prompt helps the model mention the main object. Its
+standard processor resizes images to 384 × 384 and applies the checkpoint's
+normalisation. Generation is deterministic and limited to 30 new tokens.
 
 Qwen2.5-VL-3B-Instruct is evaluated on both classification and captioning. For
 classification, it receives the image and the same fixed list of six candidate
@@ -95,6 +103,11 @@ category. The main gap is Q4 minus Q1. A category-stratified bootstrap with
 gap. The interval describes uncertainty within the selected sample; it does
 not make the sample population-representative. Raw outputs, prompts, checkpoint
 names, predictions, and run metadata are saved for reproducibility.
+
+The completed CLIP/BLIP run used Python 3.13.5, PyTorch 2.12.1,
+Transformers 5.13.0, NumPy 2.3.3, pandas 2.3.3, and Pillow 11.3.0 on CPU.
+Checkpoint files were loaded from their public model repositories. The full
+manifest and all output-row counts were validated before analysis.
 
 ## 4. Quantitative Results
 

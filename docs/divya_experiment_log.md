@@ -11,8 +11,13 @@ include InternVL, YOLO-World, the Gradio demo, or Riya's qualitative analysis.
 
 - Images: 168 unique files from the fixed balanced manifest
 - Device: CPU
+- Python 3.13.5; PyTorch 2.12.1; Transformers 5.13.0
+- NumPy 2.3.3; pandas 2.3.3; Pillow 11.3.0
 - CLIP checkpoint: `openai/clip-vit-base-patch32`
 - BLIP checkpoint: `Salesforce/blip-image-captioning-base`
+- CLIP preprocessing: resize shortest edge to 224, centre crop to 224 × 224,
+  checkpoint channel normalisation
+- BLIP preprocessing: resize to 384 × 384, checkpoint channel normalisation
 - Bootstrap: 2,000 category-stratified resamples, seed 2026
 - Completed rows: 168 CLIP classifications, 168 BLIP baseline captions, and
   168 BLIP prompted captions
