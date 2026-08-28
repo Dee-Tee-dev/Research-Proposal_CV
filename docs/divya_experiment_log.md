@@ -65,3 +65,17 @@ positives. The prompted condition remained below the baseline under the strict
 semantic decision and the upper-bound treatment of uncertain cases. The audit
 therefore supports the main interpretation while demonstrating that accepted-
 term recall is a conservative measure of object mention quality.
+
+## 2026-08-25 — Qwen compatibility check
+
+`Qwen/Qwen2.5-VL-3B-Instruct` was loaded from its public checkpoint and tested
+on one manifest image on CPU using the final classification and captioning
+prompts. The run completed without an inference error and produced exactly one
+classification row and one caption row. For the test roof image, the forced-
+choice response was `roof`, and the caption described a corrugated metal roof;
+both automatic scores were correct. This single-image check is a pipeline
+validation only and is not included in the reported benchmark results.
+
+The test took 712 seconds for both tasks. PyTorch was built with MPS support,
+but MPS was not available in this execution environment, so the full run must
+use CPU. The measured rate gives an approximate full-run duration of 33 hours.

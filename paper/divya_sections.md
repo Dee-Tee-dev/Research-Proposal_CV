@@ -139,12 +139,15 @@ the selected, balanced subset. They do not by themselves show that income
 caused the errors or that the values generalise to all households.
 
 CLIP's category accuracy ranged from **67.9% for light sources** to **100% for
-footwear**. For BLIP, baseline object recall was highest for stoves (75.0%) and
-lowest for trash containers (21.4%). The prompt improved recall for switches
-from 57.1% to 75.0% but reduced it for roofs from 46.4% to 32.1% and for trash
-containers from 21.4% to 10.7%. This mixed pattern explains why the prompt did
-not improve the overall caption score. Figure 1 shows the income-quartile
-scores, and Figure 2 presents the category breakdown.
+footwear**. Its most common single confusion was predicting `roof` for a light
+source (6/28 light-source images); roof images were most often confused with
+light sources (4/28). For BLIP, baseline object recall was highest for stoves
+(75.0%) and lowest for trash containers (21.4%). The prompt improved recall for
+switches from 57.1% to 75.0% but reduced it for roofs from 46.4% to 32.1% and
+for trash containers from 21.4% to 10.7%. This mixed pattern explains why the
+prompt did not improve the overall caption score. Figures 1 and 2 show the
+income and category breakdowns; Figures 3 and 4 provide the two focused
+diagnostics.
 
 ![CLIP and BLIP scores across the four income quartiles](assets/divya/clip_blip_scores_by_income.png)
 
@@ -155,6 +158,16 @@ quartile. Each quartile contains 42 images.*
 
 *Figure 2. CLIP top-1 accuracy and BLIP accepted-term recall by object
 category. Each category contains 28 images.*
+
+![CLIP classification confusion matrix](assets/divya/clip_confusion_matrix.png)
+
+*Figure 3. CLIP six-way confusion matrix. Cells show the number and percentage
+within each true category (28 images per row).*
+
+![Change in BLIP caption recall after applying the label-free prompt](assets/divya/blip_prompt_delta_by_category.png)
+
+*Figure 4. Prompted minus baseline accepted-term recall by category. Positive
+values indicate improvement; each category contains 28 images.*
 
 The automatic caption metric was checked on Divya's deterministic half of the
 data: 84 images and 168 BLIP captions. No automatic match was a clear semantic

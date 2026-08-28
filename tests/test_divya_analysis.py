@@ -53,6 +53,45 @@ class DivyaAnalysisTests(unittest.TestCase):
         self.assertEqual(loaded["model"].tolist(), ["clip"])
         self.assertEqual(loaded["metric_value"].tolist(), [False])
 
+    def test_clip_confusion_table_preserves_true_and_predicted_categories(self):
+        frame = pd.DataFrame([
+            {
+                "image_id": "1",
+                "model": "clip",
+                "task": "classification",
+                "study_label": "roof",
+                "predicted_label": "roof",
+            },
+            {
+                "image_id": "2",
+                "model": "clip",
+                "task": "classification",
+                "study_label": "roof",
+                "predicted_label": "stove",
+            },
+        ])
+        table = MODULE._clip_confusion_table(frame)
+        self.assertEqual(table.loc["roof", "roof"], 1)
+        self.assertEqual(table.loc["roof", "stove"], 1)
+
+    def test_prompt_delta_is_reported_in_percentage_points(self):
+        category = pd.DataFrame([
+            {
+                "model": "blip_baseline",
+                "task": "captioning",
+                "study_label": "roof",
+                "score": 0.50,
+            },
+            {
+                "model": "blip_prompted",
+                "task": "captioning",
+                "study_label": "roof",
+                "score": 0.25,
+            },
+        ])
+        result = MODULE._prompt_delta_table(category)
+        self.assertAlmostEqual(result.loc[0, "change_percentage_points"], -25.0)
+
 
 if __name__ == "__main__":
     unittest.main()
