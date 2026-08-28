@@ -14,7 +14,7 @@ secondary because the available images are not balanced equally across regions.
 - Sample: 168 unique images
 - Balance: 7 images per category in each of 4 income quartiles
 - CLIP metrics: top-1 accuracy and correct-label rank
-- BLIP/Qwen/InternVL caption metric: accepted-term recall plus blinded review
+- BLIP/Qwen/InternVL caption metric: accepted-term recall plus semantic review
 - Qwen/InternVL classification metric: forced-choice top-1 accuracy
 - YOLO-World metric: image-level correct-class detection rate
 - BLIP intervention: the label-free prefix
@@ -128,14 +128,24 @@ Outputs are written to:
 The first run of each model downloads its pretrained weights. Generated files
 remain ignored until the full run and manual quality checks are complete.
 
+Divya's separately executed CLIP/BLIP and Qwen predictions must be merged only
+through the strict finalizer. It checks all five model-task conditions, exact
+row counts, unique image IDs, and the balanced category-quartile design before
+regenerating tables and figures:
+
+```bash
+python scripts/finalize_divya_results.py
+```
+
 ## Current project status
 
 - The fixed 168-image subset has been downloaded and validated locally.
-- All six fast repository tests pass.
+- All 21 fast repository tests pass.
 - A four-image end-to-end smoke test was completed on 2026-07-29.
 - The expanded benchmark code now covers five model families and three tasks.
-- Full balanced evaluation and blinded caption review are still pending; the
-  repository does not present smoke-test numbers as research findings.
+- Divya's full CLIP/BLIP evaluation and deterministic half-sample BLIP semantic
+  review are complete. The full Qwen evaluation is in progress; its one-image
+  compatibility check is not presented as a research result.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
 and their interpretation limits. See
