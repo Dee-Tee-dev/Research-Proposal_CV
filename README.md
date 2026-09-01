@@ -104,6 +104,13 @@ python scripts/run_benchmark.py --models yolo_world --limit 4
 python scripts/run_benchmark.py --models qwen internvl --limit 1
 ```
 
+For Divya's full Qwen run, use the resumable runner. It saves both tasks after
+every completed image and safely skips those images when restarted:
+
+```bash
+PYTHONPATH=.qwen-deps python scripts/run_qwen_resumable.py --device cpu
+```
+
 YOLO-World uses a predeclared confidence threshold of 0.25. Optional threshold
 sensitivity checks can be run with `--yolo-confidence 0.05` or `0.50`; they
 must be reported separately from the primary result.

@@ -109,7 +109,7 @@ def main() -> None:
     parser.add_argument(
         "--qwen",
         type=Path,
-        default=Path("results/divya/qwen_full/benchmark_predictions.csv"),
+        default=Path("results/divya/qwen_resumable_full/benchmark_predictions.csv"),
     )
     parser.add_argument(
         "--output-dir",

@@ -79,3 +79,19 @@ validation only and is not included in the reported benchmark results.
 The test took 712 seconds for both tasks. PyTorch was built with MPS support,
 but MPS was not available in this execution environment, so the full run must
 use CPU. The measured rate gives an approximate full-run duration of 33 hours.
+
+## 2026-09-01 — Interrupted Qwen full run and recovery design
+
+The first full Qwen attempt used the general benchmark runner and reached 53 of
+168 images before the tracked Mac process disappeared without a normal exit.
+There was no model exception in the captured output. Because that runner kept
+predictions in memory until the end, no partial prediction rows were used or
+reported.
+
+The replacement Qwen runner writes both tasks atomically after every completed
+image and validates the saved model, task, image, manifest, prompt, and
+resolution configuration before resuming. To reduce CPU runtime consistently,
+Qwen preprocessing now uses the checkpoint's documented 256-visual-token
+setting (200,704 pixels) for every image. A changed run configuration cannot be
+mixed with an existing checkpoint. Full results remain pending until all 168
+images and 336 Qwen prediction rows pass the final integration checks.

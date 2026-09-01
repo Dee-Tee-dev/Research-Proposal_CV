@@ -82,9 +82,10 @@ classification, it receives the image and the same fixed list of six candidate
 labels and must return one label only. For captioning, it receives a short
 instruction to describe the main household object without guessing location or
 income. Greedy decoding is used for reproducibility. Following the model's
-documented resolution controls, image inputs are restricted to 256–1,280 visual
-tokens (200,704–1,003,520 pixels) to keep inference reproducible and feasible.
-No model is trained or fine-tuned on the study images.
+documented resolution controls, each image is standardized to a maximum of 256
+visual tokens (200,704 pixels). This predeclared lower-resolution setting makes
+the CPU evaluation feasible and is held constant for every income quartile and
+category. No model is trained or fine-tuned on the study images.
 
 ### 3.2 Evaluation
 
