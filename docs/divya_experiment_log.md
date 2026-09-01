@@ -95,3 +95,14 @@ Qwen preprocessing now uses the checkpoint's documented 256-visual-token
 setting (200,704 pixels) for every image. A changed run configuration cannot be
 mixed with an existing checkpoint. Full results remain pending until all 168
 images and 336 Qwen prediction rows pass the final integration checks.
+
+### Recovery-run trial
+
+The final resumable configuration was tested end to end on one image. It wrote
+one classification row and one caption row, then produced the expected summary,
+failure, metadata, and checkpoint files. The checkpoint and final prediction
+files were identical, the image/task grain had no duplicate, and both outputs
+were scored correctly. A second invocation detected the completed image and
+finished without loading the model or repeating inference. The two-task trial
+took 314.89 seconds on CPU, reducing the estimated uninterrupted full-run time
+to about 15 hours.
