@@ -86,6 +86,28 @@ class FinalizeDivyaResultsTests(unittest.TestCase):
         self.assertEqual(summary.count("168/168 (100.0%)"), 5)
         self.assertIn("2,000 category-stratified bootstrap", summary)
 
+    def test_qwen_review_queue_is_separate_and_has_84_unique_images(self):
+        rows = []
+        for index in range(84):
+            for model in ("blip_baseline", "blip_prompted", "qwen"):
+                rows.append({
+                    "image_id": f"image-{index:03d}",
+                    "model": model,
+                    "task": "captioning",
+                    "manual_object_correct": "",
+                })
+        queue = MODULE.qwen_review_queue(pd.DataFrame(rows))
+        self.assertEqual(len(queue), 84)
+        self.assertEqual(queue["image_id"].nunique(), 84)
+        self.assertEqual(queue["model"].unique().tolist(), ["qwen"])
+
+    def test_incomplete_qwen_review_queue_fails(self):
+        frame = pd.DataFrame([
+            {"image_id": "one", "model": "qwen", "task": "captioning"},
+        ])
+        with self.assertRaisesRegex(ValueError, "expected 84"):
+            MODULE.qwen_review_queue(frame)
+
 
 if __name__ == "__main__":
     unittest.main()

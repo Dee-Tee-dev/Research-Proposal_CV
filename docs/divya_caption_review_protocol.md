@@ -1,9 +1,11 @@
 # Divya Caption-Review Protocol
 
 Divya's share is the even-positioned half of the 168 sorted image IDs: 84
-images, with baseline and prompted BLIP captions for each image. The split is
-deterministic and does not select examples based on whether the model was
-correct.
+images, with baseline BLIP, prompted BLIP, and Qwen captions for each selected
+image. The split is deterministic and does not select examples based on whether
+the model was correct. The two BLIP conditions have already been reviewed. The
+same 84 image IDs and decision rules are used for the separate Qwen review once
+the full Qwen run is complete.
 
 Each caption receives one semantic target decision:
 
@@ -18,6 +20,7 @@ being treated as fully satisfactory. Automatic accepted-term matches are
 checked in context, while automatic misses are inspected against the image.
 
 The review does not retroactively change the predefined accepted-term list.
-Instead, clear metric false negatives and ambiguous cases are reported as an
-audit of the automatic recall measure. This preserves the preregistered metric
-while documenting its limitations.
+Instead, clear metric false negatives and ambiguous cases are reported by model
+as an audit of the automatic recall measure. This preserves the preregistered
+metric while documenting its limitations. BLIP and Qwen decisions are stored
+in separate completed files so new outputs cannot overwrite earlier judgments.

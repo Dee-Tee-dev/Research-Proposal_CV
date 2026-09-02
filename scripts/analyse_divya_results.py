@@ -238,6 +238,7 @@ def _write_review_queue(frame: pd.DataFrame, output: Path) -> None:
         "study_label",
         "income_quartile",
         "model",
+        "task",
         "raw_output",
         "metric_value",
         "manual_object_correct",

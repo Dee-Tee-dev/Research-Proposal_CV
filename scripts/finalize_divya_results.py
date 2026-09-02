@@ -34,6 +34,7 @@ PAPER_ASSET_NAMES = (
     "blip_prompt_delta_by_category.csv",
     "blip_prompt_delta_by_category.png",
 )
+QWEN_REVIEW_ROWS = 84
 RESULT_ORDER = (
     ("clip", "classification", "CLIP classification accuracy"),
     ("blip_baseline", "captioning", "BLIP baseline caption recall"),
@@ -158,6 +159,19 @@ def quantitative_summary_markdown(
     return "\n".join(lines)
 
 
+def qwen_review_queue(review: pd.DataFrame) -> pd.DataFrame:
+    qwen = review[review["model"] == "qwen"].copy()
+    if len(qwen) != QWEN_REVIEW_ROWS:
+        raise ValueError(
+            f"Qwen review queue has {len(qwen)} rows, expected {QWEN_REVIEW_ROWS}"
+        )
+    if qwen["image_id"].nunique() != QWEN_REVIEW_ROWS:
+        raise ValueError("Qwen review queue does not contain 84 unique image IDs")
+    if set(qwen["task"]) != {"captioning"}:
+        raise ValueError("Qwen review queue contains a non-captioning task")
+    return qwen.sort_values("image_id").reset_index(drop=True)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Validate, merge, and analyse all of Divya's completed results."
@@ -203,6 +217,11 @@ def main() -> None:
             str(analysis_dir),
         ],
         check=True,
+    )
+    review = pd.read_csv(analysis_dir / "divya_caption_review.csv")
+    qwen_review_queue(review).to_csv(
+        REPO_ROOT / "paper" / "review" / "divya_qwen_caption_review.csv",
+        index=False,
     )
     args.paper_assets.mkdir(parents=True, exist_ok=True)
     for name in PAPER_ASSET_NAMES:
