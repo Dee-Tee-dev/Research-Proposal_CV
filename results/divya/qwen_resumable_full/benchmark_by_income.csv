@@ -1,0 +1,9 @@
+model,task,income_quartile,n,metric,primary_score
+qwen,captioning,Q1,42,accepted_term_recall,0.35714285714285715
+qwen,captioning,Q2,42,accepted_term_recall,0.6428571428571429
+qwen,captioning,Q3,42,accepted_term_recall,0.7142857142857143
+qwen,captioning,Q4,42,accepted_term_recall,0.8095238095238095
+qwen,classification,Q1,42,top1_accuracy,0.8571428571428571
+qwen,classification,Q2,42,top1_accuracy,0.8809523809523809
+qwen,classification,Q3,42,top1_accuracy,0.8333333333333334
+qwen,classification,Q4,42,top1_accuracy,0.8809523809523809

@@ -1,0 +1,25 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "device": "cpu",
+  "manifest": "/Users/divyatiwari/.codex/.chatgpt-projects/g-p-6a69f7716ddc8191b066e196261ea9ad/Research-Proposal_CV/data/splits/balanced_subset_manifest.csv",
+  "manifest_sha256": "b715b227f6e9072c80a220109212710d9842a7b3ce05a65dfb28ec36ecb5f25d",
+  "image_dir": "/Users/divyatiwari/Downloads/Research Proposal_CV/data/images",
+  "rows_evaluated": 168,
+  "categories": [
+    "roof",
+    "light source",
+    "stove",
+    "trash container",
+    "switch",
+    "footwear"
+  ],
+  "classification_prompt": "Look at the image and identify the main household object.\nChoose exactly one label from: roof, light source, stove, trash container, switch, footwear.\nAnswer with the label only.",
+  "caption_prompt": "Describe the main household object in this image in one short sentence. Do not guess the country, region, or income level.",
+  "qwen_min_pixels": 200704,
+  "qwen_max_pixels": 200704,
+  "created_utc": "2026-09-02T22:54:53.021363+00:00",
+  "bootstrap_seed": 2026,
+  "bootstrap_samples": 2000,
+  "checkpointed_per_image": true,
+  "completed_images": 168
+}

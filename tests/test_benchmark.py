@@ -55,6 +55,16 @@ class BenchmarkMetricTests(unittest.TestCase):
         self.assertEqual(gaps.loc[0, "gap_ci_95_low"], 1.0)
         self.assertEqual(gaps.loc[0, "gap_ci_95_high"], 1.0)
 
+    def test_seeded_interval_is_invariant_to_row_order(self):
+        frame = self.frame()
+        original = summarize_income_gaps(frame, bootstrap_samples=50, seed=4)
+        shuffled = summarize_income_gaps(
+            frame.sample(frac=1, random_state=19),
+            bootstrap_samples=50,
+            seed=4,
+        )
+        pd.testing.assert_frame_equal(original, shuffled)
+
 
 if __name__ == "__main__":
     unittest.main()

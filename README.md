@@ -154,12 +154,12 @@ python scripts/check_divya_paper.py
 ## Current project status
 
 - The fixed 168-image subset has been downloaded and validated locally.
-- All 21 fast repository tests pass.
+- The repository test suite and Divya paper gate pass on the completed outputs.
 - A four-image end-to-end smoke test was completed on 2026-07-29.
 - The expanded benchmark code now covers five model families and three tasks.
-- Divya's full CLIP/BLIP evaluation and deterministic half-sample BLIP semantic
-  review are complete. The full Qwen evaluation is in progress; its one-image
-  compatibility check is not presented as a research result.
+- Divya's full CLIP, BLIP, and Qwen evaluation is complete: 840 validated rows
+  across five model-task conditions. Deterministic 84-image semantic audits are
+  complete for the BLIP and Qwen captions.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
 and their interpretation limits. See
@@ -174,8 +174,8 @@ python app.py
 
 The demo supports an uploaded image and a selectable comparison of all five
 baselines. Qwen, InternVL, and YOLO-World require the optional model packages.
-Aggregate charts will be added only after the full evaluation has passed its
-quality checks.
+Divya's validated aggregate tables and charts are stored under
+`results/divya/combined_full` and `paper/assets/divya`.
 
 ## Reproducibility notes
 

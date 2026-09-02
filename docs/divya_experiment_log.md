@@ -119,3 +119,28 @@ to about 15 hours.
 - Pillow: 11.3.0
 - PyTorch MPS support was built but unavailable in this execution environment;
   Qwen therefore ran on CPU.
+
+## 2026-09-03 — Completed Qwen run and final Divya integration
+
+The resumed Qwen run completed all 168 images and wrote 336 prediction rows:
+one forced-choice classification and one caption for every image. Its manifest
+hash, prompts, model ID, and fixed 256-visual-token preprocessing agree with the
+saved resume configuration. The final integration then validated 840 rows
+across the five Divya model-task conditions, with 168 unique images per
+condition and seven images in every category-quartile cell.
+
+| Qwen task | Correct/matched | Score | Q1 | Q2 | Q3 | Q4 | Q4 minus Q1 (95% CI) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Classification | 145/168 | 86.3% | 85.7% | 88.1% | 83.3% | 88.1% | 2.4 pp (-7.1, 14.3) |
+| Caption accepted-term recall | 106/168 | 63.1% | 35.7% | 64.3% | 71.4% | 81.0% | 45.2 pp (28.6, 61.9) |
+
+Qwen classification was comparatively stable across quartiles, and its gap
+interval includes zero. Its caption score increased across the four quartiles
+in this selected sample. These are descriptive associations, not causal income
+effects.
+
+The matched 84-image Qwen semantic audit found 48 automatic matches (57.1%), 59
+clear semantic matches (70.2%), and 11 uncertain cases, giving an upper bound
+of 70/84 (83.3%). It identified 15 clear automatic false negatives, one false
+positive, and no disfluent caption. The predefined term vocabulary therefore
+underestimates Qwen's semantic target recall on the reviewed half-sample.

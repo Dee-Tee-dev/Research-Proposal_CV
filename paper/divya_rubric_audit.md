@@ -20,7 +20,7 @@
 - [x] Defines classification accuracy, caption recall, semantic audit, and
       Q4–Q1 bootstrap intervals.
 - [x] Records software versions, random seed, and output validation rules.
-- [ ] Add Qwen runtime metadata after the full run finishes.
+- [x] Records Qwen runtime metadata for the completed 168-image run.
 
 ## Results and Quantitative Analysis (Divya contribution)
 
@@ -32,8 +32,9 @@
 - [x] Figure captions include task metric and sample count.
 - [x] Deterministic half-sample caption audit is complete and reproducible.
 - [x] Metric false negatives and ambiguous source-label cases are quantified.
-- [ ] Add and validate full Qwen results.
-- [ ] Regenerate combined Divya tables and figures with Qwen.
+- [x] Full Qwen classification and caption results validated for all 168 images.
+- [x] Combined 840-row Divya tables and figures regenerated with Qwen.
+- [x] Matched 84-image Qwen semantic audit completed and summarized.
 
 ## Writing Quality and Organization
 
@@ -42,7 +43,7 @@
 - [x] Acronyms and tasks are introduced before detailed metrics.
 - [x] Results distinguish evidence from interpretation.
 - [x] Limitations prevent causal or population-level overclaiming.
-- [x] Divya's main-paper contribution was compressed from 1,754 to 924 words
+- [x] Divya's main-paper contribution was compressed from 1,754 words
       and reduced to one primary figure to leave space within the two-page main
       paper for Riya's assigned analysis.
 - [ ] Render the integrated conference-style PDF and confirm the two-page main

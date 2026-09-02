@@ -96,6 +96,12 @@ def summarize_income_gaps(
     rng = np.random.default_rng(seed)
     records = []
     for (model, task), group in df.groupby(["model", "task"], sort=True):
+        # Keep seeded intervals invariant to the input file's row ordering.
+        # This matters when separately generated model outputs are merged.
+        sort_columns = ["study_label"]
+        if "image_id" in group.columns:
+            sort_columns.append("image_id")
+        group = group.sort_values(sort_columns).reset_index(drop=True)
         q1 = group[group["income_quartile"] == "Q1"]
         q4 = group[group["income_quartile"] == "Q4"]
         if q1.empty or q4.empty:
@@ -107,7 +113,7 @@ def summarize_income_gaps(
             sampled_scores = {}
             for quartile, quartile_group in (("Q1", q1), ("Q4", q4)):
                 cell_means = []
-                for _, cell in quartile_group.groupby("study_label"):
+                for _, cell in quartile_group.groupby("study_label", sort=True):
                     values = cell["metric_value"].astype(float).to_numpy()
                     sampled = rng.choice(values, size=len(values), replace=True)
                     cell_means.append(float(sampled.mean()))

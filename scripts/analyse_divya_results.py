@@ -78,7 +78,7 @@ def _score_table(frame: pd.DataFrame, group: str) -> pd.DataFrame:
 
 
 def _plot_income(table: pd.DataFrame, output: Path) -> None:
-    figure, axes = plt.subplots(1, 2, figsize=(11, 4.4), sharey=True)
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4.4), sharey=False)
     for axis, task, title, ylabel in (
         (axes[0], "classification", "Classification", "Top-1 accuracy"),
         (axes[1], "captioning", "Captioning", "Accepted-term recall"),
@@ -103,7 +103,7 @@ def _plot_income(table: pd.DataFrame, output: Path) -> None:
 
 
 def _plot_category(table: pd.DataFrame, output: Path) -> None:
-    figure, axes = plt.subplots(1, 2, figsize=(12, 4.8), sharey=True)
+    figure, axes = plt.subplots(1, 2, figsize=(12, 4.8), sharey=False)
     for axis, task, title, ylabel in (
         (axes[0], "classification", "Classification", "Top-1 accuracy"),
         (axes[1], "captioning", "Captioning", "Accepted-term recall"),

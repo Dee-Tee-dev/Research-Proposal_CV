@@ -1,0 +1,13 @@
+{
+  "n": 84,
+  "automatic_matches": 48,
+  "automatic_recall": 0.5714285714285714,
+  "semantic_yes": 59,
+  "semantic_recall": 0.7023809523809523,
+  "uncertain": 11,
+  "semantic_upper_count": 70,
+  "semantic_upper_bound": 0.8333333333333334,
+  "clear_false_negatives": 15,
+  "clear_false_positives": 1,
+  "disfluent": 0
+}

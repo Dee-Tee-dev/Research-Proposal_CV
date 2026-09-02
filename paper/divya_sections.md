@@ -72,43 +72,49 @@ prompts, model, and preprocessing configuration match.
 
 ## 3. Results
 
-CLIP classified 143/168 images correctly (**85.1%**). BLIP accepted-term recall
-was **53.0%** (89/168) without the prompt and **51.2%** (86/168) with it, so the
-prompt reduced overall recall by 1.8 percentage points. Qwen results are
-**pending** until all 168 images and 336 prediction rows pass the same checks.
+CLIP classified 143/168 images correctly (**85.1%**), while Qwen classified
+145/168 correctly (**86.3%**). Accepted-term caption recall was **53.0%**
+(89/168) for baseline BLIP, **51.2%** (86/168) for prompted BLIP, and **63.1%**
+(106/168) for Qwen. The label-free BLIP prompt therefore reduced overall recall
+by 1.8 percentage points rather than improving it.
 
 | Model and task | Q1 | Q2 | Q3 | Q4 | Overall |
 |---|---:|---:|---:|---:|---:|
 | CLIP classification accuracy | 71.4% | 83.3% | 92.9% | 92.9% | 85.1% |
 | BLIP baseline caption recall | 28.6% | 52.4% | 54.8% | 76.2% | 53.0% |
 | BLIP prompted caption recall | 26.2% | 54.8% | 45.2% | 78.6% | 51.2% |
-| Qwen classification accuracy | pending | pending | pending | pending | pending |
-| Qwen caption recall | pending | pending | pending | pending | pending |
+| Qwen classification accuracy | 85.7% | 88.1% | 83.3% | 88.1% | 86.3% |
+| Qwen caption recall | 35.7% | 64.3% | 71.4% | 81.0% | 63.1% |
 
 *Table 1. Primary scores by income quartile; each quartile contains 42 images.*
 
 The Q4-Q1 gap was **21.4 points** for CLIP classification (95% interval: 7.1 to
-35.7), **47.6 points** for baseline BLIP caption recall (31.0 to 64.3), and
-**52.4 points** for prompted BLIP recall (38.1 to 66.7). These differences are
+33.4) but only **2.4 points** for Qwen classification (-7.1 to 14.3). Caption
+gaps were larger: **47.6 points** for baseline BLIP (31.0 to 64.3), **52.4** for
+prompted BLIP (38.1 to 66.7), and **45.2** for Qwen (28.6 to 61.9). These are
 associations within the selected images. They do not by themselves show that
 income caused the errors or that the values generalize to all households.
 
-![CLIP and BLIP scores across income quartiles](assets/divya/clip_blip_scores_by_income.png)
+![Model scores across income quartiles](assets/divya/divya_scores_by_income.png)
 
-*Figure 1. CLIP top-1 accuracy and BLIP accepted-term recall by income quartile
-(n = 42 per quartile).*
+*Figure 1. Classification accuracy and accepted-term caption recall by income
+quartile (n = 42 per quartile).*
 
 Category results show why one overall value is insufficient. CLIP ranged from
-67.9% for light sources to 100% for footwear. BLIP baseline recall ranged from
-21.4% for trash containers to 75.0% for stoves. The prompt helped switches
-(57.1% to 75.0%) but hurt roofs (46.4% to 32.1%) and trash containers (21.4% to
-10.7%), so it was not a reliable improvement.
+67.9% for light sources to 100% for footwear. Qwen classification ranged from
+39.3% for roofs to 100% for footwear, stoves, and trash containers. Qwen
+caption recall was highest for stoves (85.7%) and lowest for roofs (42.9%).
+The BLIP prompt helped switches (57.1% to 75.0%) but hurt roofs (46.4% to
+32.1%) and trash containers (21.4% to 10.7%), so it was not reliable.
 
 Divya's completed BLIP semantic audit contains 84 images and 168 captions. The
 automatic metric had no clear false positive but missed 19 clear semantic
 matches, including `flip-flops`, `Crocs`, `bucket`, `basket`, and `garbage bag`.
 Twelve captions were uncertain. Strict semantic target recall was 65.5% (55/84)
 for baseline BLIP and 61.9% (52/84) for prompted BLIP; upper bounds including
-uncertain cases were 72.6% and 69.0%. The audit therefore shows that the narrow
-term list underestimates both systems but does not reverse the failed-prompt
-finding. The matched Qwen audit will be added after its full run.
+uncertain cases were 72.6% and 69.0%. In the matched Qwen audit, automatic
+recall was 57.1% (48/84), strict semantic recall was 70.2% (59/84), and 11 cases
+were uncertain (upper bound 83.3%). It contained 15 clear metric false
+negatives, one false positive, and no disfluent caption. Thus the narrow term
+list underestimates all three caption settings but does not reverse the failed
+BLIP-prompt finding.
