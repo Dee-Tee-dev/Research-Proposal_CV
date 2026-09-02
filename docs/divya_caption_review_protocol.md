@@ -30,3 +30,7 @@ with four records per page. Each record displays the original image, target
 category, income quartile, generated caption, automatic-match result, and the
 three decision fields. The sheets follow sorted image-ID order, matching the
 CSV queue exactly, so every decision remains traceable to its prediction row.
+After all decisions are recorded, `scripts/summarize_qwen_review.py` rejects
+blank or invalid fields and produces the automatic recall, strict semantic
+recall, uncertainty upper bound, clear false-negative and false-positive
+counts, and disfluency count used in the final results section.
