@@ -24,3 +24,9 @@ Instead, clear metric false negatives and ambiguous cases are reported by model
 as an audit of the automatic recall measure. This preserves the preregistered
 metric while documenting its limitations. BLIP and Qwen decisions are stored
 in separate completed files so new outputs cannot overwrite earlier judgments.
+
+For Qwen, `scripts/create_qwen_review_sheets.py` produces 21 numbered sheets
+with four records per page. Each record displays the original image, target
+category, income quartile, generated caption, automatic-match result, and the
+three decision fields. The sheets follow sorted image-ID order, matching the
+CSV queue exactly, so every decision remains traceable to its prediction row.
