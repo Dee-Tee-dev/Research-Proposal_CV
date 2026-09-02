@@ -7,10 +7,12 @@ from pathlib import Path
 
 
 REQUIRED_SECTIONS = (
-    "## 1. Introduction and Problem Motivation",
-    "## 2. Dataset",
-    "## 3. Methodology",
-    "## 4. Quantitative Results",
+    "## 1. Introduction",
+    "## 2. Method",
+    "### 2.1 Dataset",
+    "### 2.2 Models and tasks",
+    "### 2.3 Evaluation",
+    "## 3. Results",
 )
 REQUIRED_RESULT_LABELS = (
     "CLIP classification accuracy",
@@ -61,14 +63,14 @@ def validate_paper(text: str, paper_dir: Path) -> list[str]:
         if not (paper_dir / image_path).exists():
             issues.append(f"Missing referenced figure: {image_path}")
 
-    if "168 unique images" not in text:
+    if not re.search(r"168\s+unique\s+images", text):
         issues.append("Paper does not state the unique-image sample size")
-    if "seven images" not in lower or "category–quartile" not in text:
+    if "seven images" not in lower or not re.search(r"category[-–]quartile", lower):
         issues.append("Paper does not state the balanced cell size")
     if "95%" not in text or "2,000" not in text or "seed 2026" not in text:
         issues.append("Paper does not fully state the bootstrap interval settings")
     if not re.search(
-        r"do not\s+by themselves\s+show\s+that income\s+caused",
+        r"do not\s+by themselves\s+show\s+that\s+income\s+caused",
         lower,
     ):
         issues.append("Paper is missing the required non-causal interpretation caveat")

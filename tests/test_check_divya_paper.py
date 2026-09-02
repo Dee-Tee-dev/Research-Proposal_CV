@@ -21,12 +21,14 @@ def valid_text() -> str:
         f"| {label} | 50.0% | 50.0% | 50.0% | 50.0% | 84/168 (50.0%) |"
         for label in MODULE.REQUIRED_RESULT_LABELS
     )
-    return f"""## 1. Introduction and Problem Motivation
-## 2. Dataset
+    return f"""## 1. Introduction
+## 2. Method
+### 2.1 Dataset
 The subset has 168 unique images and seven images per category–quartile cell.
-## 3. Methodology
+### 2.2 Models and tasks
+### 2.3 Evaluation
 Intervals use 2,000 bootstrap samples, seed 2026.
-## 4. Quantitative Results
+## 3. Results
 {rows}
 ![Result figure](assets/figure.png)
 The 95% intervals do not by themselves show that income caused the errors.

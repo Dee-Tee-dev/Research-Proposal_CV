@@ -1,129 +1,75 @@
-# Divya's Short-Paper Sections
+# Income-Related Performance Gaps in Vision-Language Models
 
-> Scope: Introduction, Dataset, Methodology, and Quantitative Results for CLIP,
-> BLIP, and Qwen. Bracketed result fields must only be replaced after the full
-> 168-image experiment has completed and been checked.
+## 1. Introduction
 
-## 1. Introduction and Problem Motivation
+The same household object can look very different across homes. A stove may be
+a built-in appliance, a portable gas burner, or a simple solid-fuel setup.
+Similar variation appears in roofs, light sources, switches, footwear, and
+waste containers. Vision-language models trained mainly on common web images
+may therefore recognize familiar versions more reliably than less common ones.
 
-Vision-language models are often evaluated on standard benchmark images, but
-the same household object can look very different across homes. A stove may be
-a modern built-in appliance, a portable gas burner, or a simple solid-fuel
-setup. Similar visual variation occurs for roofs, light sources, switches,
-footwear, and waste containers. Models trained mainly on common web images may
-therefore recognise familiar versions of an object more reliably than versions
-that appear less often in their training data.
+We ask: **How does pretrained vision-language model performance on household-
+object recognition and captioning vary across four Dollar Street income
+quartiles when category frequency is held constant?** We treat this as an
+empirical question rather than assuming that a gap must exist. Divya's study
+compares CLIP zero-shot classification, BLIP captioning with and without a
+label-free prompt, and Qwen2.5-VL classification and captioning. The contribution
+is a controlled, reproducible benchmark, not a newly trained model.
 
-This project examines whether such differences are visible across household
-income groups in Dollar Street. The main research question is: **How does the
-performance of pretrained vision-language models on household-object
-recognition and captioning vary across four income quartiles when object
-category frequency is held constant?** We treat this as an empirical question;
-the experiment does not assume beforehand that lower-income images must produce
-worse results.
+## 2. Method
 
-We construct a fixed, balanced subset and compare models representing different
-vision-language approaches. Divya's quantitative evaluation covers CLIP
-zero-shot classification, BLIP captioning with and without a label-free prompt,
-and Qwen2.5-VL forced-choice classification and captioning. The broader group
-benchmark also contains baselines assigned to the other project member. Our
-contribution is not a newly trained model. It is a controlled and reproducible
-comparison showing whether any observed income-related pattern is consistent
-across tasks and model designs.
+### 2.1 Dataset
 
-## 2. Dataset
+We used the 1,600-row Dollar Street test split. Income is monthly consumption
+per adult equivalent in PPP-adjusted US dollars, not salary. We excluded 45
+multi-class rows and calculated quartiles over 1,555 eligible records: Q1 <=
+210.67, Q2 <= 685, Q3 <= 1,841, and Q4 > 1,841. The fixed subset contains 168
+unique images from 44 countries and six categories: roof, light source, stove,
+trash container, switch, and footwear. Each quartile has 42 images, and every
+category-quartile cell has seven images. This balance prevents a quartile from
+scoring higher simply because it contains more examples of an easier category.
+All files were checked for uniqueness and readability. The sample is not
+population-representative, and regional counts are unequal, so income quartile
+is the primary comparison.
 
-We use images and metadata from the 1,600-row Dollar Street test split exposed
-by the Hugging Face dataset viewer. Dollar Street's income value represents
-monthly consumption per adult equivalent in PPP-adjusted US dollars rather
-than reported salary. After excluding 45 multi-class rows and records without
-the required fields, quartiles were calculated over 1,555 eligible records:
-Q1 ≤ 210.67, Q2 ≤ 685.00, Q3 ≤ 1,841.00, and Q4 > 1,841.00. The fixed study
-subset contains 168 unique images from 44 countries. It covers six household
-object categories: roof, light source, stove, trash container, switch, and
-footwear. Income values are divided into four quartiles, Q1 to Q4. Each
-quartile contains 42 images, and every category–quartile combination contains
-exactly seven images. Each category therefore contributes 28 images overall.
+### 2.2 Models and tasks
 
-The balanced design prevents one income quartile from receiving a higher score
-simply because it contains more examples of an easier category. The manifest
-stores the original image identifier, source row, object label, income,
-quartile, country, region, and accepted caption terms. Multi-class source rows
-were excluded to reduce label ambiguity. All 168 selected files were checked
-for uniqueness and readability before evaluation.
+CLIP (`openai/clip-vit-base-patch32`) performs six-way zero-shot classification
+using `a photo of a household {label}`. Its standard processor resizes the
+shorter edge to 224 pixels and applies a 224 x 224 center crop. BLIP
+(`Salesforce/blip-image-captioning-base`) produces an unprompted caption and a
+caption beginning `the main household object in this image is`. The prompt does
+not reveal the category, income, or location. BLIP uses its standard 384 x 384
+processor and deterministic generation with at most 30 new tokens.
 
-The subset should not be treated as representative of the world population.
-Although it spans 44 countries, regional counts are unequal: 64 images are
-from Asia, 44 from the Americas, 39 from Africa, and 21 from Europe. For this
-reason, income quartile is the primary comparison and region is only a
-secondary descriptive variable.
+Qwen2.5-VL-3B-Instruct receives the same six labels for forced-choice
+classification and a short, location-neutral caption instruction. Greedy
+decoding is used, and every image is limited to 256 visual tokens (200,704
+pixels). No model is trained or fine-tuned. Experiments run on CPU on an Apple
+M4 MacBook Air with 16 GB memory because MPS is unavailable in this runtime.
+The environment uses Python 3.13.5, PyTorch 2.12.1, and Transformers 5.13.0.
 
-## 3. Methodology
+### 2.3 Evaluation
 
-### 3.1 Models and tasks
+Classification uses top-1 accuracy; CLIP's correct-label rank is retained as a
+secondary diagnostic. Captioning uses accepted-term recall: a caption matches
+when it contains a predefined category term or synonym, with whole-term
+matching to prevent partial-word errors. Divya also reviews the even-positioned
+half of sorted image IDs (84 images) to check semantic target correctness,
+caption quality, and automatic-metric errors.
 
-CLIP (`openai/clip-vit-base-patch32`) is used for six-way zero-shot
-classification. Each image is compared with the six text prompts using the
-template `a photo of a household {label}`. The label with the highest
-probability is the top-1 prediction, and the rank of the correct label is also
-saved. Its standard processor resizes the shorter edge to 224 pixels, applies a
-224 × 224 centre crop, and uses the checkpoint's channel normalisation.
+We report scores by income quartile and category. The main gap is Q4 minus Q1,
+with a 95% category-stratified bootstrap interval from 2,000 resamples using
+seed 2026. Raw outputs, prompts, metadata, and checkpoints are saved. The Qwen
+runner saves both tasks after every image and resumes only when the manifest,
+prompts, model, and preprocessing configuration match.
 
-BLIP (`Salesforce/blip-image-captioning-base`) generates two captions per
-image. The baseline caption is unprompted. The second uses the prefix `the main
-household object in this image is`. This prompt does not reveal the correct
-category, income, country, or region. Comparing the two outputs tests whether a
-small, training-free prompt helps the model mention the main object. Its
-standard processor resizes images to 384 × 384 and applies the checkpoint's
-normalisation. Generation is deterministic and limited to 30 new tokens.
+## 3. Results
 
-Qwen2.5-VL-3B-Instruct is evaluated on both classification and captioning. For
-classification, it receives the image and the same fixed list of six candidate
-labels and must return one label only. For captioning, it receives a short
-instruction to describe the main household object without guessing location or
-income. Greedy decoding is used for reproducibility. Following the model's
-documented resolution controls, each image is standardized to a maximum of 256
-visual tokens (200,704 pixels). This predeclared lower-resolution setting makes
-the CPU evaluation feasible and is held constant for every income quartile and
-category. No model is trained or fine-tuned on the study images.
-
-### 3.2 Evaluation
-
-Classification performance is measured using top-1 accuracy. CLIP's
-correct-label rank is retained as a secondary diagnostic. Captioning is scored
-using accepted-term recall: a caption is counted as a match when it contains a
-predefined term or synonym associated with the study category. For example,
-`lantern` can count for light source. Whole-term matching is used to avoid
-partial-word errors. Because this automatic measure does not capture full
-caption quality, half of the caption outputs are assigned to Divya for manual
-review and the other half to the second reviewer.
-
-Scores are calculated for every model and task by income quartile and object
-category. The main gap is Q4 minus Q1. A category-stratified bootstrap with
-2,000 resamples and random seed 2026 is used to obtain a 95% interval for this
-gap. The interval describes uncertainty within the selected sample; it does
-not make the sample population-representative. Raw outputs, prompts, checkpoint
-names, predictions, and run metadata are saved for reproducibility.
-
-The completed CLIP/BLIP run used Python 3.13.5, PyTorch 2.12.1,
-Transformers 5.13.0, NumPy 2.3.3, pandas 2.3.3, and Pillow 11.3.0 on CPU.
-Experiments were executed on an Apple M4 MacBook Air with 16 GB memory; PyTorch
-used four CPU threads because its MPS backend was unavailable in this runtime.
-Checkpoint files were loaded from their public model repositories. The full
-manifest and all output-row counts were validated before analysis.
-
-## 4. Quantitative Results
-
-> **Do not submit this section with placeholders.** Populate it from
-> `results/divya/analysis/` after validating the full run.
-
-The completed CLIP and BLIP runs each evaluated all 168 images. CLIP correctly
-classified 143 images, giving an overall top-1 accuracy of **85.1%**. BLIP's
-accepted-term recall was **53.0%** (89/168) without the prompt and **51.2%**
-(86/168) with the label-free object prompt. The prompt therefore produced a
-small overall decrease of 1.8 percentage points rather than an improvement.
-Qwen values remain **pending** and will be inserted only after its full run has
-passed the same row-count and metadata checks.
+CLIP classified 143/168 images correctly (**85.1%**). BLIP accepted-term recall
+was **53.0%** (89/168) without the prompt and **51.2%** (86/168) with it, so the
+prompt reduced overall recall by 1.8 percentage points. Qwen results are
+**pending** until all 168 images and 336 prediction rows pass the same checks.
 
 | Model and task | Q1 | Q2 | Q3 | Q4 | Overall |
 |---|---:|---:|---:|---:|---:|
@@ -133,71 +79,30 @@ passed the same row-count and metadata checks.
 | Qwen classification accuracy | pending | pending | pending | pending | pending |
 | Qwen caption recall | pending | pending | pending | pending | pending |
 
-For all three completed conditions, the primary score was higher in Q4 than in
-Q1. The Q4–Q1 difference was **21.4 percentage points** for CLIP classification
-(95% category-stratified bootstrap interval: 7.1 to 35.7), **47.6 points** for
-BLIP baseline caption recall (31.0 to 64.3), and **52.4 points** for BLIP
-prompted caption recall (38.1 to 66.7). These are observed differences within
-the selected, balanced subset. They do not by themselves show that income
-caused the errors or that the values generalise to all households.
+*Table 1. Primary scores by income quartile; each quartile contains 42 images.*
 
-CLIP's category accuracy ranged from **67.9% for light sources** to **100% for
-footwear**. Its most common single confusion was predicting `roof` for a light
-source (6/28 light-source images); roof images were most often confused with
-light sources (4/28). For BLIP, baseline object recall was highest for stoves
-(75.0%) and lowest for trash containers (21.4%). The prompt improved recall for
-switches from 57.1% to 75.0% but reduced it for roofs from 46.4% to 32.1% and
-for trash containers from 21.4% to 10.7%. This mixed pattern explains why the
-prompt did not improve the overall caption score. Figures 1 and 2 show the
-income and category breakdowns; Figures 3 and 4 provide the two focused
-diagnostics.
+The Q4-Q1 gap was **21.4 points** for CLIP classification (95% interval: 7.1 to
+35.7), **47.6 points** for baseline BLIP caption recall (31.0 to 64.3), and
+**52.4 points** for prompted BLIP recall (38.1 to 66.7). These differences are
+associations within the selected images. They do not by themselves show that
+income caused the errors or that the values generalize to all households.
 
-![CLIP and BLIP scores across the four income quartiles](assets/divya/clip_blip_scores_by_income.png)
+![CLIP and BLIP scores across income quartiles](assets/divya/clip_blip_scores_by_income.png)
 
-*Figure 1. CLIP top-1 accuracy and BLIP accepted-term recall by income
-quartile. Each quartile contains 42 images.*
+*Figure 1. CLIP top-1 accuracy and BLIP accepted-term recall by income quartile
+(n = 42 per quartile).*
 
-![CLIP and BLIP scores across the six object categories](assets/divya/clip_blip_scores_by_category.png)
+Category results show why one overall value is insufficient. CLIP ranged from
+67.9% for light sources to 100% for footwear. BLIP baseline recall ranged from
+21.4% for trash containers to 75.0% for stoves. The prompt helped switches
+(57.1% to 75.0%) but hurt roofs (46.4% to 32.1%) and trash containers (21.4% to
+10.7%), so it was not a reliable improvement.
 
-*Figure 2. CLIP top-1 accuracy and BLIP accepted-term recall by object
-category. Each category contains 28 images.*
-
-![CLIP classification confusion matrix](assets/divya/clip_confusion_matrix.png)
-
-*Figure 3. CLIP six-way confusion matrix. Cells show the number and percentage
-within each true category (28 images per row).*
-
-![Change in BLIP caption recall after applying the label-free prompt](assets/divya/blip_prompt_delta_by_category.png)
-
-*Figure 4. Prompted minus baseline accepted-term recall by category. Positive
-values indicate improvement; each category contains 28 images.*
-
-The automatic caption metric was checked on Divya's deterministic half of the
-data: 84 images and 168 BLIP captions. No automatic match was a clear semantic
-false positive. However, **19 automatic misses were clear false negatives**—10
-baseline and 9 prompted captions—because they used valid wording such as
-`flip-flops`, `Crocs`, `bucket`, `basket`, `garbage bag`, or a misspelled form
-of `chandelier`. Twelve additional captions were marked uncertain because the
-image or source label did not show one clear trash container or because the
-caption named a related electrical object.
-
-Counting only clear `yes` decisions, semantic target recall on the reviewed
-half was **65.5%** (55/84) for baseline BLIP and **61.9%** (52/84) for prompted
-BLIP. If uncertain cases are included as an upper bound, the values are 72.6%
-and 69.0%. Thus, the narrow accepted-term metric underestimates both systems,
-but the review does not reverse the finding that the prompt failed to improve
-caption performance. One prompted caption correctly identified Crocs but was
-marked disfluent because it repeated the word many times.
-
-### Quantitative-results checklist
-
-- [ ] Confirm all 168 images were evaluated by CLIP, BLIP, and Qwen. CLIP and
-      BLIP are complete; Qwen is pending.
-- [ ] Confirm expected row counts: CLIP 168, Qwen classification 168, Qwen
-      captioning 168, BLIP baseline 168, BLIP prompted 168. Current verified
-      counts are CLIP 168, BLIP baseline 168, and BLIP prompted 168.
-- [ ] Fill every bracketed value from saved CSV files.
-- [ ] Refer to every included table and figure in the text.
-- [ ] Report sample counts with quartile and category scores.
-- [ ] Describe associations, not causes or universal fairness conclusions.
-- [x] Record the completed manual-review counts.
+Divya's completed BLIP semantic audit contains 84 images and 168 captions. The
+automatic metric had no clear false positive but missed 19 clear semantic
+matches, including `flip-flops`, `Crocs`, `bucket`, `basket`, and `garbage bag`.
+Twelve captions were uncertain. Strict semantic target recall was 65.5% (55/84)
+for baseline BLIP and 61.9% (52/84) for prompted BLIP; upper bounds including
+uncertain cases were 72.6% and 69.0%. The audit therefore shows that the narrow
+term list underestimates both systems but does not reverse the failed-prompt
+finding. The matched Qwen audit will be added after its full run.

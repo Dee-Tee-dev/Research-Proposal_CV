@@ -37,11 +37,16 @@
 
 ## Writing Quality and Organization
 
-- [x] Sections follow Introduction → Dataset → Methodology → Results.
+- [x] Main-paper sections follow the required Introduction → Method → Results
+      order, with Dataset inside Method.
 - [x] Acronyms and tasks are introduced before detailed metrics.
 - [x] Results distinguish evidence from interpretation.
 - [x] Limitations prevent causal or population-level overclaiming.
-- [ ] Perform final compression and page-limit check after group integration.
+- [x] Divya's main-paper contribution was compressed from 1,754 to 924 words
+      and reduced to one primary figure to leave space within the two-page main
+      paper for Riya's assigned analysis.
+- [ ] Render the integrated conference-style PDF and confirm the two-page main
+      paper plus one-page related-work appendix limit.
 
 Riya's related-work appendix, InternVL/YOLO-World results, qualitative failure
 analysis, demo, and assigned writing are intentionally outside this audit.
