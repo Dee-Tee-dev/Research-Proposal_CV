@@ -34,6 +34,13 @@ PAPER_ASSET_NAMES = (
     "blip_prompt_delta_by_category.csv",
     "blip_prompt_delta_by_category.png",
 )
+RESULT_ORDER = (
+    ("clip", "classification", "CLIP classification accuracy"),
+    ("blip_baseline", "captioning", "BLIP baseline caption recall"),
+    ("blip_prompted", "captioning", "BLIP prompted caption recall"),
+    ("qwen", "classification", "Qwen classification accuracy"),
+    ("qwen", "captioning", "Qwen caption recall"),
+)
 
 
 def _read_predictions(path: Path) -> pd.DataFrame:
@@ -54,7 +61,18 @@ def _read_predictions(path: Path) -> pd.DataFrame:
     return frame
 
 
+def _metric_boolean(series: pd.Series) -> pd.Series:
+    if series.dtype == bool:
+        return series
+    normalized = series.astype(str).str.strip().str.lower()
+    unexpected = set(normalized.unique()) - {"true", "false", "1", "0"}
+    if unexpected:
+        raise ValueError(f"Unexpected metric values: {sorted(unexpected)}")
+    return normalized.isin({"true", "1"})
+
+
 def validate_complete_predictions(frame: pd.DataFrame) -> None:
+    _metric_boolean(frame["metric_value"])
     groups = set(zip(frame["model"], frame["task"]))
     if groups != EXPECTED_GROUPS:
         missing = sorted(EXPECTED_GROUPS - groups)
@@ -97,6 +115,49 @@ def merge_predictions(clip_blip_path: Path, qwen_path: Path) -> pd.DataFrame:
     return frame.sort_values(["image_id", "model", "task"]).reset_index(drop=True)
 
 
+def quantitative_summary_markdown(
+    frame: pd.DataFrame,
+    gaps: pd.DataFrame,
+) -> str:
+    lines = [
+        "# Divya Quantitative Results",
+        "",
+        "Generated only after the complete five-condition validation passed.",
+        "",
+        "| Model and task | Q1 | Q2 | Q3 | Q4 | Overall | Q4–Q1 gap (95% CI) |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for model, task, label in RESULT_ORDER:
+        subset = frame[(frame["model"] == model) & (frame["task"] == task)].copy()
+        subset["metric_value"] = _metric_boolean(subset["metric_value"])
+        scores = subset.groupby("income_quartile")["metric_value"].mean()
+        correct = int(subset["metric_value"].sum())
+        total = len(subset)
+        gap = gaps[(gaps["model"] == model) & (gaps["task"] == task)]
+        if len(gap) != 1:
+            raise ValueError(f"Expected one income-gap row for {model}/{task}")
+        gap_row = gap.iloc[0]
+        cells = [f"{float(scores[quartile]):.1%}" for quartile in ("Q1", "Q2", "Q3", "Q4")]
+        overall = f"{correct}/{total} ({correct / total:.1%})"
+        interval = (
+            f"{float(gap_row['q4_minus_q1_gap']) * 100:.1f} pp "
+            f"[{float(gap_row['gap_ci_95_low']) * 100:.1f}, "
+            f"{float(gap_row['gap_ci_95_high']) * 100:.1f}]"
+        )
+        lines.append(
+            f"| {label} | {' | '.join(cells)} | {overall} | {interval} |"
+        )
+
+    lines.extend([
+        "",
+        "All quartile cells contain 42 images. Intervals use 2,000 "
+        "category-stratified bootstrap resamples with seed 2026. These are "
+        "associations within the selected balanced subset, not causal effects.",
+        "",
+    ])
+    return "\n".join(lines)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Validate, merge, and analyse all of Divya's completed results."
@@ -125,6 +186,11 @@ def main() -> None:
 
     predictions = merge_predictions(args.clip_blip, args.qwen)
     write_benchmark_results(predictions, args.output_dir)
+    gaps = pd.read_csv(args.output_dir / "income_gap_estimates.csv")
+    (args.output_dir / "divya_quantitative_results.md").write_text(
+        quantitative_summary_markdown(predictions, gaps),
+        encoding="utf-8",
+    )
 
     analysis_dir = args.output_dir / "analysis"
     subprocess.run(

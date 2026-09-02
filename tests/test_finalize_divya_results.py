@@ -68,6 +68,24 @@ class FinalizeDivyaResultsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unique image IDs"):
             MODULE.validate_complete_predictions(frame)
 
+    def test_paper_summary_contains_all_conditions_and_denominators(self):
+        frame = complete_frame()
+        gaps = pd.DataFrame([
+            {
+                "model": model,
+                "task": task,
+                "q4_minus_q1_gap": 0.0,
+                "gap_ci_95_low": 0.0,
+                "gap_ci_95_high": 0.0,
+            }
+            for model, task in MODULE.EXPECTED_GROUPS
+        ])
+        summary = MODULE.quantitative_summary_markdown(frame, gaps)
+        self.assertIn("Qwen classification accuracy", summary)
+        self.assertIn("Qwen caption recall", summary)
+        self.assertEqual(summary.count("168/168 (100.0%)"), 5)
+        self.assertIn("2,000 category-stratified bootstrap", summary)
+
 
 if __name__ == "__main__":
     unittest.main()
