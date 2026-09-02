@@ -21,6 +21,13 @@ REQUIRED_RESULT_LABELS = (
     "Qwen classification accuracy",
     "Qwen caption recall",
 )
+REQUIRED_CITATIONS = (
+    "Nwatu et al., 2023",
+    "Rojas et al., 2022",
+    "Radford et al., 2021",
+    "Li et al., 2022",
+    "Qwen Team, 2025",
+)
 
 
 def validate_paper(text: str, paper_dir: Path) -> list[str]:
@@ -55,6 +62,10 @@ def validate_paper(text: str, paper_dir: Path) -> list[str]:
             issues.append(f"Expected exactly one completed table row for {label}")
         elif matches[0].lower().count("pending"):
             issues.append(f"Result table row is incomplete: {label}")
+
+    for citation in REQUIRED_CITATIONS:
+        if citation not in text:
+            issues.append(f"Missing required inline citation: {citation}")
 
     image_paths = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)
     if not image_paths:

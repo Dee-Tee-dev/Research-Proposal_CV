@@ -7,6 +7,9 @@ a built-in appliance, a portable gas burner, or a simple solid-fuel setup.
 Similar variation appears in roofs, light sources, switches, footwear, and
 waste containers. Vision-language models trained mainly on common web images
 may therefore recognize familiar versions more reliably than less common ones.
+Prior Dollar Street work found socioeconomic variation in CLIP-based alignment
+and retrieval (Nwatu et al., 2023); we test whether a similar pattern appears
+across classification and captioning models.
 
 We ask: **How does pretrained vision-language model performance on household-
 object recognition and captioning vary across four Dollar Street income
@@ -20,8 +23,9 @@ is a controlled, reproducible benchmark, not a newly trained model.
 
 ### 2.1 Dataset
 
-We used the 1,600-row Dollar Street test split. Income is monthly consumption
-per adult equivalent in PPP-adjusted US dollars, not salary. We excluded 45
+We used the 1,600-row Dollar Street test split (Rojas et al., 2022). Income is
+monthly consumption per adult equivalent in PPP-adjusted US dollars, not
+salary. We excluded 45
 multi-class rows and calculated quartiles over 1,555 eligible records: Q1 <=
 210.67, Q2 <= 685, Q3 <= 1,841, and Q4 > 1,841. The fixed subset contains 168
 unique images from 44 countries and six categories: roof, light source, stove,
@@ -34,20 +38,22 @@ is the primary comparison.
 
 ### 2.2 Models and tasks
 
-CLIP (`openai/clip-vit-base-patch32`) performs six-way zero-shot classification
-using `a photo of a household {label}`. Its standard processor resizes the
-shorter edge to 224 pixels and applies a 224 x 224 center crop. BLIP
-(`Salesforce/blip-image-captioning-base`) produces an unprompted caption and a
-caption beginning `the main household object in this image is`. The prompt does
-not reveal the category, income, or location. BLIP uses its standard 384 x 384
-processor and deterministic generation with at most 30 new tokens.
+CLIP (`openai/clip-vit-base-patch32`; Radford et al., 2021) performs six-way
+zero-shot classification using `a photo of a household {label}`. Its standard
+processor resizes the shorter edge to 224 pixels and applies a 224 x 224 center
+crop. BLIP (`Salesforce/blip-image-captioning-base`; Li et al., 2022) produces
+an unprompted caption and a caption beginning `the main household object in
+this image is`. The prompt does not reveal the category, income, or location.
+BLIP uses its standard 384 x 384 processor and deterministic generation with at
+most 30 new tokens.
 
-Qwen2.5-VL-3B-Instruct receives the same six labels for forced-choice
-classification and a short, location-neutral caption instruction. Greedy
-decoding is used, and every image is limited to 256 visual tokens (200,704
-pixels). No model is trained or fine-tuned. Experiments run on CPU on an Apple
-M4 MacBook Air with 16 GB memory because MPS is unavailable in this runtime.
-The environment uses Python 3.13.5, PyTorch 2.12.1, and Transformers 5.13.0.
+Qwen2.5-VL-3B-Instruct (Qwen Team, 2025) receives the same six labels for
+forced-choice classification and a short, location-neutral caption instruction.
+Greedy decoding is used, and every image is limited to 256 visual tokens
+(200,704 pixels). No model is trained or fine-tuned. Experiments run on CPU on
+an Apple M4 MacBook Air with 16 GB memory because MPS is unavailable in this
+runtime. The environment uses Python 3.13.5, PyTorch 2.12.1, and Transformers
+5.13.0.
 
 ### 2.3 Evaluation
 

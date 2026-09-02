@@ -22,6 +22,8 @@ def valid_text() -> str:
         for label in MODULE.REQUIRED_RESULT_LABELS
     )
     return f"""## 1. Introduction
+Nwatu et al., 2023; Rojas et al., 2022; Radford et al., 2021; Li et al., 2022;
+Qwen Team, 2025.
 ## 2. Method
 ### 2.1 Dataset
 The subset has 168 unique images and seven images per category–quartile cell.
