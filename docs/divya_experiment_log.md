@@ -106,3 +106,16 @@ were scored correctly. A second invocation detected the completed image and
 finished without loading the model or repeating inference. The two-task trial
 took 314.89 seconds on CPU, reducing the estimated uninterrupted full-run time
 to about 15 hours.
+
+### Local execution environment
+
+- Hardware: MacBook Air, Apple M4 (10 CPU cores), 16 GB memory
+- Operating system: macOS 26.6.2, arm64
+- Python: 3.13.5
+- PyTorch: 2.12.1, four CPU threads used
+- Transformers: 5.13.0
+- NumPy: 2.3.3
+- pandas: 2.3.3
+- Pillow: 11.3.0
+- PyTorch MPS support was built but unavailable in this execution environment;
+  Qwen therefore ran on CPU.

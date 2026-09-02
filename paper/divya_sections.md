@@ -107,6 +107,8 @@ names, predictions, and run metadata are saved for reproducibility.
 
 The completed CLIP/BLIP run used Python 3.13.5, PyTorch 2.12.1,
 Transformers 5.13.0, NumPy 2.3.3, pandas 2.3.3, and Pillow 11.3.0 on CPU.
+Experiments were executed on an Apple M4 MacBook Air with 16 GB memory; PyTorch
+used four CPU threads because its MPS backend was unavailable in this runtime.
 Checkpoint files were loaded from their public model repositories. The full
 manifest and all output-row counts were validated before analysis.
 
