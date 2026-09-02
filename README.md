@@ -144,6 +144,13 @@ regenerating tables and figures:
 python scripts/finalize_divya_results.py
 ```
 
+After the generated values have been inserted and the internal checklist has
+been removed, run Divya's submission gate:
+
+```bash
+python scripts/check_divya_paper.py
+```
+
 ## Current project status
 
 - The fixed 168-image subset has been downloaded and validated locally.
