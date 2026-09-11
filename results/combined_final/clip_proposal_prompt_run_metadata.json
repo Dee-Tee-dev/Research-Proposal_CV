@@ -17,6 +17,7 @@
     "footwear"
   ],
   "classification_prompt": "Look at the image and identify the main household object.\nChoose exactly one label from: roof, light source, stove, trash container, switch, footwear.\nAnswer with the label only.",
+  "clip_prompt_template": "a photo of a {}",
   "caption_prompt": "Describe the main household object in this image in one short sentence. Do not guess the country, region, or income level.",
   "device": "cpu",
   "manifest": "data/splits/balanced_subset_manifest.csv",

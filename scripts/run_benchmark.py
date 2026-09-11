@@ -15,6 +15,7 @@ from vlm_gap.config import (  # noqa: E402
     CAPTION_PROMPT,
     CATEGORY_LABELS,
     CLASSIFICATION_PROMPT,
+    CLIP_PROMPT_TEMPLATE,
     DEFAULT_IMAGE_DIR,
     DEFAULT_MANIFEST,
     DEFAULT_RESULTS_DIR,
@@ -104,6 +105,7 @@ def main() -> None:
         "classification_prompt": CLASSIFICATION_PROMPT.format(
             labels=", ".join(CATEGORY_LABELS)
         ),
+        "clip_prompt_template": CLIP_PROMPT_TEMPLATE,
         "caption_prompt": CAPTION_PROMPT,
         "device": device,
         "manifest": str(args.manifest.resolve()),

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -35,6 +36,13 @@ def as_bool(value: str) -> bool:
 def main() -> None:
     errors: list[str] = []
     rows = read_csv(PREDICTIONS)
+    metadata = json.loads(
+        (ROOT / "results/combined_final/clip_proposal_prompt_run_metadata.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if metadata.get("clip_prompt_template") != "a photo of a {}":
+        errors.append("combined CLIP metadata does not record the exact proposal template")
     if len(rows) != 1344:
         errors.append(f"combined predictions: expected 1344 rows, found {len(rows)}")
 

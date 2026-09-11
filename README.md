@@ -162,8 +162,8 @@ python scripts/check_divya_paper.py
   as editable Word and submission-ready PDF files under `output/`.
 - The 42-test repository suite and `scripts/check_combined_submission.py` pass.
 
-The final integration uses the exact proposal CLIP prompt
-`a photo of a household {label}`. Its 145/168 result supersedes the earlier
+The final integration uses the exact proposal CLIP template
+`a photo of a {label}`. Its 145/168 result supersedes the earlier
 143/168 run that used different prompt wording.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
