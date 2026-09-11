@@ -23,7 +23,7 @@ CATEGORY_LABELS = (
     "footwear",
 )
 
-CLIP_PROMPT_TEMPLATE = "a photo of a household {}"
+CLIP_PROMPT_TEMPLATE = "a photo of a {}"
 OBJECT_PROMPT = "the main household object in this image is"
 
 CLASSIFICATION_PROMPT = """Look at the image and identify the main household object.

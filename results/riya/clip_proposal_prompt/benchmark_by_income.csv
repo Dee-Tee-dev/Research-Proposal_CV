@@ -1,0 +1,5 @@
+model,task,income_quartile,n,metric,primary_score
+clip,classification,Q1,42,top1_accuracy,0.7619047619047619
+clip,classification,Q2,42,top1_accuracy,0.8095238095238095
+clip,classification,Q3,42,top1_accuracy,0.9523809523809523
+clip,classification,Q4,42,top1_accuracy,0.9285714285714286

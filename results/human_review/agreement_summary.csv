@@ -1,0 +1,4 @@
+﻿metric,n,rater_a_positive,rater_b_positive,agreements,disagreements,raw_agreement,expected_agreement,cohen_kappa
+object_correct,336,264,284,300,36,0.892857,0.697279,0.646067
+non_informative,336,1,3,334,2,0.994048,0.988148,0.497758
+hallucination,336,48,54,316,20,0.940476,0.742347,0.768977

@@ -16,3 +16,8 @@ results/*
 # Model caches and local notebooks
 .cache/
 notebooks/.ipynb_checkpoints/
+*.egg-info/
+weights/
+*.pt
+*.zip
+review_failure_bundle/

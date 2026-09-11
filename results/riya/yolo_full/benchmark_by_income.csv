@@ -1,0 +1,5 @@
+model,task,income_quartile,n,metric,primary_score
+yolo_world,detection,Q1,42,image_level_hit_rate,0.11904761904761904
+yolo_world,detection,Q2,42,image_level_hit_rate,0.14285714285714285
+yolo_world,detection,Q3,42,image_level_hit_rate,0.14285714285714285
+yolo_world,detection,Q4,42,image_level_hit_rate,0.21428571428571427

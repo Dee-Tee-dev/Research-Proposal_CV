@@ -1,0 +1,2 @@
+model,task,q1_score,q4_score,q4_minus_q1_gap,gap_ci_95_low,gap_ci_95_high,bootstrap_samples
+yolo_world,detection,0.11904761904761904,0.21428571428571427,0.09523809523809523,-0.0476190476190476,0.21428571428571433,2000

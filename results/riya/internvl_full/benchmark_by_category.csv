@@ -1,0 +1,13 @@
+model,task,study_label,n,metric,primary_score
+internvl,captioning,footwear,28,accepted_term_recall,0.6071428571428571
+internvl,captioning,light source,28,accepted_term_recall,0.75
+internvl,captioning,roof,28,accepted_term_recall,0.5714285714285714
+internvl,captioning,stove,28,accepted_term_recall,0.8571428571428571
+internvl,captioning,switch,28,accepted_term_recall,0.6785714285714286
+internvl,captioning,trash container,28,accepted_term_recall,0.03571428571428571
+internvl,classification,footwear,28,top1_accuracy,1.0
+internvl,classification,light source,28,top1_accuracy,0.8571428571428571
+internvl,classification,roof,28,top1_accuracy,0.5
+internvl,classification,stove,28,top1_accuracy,0.9642857142857143
+internvl,classification,switch,28,top1_accuracy,0.9285714285714286
+internvl,classification,trash container,28,top1_accuracy,0.9642857142857143
