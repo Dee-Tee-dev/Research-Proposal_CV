@@ -153,13 +153,18 @@ python scripts/check_divya_paper.py
 
 ## Current project status
 
-- The fixed 168-image subset has been downloaded and validated locally.
-- The repository test suite and Divya paper gate pass on the completed outputs.
-- A four-image end-to-end smoke test was completed on 2026-07-29.
-- The expanded benchmark code now covers five model families and three tasks.
-- Divya's full CLIP, BLIP, and Qwen evaluation is complete: 840 validated rows
-  across five model-task conditions. Deterministic 84-image semantic audits are
-  complete for the BLIP and Qwen captions.
+- The combined benchmark is complete: 1,344 validated prediction rows across
+  eight model-task conditions and 168 images per condition.
+- CLIP, BLIP, Qwen2.5-VL, InternVL3.5, and YOLO-World results are integrated.
+- The full two-rater BLIP review contains 336 adjudicated captions; the separate
+  Qwen semantic audit covers a deterministic 84-image half-sample.
+- The final two-page main paper and one-page related-work appendix are available
+  as editable Word and submission-ready PDF files under `output/`.
+- The 42-test repository suite and `scripts/check_combined_submission.py` pass.
+
+The final integration uses the exact proposal CLIP prompt
+`a photo of a household {label}`. Its 145/168 result supersedes the earlier
+143/168 run that used different prompt wording.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
 and their interpretation limits. See
@@ -175,7 +180,17 @@ python app.py
 The demo supports an uploaded image and a selectable comparison of all five
 baselines. Qwen, InternVL, and YOLO-World require the optional model packages.
 Divya's validated aggregate tables and charts are stored under
-`results/divya/combined_full` and `paper/assets/divya`.
+`results/divya/combined_full` and `paper/assets/divya`. Final cross-model tables
+are stored under `results/combined_final`, and demo screenshots are under
+`results/demo_evidence`.
+
+## Final paper
+
+- Editable source: `paper/final_short_paper.md`
+- Editable Word file: `output/Income_Gaps_VLM_Short_Paper.docx`
+- Submission PDF: `output/pdf/Income_Gaps_VLM_Short_Paper.pdf`
+- Rubric audit: `paper/final_rubric_audit.md`
+- Final evidence gate: `python scripts/check_combined_submission.py`
 
 ## Reproducibility notes
 
