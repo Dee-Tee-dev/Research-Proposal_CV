@@ -144,3 +144,10 @@ clear semantic matches (70.2%), and 11 uncertain cases, giving an upper bound
 of 70/84 (83.3%). It identified 15 clear automatic false negatives, one false
 positive, and no disfluent caption. The predefined term vocabulary therefore
 underestimates Qwen's semantic target recall on the reviewed half-sample.
+
+## 2026-09-11 — CLIP prompt correction
+
+The combined report uses the proposal prompt `a photo of a {label}`. This run
+classified 145/168 images correctly (86.3%), with Q1 and Q4 scores of 76.2% and
+92.9%. It replaces the 143/168 result above, which came from different prompt
+wording. Both runs are kept in the log so the change is traceable.

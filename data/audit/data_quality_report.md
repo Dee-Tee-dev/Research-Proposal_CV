@@ -33,7 +33,7 @@
 
 - **Income-quartile analysis: low data-quality risk.** The design is exactly balanced by category and quartile, with unique images and complete required metadata.
 - **Regional analysis: medium risk.** All four regions are represented, but the manifest is not region-balanced; Asia has the largest share and Europe the smallest. Regional findings must remain secondary and include sample counts.
-- **Caption metric: medium risk.** Source ImageNet names can be culturally narrow. The manifest therefore stores broader accepted caption terms, but automated term matching must still be paired with the planned blinded manual audit.
+- **Caption metric: medium risk.** Source ImageNet names can be culturally narrow. The manifest stores broader accepted caption terms, and the final analysis compares automatic matches with manual review.
 
 ## Stable automated tests
 
@@ -42,5 +42,3 @@
 - Reject missing category, income, region, country, image name, or accepted-term fields.
 - Reject manifest IDs absent from the normalized 1,600-row metadata table.
 - Treat region-level metrics as invalid unless every reported group includes its sample count.
-
-Overall validation status: **PASS**.

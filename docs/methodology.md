@@ -42,9 +42,9 @@ images.
 
 - Classification: top-1 accuracy. CLIP correct-label rank is retained as a
   secondary diagnostic.
-- Captioning: accepted-term recall, followed by blinded manual checking of
-  automatic false positives and false negatives. Terms are defined before the
-  full experiment and stored in the manifest.
+- Captioning: accepted-term recall. Two raters reviewed all 336 BLIP captions,
+  and a separate one-rater check covered a fixed 84-image Qwen sample. Caption
+  terms were defined before the full experiment and stored in the manifest.
 - Detection: image-level hit rate, meaning that at least one detection has the
   correct study label. Confidence and predicted boxes are saved for failure
   analysis. The primary threshold is fixed at 0.25 before the full run; 0.05
@@ -56,22 +56,19 @@ caption quality; it tests whether the relevant object was named.
 
 ## Analysis plan
 
-For each model and task, the report will show the score and sample count for
+For each model and task, the report shows the score and sample count for
 each income quartile and category. The main gap estimate is Q4 minus Q1, with a
 95% category-stratified bootstrap interval using a fixed random seed. The
 interval describes uncertainty in this selected sample; it does not make the
 subset population-representative.
 
-Failure analysis will include examples from each quartile and separate common
-cases such as visually small objects, clutter, local object designs, ambiguous
-labels, caption synonyms missed by the automatic metric, and detector
-localization failures. Examples will be selected by a written rule, not only by
-how surprising they look.
+The failure analysis covers small or cluttered objects, local object forms,
+ambiguous source labels, caption synonyms missed by the automatic metric, and
+detector failures. The selected examples are stored with the model outputs.
 
 ## Reproducibility and reporting limits
 
 The split, prompts, model checkpoint names, thresholds, raw outputs, and random
 seed are stored in the repository. Smoke tests are marked separately from the
-full experiment. The final report will distinguish observed associations from
-causal claims and will report unsuccessful runs or model-specific limitations
-rather than silently excluding them.
+full experiment. The report separates observed associations from causal claims
+and includes unsuccessful prompt results and model-specific limitations.

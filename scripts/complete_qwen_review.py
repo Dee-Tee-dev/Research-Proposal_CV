@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Record the decisions from Divya's 84-image Qwen caption audit.
-
-The decision sequence follows the numbered, sorted review sheets produced by
-``create_qwen_review_sheets.py``.  Keeping the reviewed judgements in this
-small reproducible script makes the completed CSV traceable and prevents a
-later analysis run from silently overwriting it.
-"""
+"""Write the recorded decisions from the 84-image Qwen caption review."""
 
 from __future__ import annotations
 

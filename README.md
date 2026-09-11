@@ -1,4 +1,4 @@
-# Socioeconomic and Regional Performance Gaps in Vision-Language Models
+# Income-Related Performance Gaps in Vision-Language Models
 
 This repository contains the code, proposal, and reproducible data split for a
 Computer Vision course project. The study compares contrastive, generative,
@@ -132,25 +132,23 @@ Outputs are written to:
 - `results/failure_cases.csv`
 - `results/run_metadata.json`
 
-The first run of each model downloads its pretrained weights. Generated files
-remain ignored until the full run and manual quality checks are complete.
+The first run of each model downloads its pretrained weights. The result files
+used in the paper are stored in `results/combined_final/` and the model-specific
+result folders.
 
-Divya's separately executed CLIP/BLIP and Qwen predictions are merged with the
-validation script. It checks all five model-task conditions, exact
-row counts, unique image IDs, and the balanced category-quartile design before
-regenerating tables and figures:
+The separately executed CLIP, BLIP, and Qwen predictions can be combined with:
 
 ```bash
 python scripts/finalize_divya_results.py
 ```
 
-After inserting the generated values, run the paper checks:
+The final combined results and paper can be checked with:
 
 ```bash
-python scripts/check_divya_paper.py
+python scripts/check_combined_submission.py
 ```
 
-## Current project status
+## Results included in this repository
 
 - The combined benchmark is complete: 1,344 validated prediction rows across
   eight model-task conditions and 168 images per condition.
@@ -160,7 +158,7 @@ python scripts/check_divya_paper.py
 - The final paper uses the official CVPR 2026 two-column template and stays
   within the two-page course limit. Files are stored under `paper/cvpr2026/`
   and `output/pdf/`.
-- The 42-test repository suite and `scripts/check_combined_submission.py` pass.
+- The automated test suite and `scripts/check_combined_submission.py` pass.
 
 The final integration uses the exact proposal CLIP template
 `a photo of a {label}`. Its 145/168 result supersedes the earlier
@@ -171,7 +169,7 @@ and their interpretation limits. See
 [`docs/literature_review.md`](docs/literature_review.md) for the baseline
 background and the difference from the closest Dollar Street study.
 
-## Launch the early demo
+## Launch the demo
 
 ```bash
 python app.py
@@ -189,7 +187,6 @@ are stored under `results/combined_final`, and demo screenshots are under
 - Editable source: `paper/final_short_paper.md`
 - Editable Word file: `output/Income_Gaps_VLM_Short_Paper.docx`
 - Submission PDF: `output/pdf/Income_Gaps_VLM_Short_Paper.pdf`
-- Content checklist: `paper/final_rubric_audit.md`
 - Paper checks: `python scripts/check_combined_submission.py`
 
 ## Reproducibility notes

@@ -5,9 +5,9 @@
 - Income quartile cutpoints: Q1 <= 210.67, Q2 <= 685.00, Q3 <= 1841.00, Q4 above 1841.00
 - Unique eligible ImageNet classes: 58
 
-## Final recommended controlled subset
+## Selected subset
 
-Use 7 images per category per income quartile: 6 categories x 4 quartiles x 7 = 168 images.
+The experiment uses 7 images per category per income quartile: 6 categories x 4 quartiles x 7 = 168 images.
 
 | Study label | Source class | Q1 | Q2 | Q3 | Q4 | Accepted caption terms |
 |---|---|---:|---:|---:|---:|---|

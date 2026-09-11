@@ -8,8 +8,9 @@ closest prior study because it uses the same source dataset and treats income as
 an important evaluation variable. Our project does not try to reproduce every
 task in that paper. It uses a smaller, fixed, category-balanced subset and asks
 whether the pattern is consistent across different model families and tasks.
-This is important because a result observed for CLIP similarity scores may not
-hold for instruction-following VLMs or an open-vocabulary detector.
+A result from CLIP similarity scores may not hold for instruction-following
+VLMs or an open-vocabulary detector, so we compare these model families on the
+same images.
 
 ## Baseline model families
 
@@ -32,19 +33,18 @@ instruction and the same short caption instruction. Decoding is deterministic,
 and the models receive no income, country, region, or correct-label metadata.
 
 YOLO-World is an open-vocabulary detector that accepts user-defined category
-names (Cheng et al., 2024). It therefore provides a model family that is
-different from both contrastive classification and caption generation. Dollar
+names (Cheng et al., 2024). It adds a task that differs from contrastive
+classification and caption generation. Dollar
 Street supplies image-level object labels but not bounding-box annotations, so
 we report image-level detection hit rate and qualitative boxes. We do not
 report mAP or IoU, because those metrics would require ground-truth boxes.
 
 ## Difference from prior studies
 
-The main contribution is a controlled comparison rather than a new model. All
-baselines use the same 168 images, the same six object categories, and the same
+We compare all baselines on the same 168 images, six object categories, and
 four income groups. The subset contains seven images in each
 category-by-income cell, which prevents category frequency from explaining an
-income-level difference. Results will be reported by income group and category,
+income-level difference. Results are reported by income group and category,
 with sample counts, failure examples, and limits on interpretation. Region is a
 secondary analysis because the subset is not region-balanced. The study tests
 for observed performance differences; it does not assume in advance that every

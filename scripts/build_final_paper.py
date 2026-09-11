@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -238,9 +239,12 @@ def build_docx() -> None:
 
 
 def convert_pdf() -> None:
+    soffice = shutil.which("soffice")
+    if soffice is None:
+        raise RuntimeError("LibreOffice is required to export the Word preview as PDF")
     subprocess.run(
         [
-            "/Users/divyatiwari/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            soffice,
             "--headless",
             "--convert-to",
             "pdf",
