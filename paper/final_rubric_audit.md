@@ -8,9 +8,9 @@
 | Quantitative analysis | Tables, bootstrap gaps, CLIP/BLIP/Qwen checks | InternVL/YOLO outputs and combined evidence | One corrected 1,344-row benchmark with shared quartile and category analysis |
 | Caption review | Deterministic 84-image Qwen audit and earlier BLIP checks | Full two-rater BLIP review and adjudication | Automatic caption recall is interpreted beside semantic review |
 | Qualitative evidence | Model-specific failure interpretation | Demo evidence and detector examples | Failure cases are described in the Results section and preserved in the repository |
-| Shared deliverable | Dataset, method, and quantitative writing | Literature/model background, limitations, demo, and new baselines | Two-page main paper plus one-page related-work appendix |
+| Shared deliverable | Dataset, method, and quantitative writing | Literature/model background, limitations, demo, and new baselines | One two-page CVPR paper with related work included |
 
-Neither personal branch was edited during integration. The combined paper was built on `codex/final-combined` from Riya's final evidence commit, which already contains Divya's completed commit.
+Neither personal branch was edited during integration. The combined paper is maintained on `final-combined` and includes both completed contributions.
 
 ## Rubric coverage
 
@@ -29,13 +29,13 @@ Neither personal branch was edited during integration. The combined paper was bu
 - [x] Defines top-1 accuracy, accepted-term recall, human semantic review, detection hit rate, and the category-stratified bootstrap.
 - [x] Explains why YOLO mAP and IoU are not reported without ground-truth boxes.
 - [x] Preserves the exact failed BLIP prompt intervention and the corrected proposal-prompt CLIP rerun.
-- [x] Provides scripts, raw outputs, run metadata, a fixed seed, and a combined automated gate.
+- [x] Provides scripts, raw outputs, run metadata, a fixed seed, and automated consistency checks.
 
 ### Results and Analysis 12 points
 
 - [x] Reports overall and quartile scores for all eight model-task conditions.
 - [x] Reports Q4-Q1 intervals and distinguishes intervals that include zero.
-- [x] Includes a clear table, a two-panel figure, category analysis, and concrete failure cases.
+- [x] Includes a clear quantitative table, category analysis, and concrete failure cases; the editable companion also includes the quartile figure.
 - [x] Compares automatic caption recall with the full two-rater BLIP review.
 - [x] Reports agreement, Cohen's kappa, hallucination rates, and the different prompt conclusion under human review.
 - [x] Treats YOLO-World as a weak image-level baseline without unsupported localization claims.
@@ -44,13 +44,13 @@ Neither personal branch was edited during integration. The combined paper was bu
 
 - [x] Covers Dollar Street, the closest socioeconomic CLIP study, and all five baseline families.
 - [x] Explains how the dataset, task formulation, multi-model comparison, and manual review differ from prior work.
-- [x] Includes a comparison table and seven consistently formatted references.
+- [x] Includes seven consistently formatted references and explains the differences from the closest studies in the text.
 
 ### Writing Quality and Organization 5 points
 
-- [x] Follows Introduction, Methodology, Results, Discussion, then Related Work in the appendix.
+- [x] Follows Abstract, Introduction, Method, Results, Discussion, then Related Work.
 - [x] Uses task-specific metric labels and sample counts in captions.
-- [x] Uses two main-paper pages plus one related-work appendix page, with page numbers.
+- [x] Uses the official CVPR 2026 style, stays within two US Letter pages, and includes page numbers.
 - [x] Word and PDF renders were visually inspected for clipping, overlap, table wrapping, and figure readability.
 - [x] Names both authors and keeps the main limitations beside the affected conclusions.
 

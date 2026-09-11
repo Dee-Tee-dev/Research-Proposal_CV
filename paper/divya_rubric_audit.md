@@ -46,8 +46,8 @@
 - [x] Divya's main-paper contribution was compressed from 1,754 words
       and reduced to one primary figure to leave space within the two-page main
       paper for Riya's assigned analysis.
-- [ ] Render the integrated conference-style PDF and confirm the two-page main
-      paper plus one-page related-work appendix limit.
+- [x] The combined report was rendered in CVPR 2026 style and confirmed to fit
+      the two-page course limit, including related work.
 
 Riya's related-work appendix, InternVL/YOLO-World results, qualitative failure
 analysis, demo, and assigned writing are intentionally outside this audit.

@@ -74,7 +74,7 @@ def set_cell_borders(cell, color="D9D9D9", size="4") -> None:
 
 
 def clean_inline(text: str) -> str:
-    return text.replace("**", "").replace("`", "")
+    return text.replace("*", "").replace("`", "")
 
 
 def add_body_paragraph(doc: Document, text: str, italic=False) -> None:

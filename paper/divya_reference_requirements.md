@@ -1,8 +1,8 @@
 # References Required by Divya's Main-Paper Sections
 
-The final one-page related-work appendix is assigned to Riya and is not edited
-here. Its bibliography must include the five sources cited in Divya's main-
-paper text:
+This file records the references identified during Divya's individual work.
+The related-work section was later integrated into the two-page combined paper.
+Its bibliography includes the following sources from Divya's text:
 
 - Li, J., Li, D., Xiong, C., & Hoi, S. (2022). *BLIP: Bootstrapping
   Language-Image Pre-training for Unified Vision-Language Understanding and
@@ -18,6 +18,5 @@ paper text:
   Geographic and Socioeconomic Diversity of the World*. NeurIPS Datasets and
   Benchmarks.
 
-Author-year spellings should remain consistent between the main paper and the
-appendix. The Rojas et al. dataset reference is not present in the current
-related-work draft and must be added during group integration.
+Author-year spellings should remain consistent throughout the report. The
+combined bibliography includes the Rojas et al. dataset reference.
