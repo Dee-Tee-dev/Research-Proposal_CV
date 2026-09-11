@@ -1,4 +1,4 @@
-# Divya Section Rubric Audit
+# Divya Section Content Checklist
 
 ## Introduction and Problem Motivation (6 points)
 

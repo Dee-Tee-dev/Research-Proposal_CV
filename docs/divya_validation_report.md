@@ -1,9 +1,9 @@
 # Divya Evidence Validation Report
 
-## Overall assessment
+## Validation summary
 
-**Divya's CLIP, BLIP, and Qwen analysis is ready to share with the stated
-caveats.** The manifest, full predictions, calculations, figures, and both
+Divya's CLIP, BLIP, and Qwen results were checked against the saved predictions.
+The manifest, full predictions, calculations, figures, and both
 caption-audit summaries agree. The completed Qwen benchmark, rather than the
 earlier one-image compatibility check, is used in the paper.
 
@@ -68,7 +68,7 @@ category numerators.
   vocabulary. The paper reports strict semantic results and upper bounds that
   include uncertain decisions.
 
-## Required caveats
+## Interpretation limits
 
 - The balanced 168-image subset is deliberately controlled for category but is
   not population-representative.
@@ -80,13 +80,12 @@ category numerators.
 - Divya's caption audit uses one deterministic half-sample and one reviewer; it
   must not be described as blinded or as an inter-rater reliability study.
 
-## Final gate
+## Paper checks
 
 `scripts/finalize_divya_results.py` passed all exact-row, unique-ID,
 shared-image, and balance checks before the Qwen values were inserted. Combined
 tables, confidence intervals, and figures were regenerated; both primary plots
 were visually checked, and their classification and captioning axes use the
-correct metric labels. `scripts/check_divya_paper.py` is the final automated
-gate for Divya's submission-ready sections. Rendering the integrated paper is a
-shared final-report step because Riya's assigned sections are intentionally not
-modified here.
+correct metric labels. `scripts/check_divya_paper.py` checks Divya's sections.
+Rendering the integrated paper is a shared report step because Riya's assigned
+sections are intentionally not modified here.

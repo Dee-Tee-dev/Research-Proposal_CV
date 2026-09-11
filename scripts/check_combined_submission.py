@@ -82,14 +82,14 @@ def main() -> None:
     text = PAPER.read_text(encoding="utf-8")
     required = [
         "Diya Tiwari and Riya Katikar",
-        "## 1 Introduction and problem motivation",
-        "## 2 Methodology",
+        "## 1 Introduction",
+        "## 2 Method",
         "## 3 Results and analysis",
         "## 4 Discussion and limitations",
-        "## Appendix A Related work and positioning",
-        "do not establish that income caused errors",
+        "## 5 Related work",
+        "do not establish that income caused the errors",
         "1,344 prediction rows",
-        "Gradio demo",
+        "Gradio interface",
         "Rojas, W. A. G.",
     ]
     for phrase in required:
@@ -105,7 +105,7 @@ def main() -> None:
     print("PASS: 1,344 rows across eight complete model-task conditions")
     print("PASS: every condition uses 168 unique images and 24 balanced cells")
     print("PASS: 336 adjudicated BLIP human-review rows are complete")
-    print("PASS: final paper contains every rubric section and required caveats")
+    print("PASS: final paper contains the required sections and limitations")
 
 
 if __name__ == "__main__":

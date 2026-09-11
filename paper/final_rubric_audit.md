@@ -1,4 +1,4 @@
-# Final Short Paper Rubric Audit
+# Final Short Paper Content Checklist
 
 ## Evidence ownership and integration
 
@@ -56,6 +56,6 @@ Neither personal branch was edited during integration. The combined paper was bu
 
 ## Validation status
 
-**Ready within reviewed scope.** The 1,344 saved prediction rows contain 168 unique images in each of eight model-task conditions, no duplicate image-model-task keys, and no missing metrics. Every condition retains seven images in each of the 24 category-quartile cells. The 336-row adjudicated BLIP review is complete. All 42 repository unit tests and the combined paper gate pass.
+The 1,344 saved prediction rows contain 168 unique images in each of eight model-task conditions, no duplicate image-model-task keys, and no missing metrics. Every condition retains seven images in each of the 24 category-quartile cells. The 336-row adjudicated BLIP review is complete. All 42 repository unit tests and the combined paper checks pass.
 
 The image binaries are intentionally ignored by Git and are not present in this integration checkout, so the final check could not reopen all 168 source images. This does not invalidate the saved full-run predictions, metadata, human-review sheets, or demo screenshots, but anyone rerunning the benchmark must download the images using the repository script first.

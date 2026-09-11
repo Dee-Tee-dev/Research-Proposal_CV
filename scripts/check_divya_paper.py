@@ -90,7 +90,7 @@ def validate_paper(text: str, paper_dir: Path) -> list[str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Fail if Divya's paper section is not submission-ready."
+        description="Check that Divya's paper section contains the required evidence."
     )
     parser.add_argument(
         "paper",
@@ -105,7 +105,7 @@ def main() -> None:
         for issue in issues:
             print(f"FAIL: {issue}")
         raise SystemExit(1)
-    print(f"PASS: {args.paper} is submission-ready")
+    print(f"PASS: {args.paper} contains the required sections and evidence")
 
 
 if __name__ == "__main__":

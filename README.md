@@ -135,8 +135,8 @@ Outputs are written to:
 The first run of each model downloads its pretrained weights. Generated files
 remain ignored until the full run and manual quality checks are complete.
 
-Divya's separately executed CLIP/BLIP and Qwen predictions must be merged only
-through the strict finalizer. It checks all five model-task conditions, exact
+Divya's separately executed CLIP/BLIP and Qwen predictions are merged with the
+validation script. It checks all five model-task conditions, exact
 row counts, unique image IDs, and the balanced category-quartile design before
 regenerating tables and figures:
 
@@ -144,8 +144,7 @@ regenerating tables and figures:
 python scripts/finalize_divya_results.py
 ```
 
-After the generated values have been inserted and the internal checklist has
-been removed, run Divya's submission gate:
+After inserting the generated values, run the paper checks:
 
 ```bash
 python scripts/check_divya_paper.py
@@ -158,8 +157,9 @@ python scripts/check_divya_paper.py
 - CLIP, BLIP, Qwen2.5-VL, InternVL3.5, and YOLO-World results are integrated.
 - The full two-rater BLIP review contains 336 adjudicated captions; the separate
   Qwen semantic audit covers a deterministic 84-image half-sample.
-- The final two-page main paper and one-page related-work appendix are available
-  as editable Word and submission-ready PDF files under `output/`.
+- The final paper uses the official CVPR 2026 two-column template and stays
+  within the two-page course limit. Files are stored under `paper/cvpr2026/`
+  and `output/pdf/`.
 - The 42-test repository suite and `scripts/check_combined_submission.py` pass.
 
 The final integration uses the exact proposal CLIP template
@@ -189,8 +189,8 @@ are stored under `results/combined_final`, and demo screenshots are under
 - Editable source: `paper/final_short_paper.md`
 - Editable Word file: `output/Income_Gaps_VLM_Short_Paper.docx`
 - Submission PDF: `output/pdf/Income_Gaps_VLM_Short_Paper.pdf`
-- Rubric audit: `paper/final_rubric_audit.md`
-- Final evidence gate: `python scripts/check_combined_submission.py`
+- Content checklist: `paper/final_rubric_audit.md`
+- Paper checks: `python scripts/check_combined_submission.py`
 
 ## Reproducibility notes
 
