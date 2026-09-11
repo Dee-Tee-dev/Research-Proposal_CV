@@ -21,6 +21,7 @@ DOCX_PATH = OUTPUT_DIR / "Income_Gaps_VLM_Short_Paper.docx"
 PDF_PATH = OUTPUT_DIR / "pdf/Income_Gaps_VLM_Short_Paper.pdf"
 ASSET_DIR = ROOT / "paper/assets/combined"
 CHART_PATH = ASSET_DIR / "scores_by_income.png"
+QUALITATIVE_PATH = ASSET_DIR / "qualitative_examples.png"
 
 
 def add_page_number(paragraph) -> None:
@@ -124,6 +125,8 @@ def add_markdown_table(doc: Document, lines: list[str]) -> None:
 def build_docx() -> None:
     if not CHART_PATH.exists():
         raise FileNotFoundError(f"Create the combined chart first: {CHART_PATH}")
+    if not QUALITATIVE_PATH.exists():
+        raise FileNotFoundError(f"Create the qualitative figure first: {QUALITATIVE_PATH}")
     doc = Document()
     section = doc.sections[0]
     section.page_width = Inches(8.5)
@@ -179,9 +182,6 @@ def build_docx() -> None:
         elif line.startswith("## Appendix A"):
             doc.add_page_break()
             doc.add_heading(clean_inline(line[3:]), level=1)
-        elif line.startswith("## 3 Results"):
-            doc.add_page_break()
-            doc.add_heading(clean_inline(line[3:]), level=1)
         elif line.startswith("## "):
             doc.add_heading(clean_inline(line[3:]), level=1)
         elif line.startswith("### "):
@@ -193,6 +193,12 @@ def build_docx() -> None:
             run = paragraph.add_run(clean_inline(line))
             run.bold = True
             run.font.size = Pt(9.5)
+        elif line.startswith("!["):
+            picture = doc.add_paragraph()
+            picture.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            picture.paragraph_format.space_after = Pt(1)
+            picture.paragraph_format.keep_with_next = True
+            picture.add_run().add_picture(str(QUALITATIVE_PATH), width=Inches(6.9))
         elif line.startswith("*") and line.endswith("*"):
             add_body_paragraph(doc, line.strip("*"), italic=True)
             if line.startswith("*Table 1") and not inserted_chart:

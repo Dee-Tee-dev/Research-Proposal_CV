@@ -52,6 +52,10 @@ Category analysis exposed different weaknesses. CLIP was lowest on light sources
 
 Failure cases often involved local object forms and label ambiguity. A small red fuel can was classified by CLIP as a stove while BLIP called it a can, showing that the source label and visible object can support different readings. In another case, a waste container was described as a bucket or basket and counted wrong by the term list despite being understandable. Roof images were sometimes classified as light sources when the roof occupied little of the frame. These examples support manual review and category-level reporting rather than relying only on a single aggregate score.
 
+![Qualitative model and demo evidence](assets/combined/qualitative_examples.png)
+
+*Figure 2. Qualitative evidence from the Gradio demo: a shared CLIP/BLIP footwear success, correct YOLO-World footwear localization, and a culturally specific fuel-can case where the source label and visible form are difficult to align.*
+
 ## 4 Discussion and limitations
 
 The strongest result is not that every model has the same income gap. CLIP and all automatic caption metrics showed higher Q4 than Q1 performance, but the instruction-following classifiers were nearly flat across quartiles. Caption conclusions also depended strongly on the metric: accepted-term recall exaggerated the BLIP gap because valid cultural synonyms were missed. The unsuccessful automatic prompt result is retained, together with the different human-review result.
