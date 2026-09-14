@@ -80,8 +80,20 @@ class CLIPClassifier:
         self.device = device or choose_device()
         # Public Hugging Face checkpoints are downloaded automatically on the
         # first run and then cached by Transformers for later runs.
-        self.model = CLIPModel.from_pretrained(model_name).to(self.device).eval()
-        self.processor = CLIPProcessor.from_pretrained(model_name)
+        try:
+            self.model = CLIPModel.from_pretrained(model_name)
+            self.processor = CLIPProcessor.from_pretrained(model_name)
+        except OSError as online_error:
+            try:
+                self.model = CLIPModel.from_pretrained(
+                    model_name, local_files_only=True
+                )
+                self.processor = CLIPProcessor.from_pretrained(
+                    model_name, local_files_only=True
+                )
+            except OSError:
+                raise online_error
+        self.model = self.model.to(self.device).eval()
 
     def classify(self, image, correct_label: str | None = None) -> ClipPrediction:
         prompts = [CLIP_PROMPT_TEMPLATE.format(label) for label in CATEGORY_LABELS]
@@ -119,12 +131,20 @@ class BLIPCaptioner:
         from transformers import BlipForConditionalGeneration, BlipProcessor
 
         self.device = device or choose_device()
-        self.model = (
-            BlipForConditionalGeneration.from_pretrained(model_name)
-            .to(self.device)
-            .eval()
-        )
-        self.processor = BlipProcessor.from_pretrained(model_name)
+        try:
+            self.model = BlipForConditionalGeneration.from_pretrained(model_name)
+            self.processor = BlipProcessor.from_pretrained(model_name)
+        except OSError as online_error:
+            try:
+                self.model = BlipForConditionalGeneration.from_pretrained(
+                    model_name, local_files_only=True
+                )
+                self.processor = BlipProcessor.from_pretrained(
+                    model_name, local_files_only=True
+                )
+            except OSError:
+                raise online_error
+        self.model = self.model.to(self.device).eval()
 
     def caption(self, image, prompt: str | None = None) -> str:
         if prompt:
