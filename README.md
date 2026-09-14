@@ -171,12 +171,16 @@ background and the difference from the closest Dollar Street study.
 
 ## Launch the demo
 
+Hosted live demo: [Hugging Face Space](https://divyatw-vlm-income-gap-demo.hf.space)
+
 ```bash
 python app.py
 ```
 
-The demo supports an uploaded image and a selectable comparison of all five
-baselines. Qwen, InternVL, and YOLO-World require the optional model packages.
+The demo supports an uploaded image and a selectable live comparison of all five
+baselines. Public Hugging Face checkpoints download automatically on first use;
+the hosted Space is configured for ZeroGPU. Qwen, InternVL, and YOLO-World may
+take longer on their first run.
 Divya's validated aggregate tables and charts are stored under
 `results/divya/combined_full` and `paper/assets/divya`. Final cross-model tables
 are stored under `results/combined_final`, and demo screenshots are under
