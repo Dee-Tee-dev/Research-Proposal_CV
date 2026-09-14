@@ -73,7 +73,8 @@ The results do not support one common income pattern across all models. CLIP and
 
 The study covers 168 selected images and six categories. Balancing removes category-frequency differences but does not control country, region, image quality, scene complexity, or variation within a category. Quartiles are defined within the test split, and the intervals describe this benchmark only. Models never received income information, so the results show an association and do not establish that income caused errors. The Gradio interface demonstrates the five models on uploaded images; it is not a second evaluation dataset.
 
-\section{Related work}
+\clearpage
+\section*{Appendix: Related Work}
 Dollar Street provides household-object images with country, region, and income metadata~\cite{rojas2022}. Nwatu et al. evaluated CLIP alignment and prompt-based retrieval across income groups~\cite{nwatu2023}. We use a category-balanced subset, test six-way recognition and captioning, and compare five model families on the same images. CLIP links the experiment to earlier work~\cite{radford2021}, while BLIP adds caption generation~\cite{li2022}. Qwen2.5-VL and InternVL3.5 add instruction-following VLMs~\cite{bai2025,wang2025}, and YOLO-World adds open-vocabulary detection~\cite{cheng2024}. A gap observed with one model or automatic metric did not always carry over to another.
 
 {\small
