@@ -14,6 +14,15 @@ import gradio as gr
 import pandas as pd
 from PIL import Image
 
+try:
+    import spaces
+except ImportError:  # Local runs do not need the ZeroGPU helper package.
+    class _LocalSpaces:
+        @staticmethod
+        def GPU(function):
+            return function
+    spaces = _LocalSpaces()
+
 from vlm_gap.config import OBJECT_PROMPT
 from vlm_gap.models import (
     BLIPCaptioner,
@@ -40,6 +49,7 @@ def get_model(name: str):
     return model_cache[name]
 
 
+@spaces.GPU
 def analyse(image: Image.Image, selected_models: list[str]):
     if image is None:
         raise gr.Error("Please upload an image.")
