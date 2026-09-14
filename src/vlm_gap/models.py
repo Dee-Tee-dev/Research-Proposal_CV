@@ -78,14 +78,10 @@ class CLIPClassifier:
         from transformers import CLIPModel, CLIPProcessor
 
         self.device = device or choose_device()
-        # Prefer the local Hugging Face cache so the demo remains usable when
-        # a campus network blocks outbound model downloads.
-        self.model = CLIPModel.from_pretrained(
-            model_name, local_files_only=True
-        ).to(self.device).eval()
-        self.processor = CLIPProcessor.from_pretrained(
-            model_name, local_files_only=True
-        )
+        # Public Hugging Face checkpoints are downloaded automatically on the
+        # first run and then cached by Transformers for later runs.
+        self.model = CLIPModel.from_pretrained(model_name).to(self.device).eval()
+        self.processor = CLIPProcessor.from_pretrained(model_name)
 
     def classify(self, image, correct_label: str | None = None) -> ClipPrediction:
         prompts = [CLIP_PROMPT_TEMPLATE.format(label) for label in CATEGORY_LABELS]
@@ -124,15 +120,11 @@ class BLIPCaptioner:
 
         self.device = device or choose_device()
         self.model = (
-            BlipForConditionalGeneration.from_pretrained(
-                model_name, local_files_only=True
-            )
+            BlipForConditionalGeneration.from_pretrained(model_name)
             .to(self.device)
             .eval()
         )
-        self.processor = BlipProcessor.from_pretrained(
-            model_name, local_files_only=True
-        )
+        self.processor = BlipProcessor.from_pretrained(model_name)
 
     def caption(self, image, prompt: str | None = None) -> str:
         if prompt:

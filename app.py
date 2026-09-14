@@ -108,11 +108,18 @@ def analyse(image: Image.Image, selected_models: list[str]):
                     ),
                 })
         except Exception as error:  # Demo should explain optional setup failures.
+            detail = str(error)
+            if isinstance(error, OSError) and ("Hugging Face" in detail or "valid repository" in detail):
+                detail = (
+                    "Checkpoint download failed. Connect to the internet and "
+                    "retry; public Hugging Face models download automatically "
+                    "on first use. Original error: " + detail
+                )
             rows.append({
                 "Model": name,
                 "Task": "load/run error",
                 "Output": type(error).__name__,
-                "Details": str(error),
+                "Details": detail,
             })
 
     frame = pd.DataFrame(rows, columns=["Model", "Task", "Output", "Details"])
