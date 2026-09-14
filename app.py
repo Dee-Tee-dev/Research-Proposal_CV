@@ -143,9 +143,16 @@ with gr.Blocks(
     title="VLM Income-Gap Benchmark",
     theme=gr.themes.Soft(primary_hue="blue", secondary_hue="slate"),
     css="""
-    .hero {background: linear-gradient(120deg,#123d62,#217eaf); color: white;
-           border-radius: 14px; padding: 18px 22px; margin-bottom: 12px;}
-    .note {color: #536273; font-size: 0.92rem;}
+    .gradio-container {max-width: 1120px !important; padding-top: 18px !important;}
+    .hero {background: linear-gradient(120deg,#123b5d 0%,#176b87 55%,#2a9d8f 100%);
+           color: white; border-radius: 16px; padding: 20px 26px; margin-bottom: 10px;
+           box-shadow: 0 6px 18px rgba(18,59,93,.18);}
+    .hero h1 {margin: 0 0 4px 0; font-size: 2rem;}
+    .hero p {margin: 0; opacity: .92;}
+    .note {color: #536273; font-size: 0.9rem; margin: 6px 0 12px 0;}
+    .panel {border: 1px solid #dce7ec; border-radius: 12px; padding: 10px;
+            background: #fbfdfe;}
+    footer {display: none !important;}
     """,
 ) as demo:
     gr.Markdown(
@@ -156,14 +163,16 @@ with gr.Blocks(
         "or location is provided to any model. This demo runs inference on the "
         "uploaded image; the paper's quartile results are precomputed separately.</p>"
     )
-    with gr.Row():
-        image_input = gr.Image(type="pil", sources=["upload", "clipboard"], label="Upload an image")
-        model_input = gr.CheckboxGroup(
-            choices=list(MODEL_FACTORIES),
-            value=["CLIP", "BLIP"],
-            label="Models to compare (select one or more)",
-        )
-    gr.Markdown("**Tip:** CLIP and BLIP are the lightest starting choices. Qwen, InternVL, and YOLO-World may take longer on first use while checkpoints load.", elem_classes=["note"])
+    with gr.Row(equal_height=True):
+        with gr.Column(scale=5, elem_classes=["panel"]):
+            image_input = gr.Image(type="pil", sources=["upload", "clipboard"], label="Upload an image")
+        with gr.Column(scale=4, elem_classes=["panel"]):
+            model_input = gr.CheckboxGroup(
+                choices=list(MODEL_FACTORIES),
+                value=["CLIP", "BLIP"],
+                label="Models to compare",
+            )
+    gr.Markdown("CLIP and BLIP load fastest. Larger models may take longer on their first run.", elem_classes=["note"])
     with gr.Row():
         run_button = gr.Button("Run live comparison", variant="primary")
     comparison = gr.Dataframe(
@@ -171,8 +180,9 @@ with gr.Blocks(
         interactive=False,
         label="Model outputs",
     )
-    clear_button = gr.ClearButton([image_input, comparison], value="Clear")
-    annotated_image = gr.Image(label="YOLO-World detections")
+    annotated_image = gr.Image(label="YOLO-World detections", show_label=True)
+    with gr.Row():
+        clear_button = gr.ClearButton([image_input, comparison, annotated_image], value="Clear")
     status = gr.Markdown("Upload an image and select at least one model.", elem_classes=["note"])
     run_button.click(
         analyse,
