@@ -1,6 +1,8 @@
 .DS_Store
+tmp/
 *.swp
 .venv/
+.qwen-deps/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -15,3 +17,15 @@ results/*
 # Model caches and local notebooks
 .cache/
 notebooks/.ipynb_checkpoints/
+*.egg-info/
+weights/
+*.pt
+*.zip
+review_failure_bundle/
+paper/cvpr2026/*.aux
+paper/cvpr2026/*.bbl
+paper/cvpr2026/*.blg
+paper/cvpr2026/*.brf
+paper/cvpr2026/*.log
+paper/cvpr2026/*.out
+paper/cvpr2026/*.pdf

@@ -1,0 +1,19 @@
+model,model_label,task,study_label,n,score
+clip,CLIP,classification,roof,28,0.75
+blip_baseline,BLIP baseline,captioning,roof,28,0.4642857142857143
+blip_prompted,BLIP prompted,captioning,roof,28,0.32142857142857145
+clip,CLIP,classification,light source,28,0.6785714285714286
+blip_baseline,BLIP baseline,captioning,light source,28,0.4642857142857143
+blip_prompted,BLIP prompted,captioning,light source,28,0.4642857142857143
+clip,CLIP,classification,stove,28,0.8928571428571429
+blip_baseline,BLIP baseline,captioning,stove,28,0.75
+blip_prompted,BLIP prompted,captioning,stove,28,0.6785714285714286
+clip,CLIP,classification,trash container,28,0.8214285714285714
+blip_baseline,BLIP baseline,captioning,trash container,28,0.21428571428571427
+blip_prompted,BLIP prompted,captioning,trash container,28,0.10714285714285714
+clip,CLIP,classification,switch,28,0.9642857142857143
+blip_baseline,BLIP baseline,captioning,switch,28,0.5714285714285714
+blip_prompted,BLIP prompted,captioning,switch,28,0.75
+clip,CLIP,classification,footwear,28,1.0
+blip_baseline,BLIP baseline,captioning,footwear,28,0.7142857142857143
+blip_prompted,BLIP prompted,captioning,footwear,28,0.75

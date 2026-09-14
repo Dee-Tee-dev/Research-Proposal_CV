@@ -1,0 +1,16 @@
+﻿group,n,object_correct_count,object_correct_rate,non_informative_count,non_informative_rate,hallucination_count,hallucination_rate
+overall,336,276,0.821429,3,0.008929,49,0.145833
+condition=baseline,168,135,0.803571,1,0.005952,28,0.166667
+condition=prompted,168,141,0.839286,2,0.011905,21,0.125000
+income_quartile=Q1,84,64,0.761905,1,0.011905,14,0.166667
+income_quartile=Q2,84,68,0.809524,1,0.011905,15,0.178571
+income_quartile=Q3,84,69,0.821429,1,0.011905,12,0.142857
+income_quartile=Q4,84,75,0.892857,0,0.000000,8,0.095238
+condition=baseline;income_quartile=Q1,42,33,0.785714,0,0.000000,7,0.166667
+condition=baseline;income_quartile=Q2,42,33,0.785714,1,0.023810,9,0.214286
+condition=baseline;income_quartile=Q3,42,32,0.761905,0,0.000000,7,0.166667
+condition=baseline;income_quartile=Q4,42,37,0.880952,0,0.000000,5,0.119048
+condition=prompted;income_quartile=Q1,42,31,0.738095,1,0.023810,7,0.166667
+condition=prompted;income_quartile=Q2,42,35,0.833333,0,0.000000,6,0.142857
+condition=prompted;income_quartile=Q3,42,37,0.880952,1,0.023810,5,0.119048
+condition=prompted;income_quartile=Q4,42,38,0.904762,0,0.000000,3,0.071429

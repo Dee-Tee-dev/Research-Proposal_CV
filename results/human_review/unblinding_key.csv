@@ -1,0 +1,337 @@
+review_id,image_id,condition,study_label,income_quartile,region,country_id,country_name
+121828b3322bb1cd,5d4bf05ccf0b3a0f3f354caa,baseline,roof,Q1,af,lr,Liberia
+fd4c26115d59a6e6,5d4bf05ccf0b3a0f3f354caa,prompted,roof,Q1,af,lr,Liberia
+3cc4034c478bcd67,5d4be798cf0b3a0f3f345bb4,baseline,roof,Q1,as,bd,Bangladesh
+ca466f1dbc74f288,5d4be798cf0b3a0f3f345bb4,prompted,roof,Q1,as,bd,Bangladesh
+a8915041de0974b0,5d4bf377cf0b3a0f3f35a144,baseline,roof,Q1,af,bf,Burkina Faso
+8d3d6f75ccf12235,5d4bf377cf0b3a0f3f35a144,prompted,roof,Q1,af,bf,Burkina Faso
+1012b38e3f64ccdc,5d4beacdcf0b3a0f3f34b1d8,baseline,roof,Q1,as,in,India
+edb0cf92b69d85fd,5d4beacdcf0b3a0f3f34b1d8,prompted,roof,Q1,as,in,India
+b1ff854e3875604d,5d4bf0bfcf0b3a0f3f355712,baseline,roof,Q1,af,ci,Cote d'Ivoire
+e3327c7a170863b5,5d4bf0bfcf0b3a0f3f355712,prompted,roof,Q1,af,ci,Cote d'Ivoire
+4ed2594345777de0,5d4bef5dcf0b3a0f3f3531c6,baseline,roof,Q1,as,np,Nepal
+c8436cc5dc545604,5d4bef5dcf0b3a0f3f3531c6,prompted,roof,Q1,as,np,Nepal
+029a99ec4d6caf30,5d4bf3a8cf0b3a0f3f35a67c,baseline,roof,Q1,af,bf,Burkina Faso
+48410c1dd58323dd,5d4bf3a8cf0b3a0f3f35a67c,prompted,roof,Q1,af,bf,Burkina Faso
+28cd3828db12d420,5ec4f9f2f0611d7ddd741bae,baseline,roof,Q2,af,et,Ethiopia
+961952dc2ab269d6,5ec4f9f2f0611d7ddd741bae,prompted,roof,Q2,af,et,Ethiopia
+54a4d7224fbbb457,5ec4fa89f0611d7ddd742087,baseline,roof,Q2,am,br,Brazil
+e3ba39a9979eb5b3,5ec4fa89f0611d7ddd742087,prompted,roof,Q2,am,br,Brazil
+a000989306273eed,5d4bea54cf0b3a0f3f34a3ac,baseline,roof,Q2,as,in,India
+021fa48fa814840f,5d4bea54cf0b3a0f3f34a3ac,prompted,roof,Q2,as,in,India
+f44bc0bf5543a2bb,5d4bdefccf0b3a0f3f336ec5,baseline,roof,Q2,eu,rs,Serbia
+4dc7d3863812f16e,5d4bdefccf0b3a0f3f336ec5,prompted,roof,Q2,eu,rs,Serbia
+ab9bf1e6eea14794,5d4be3ffcf0b3a0f3f33f500,baseline,roof,Q2,af,cm,Cameroon
+be644282a8b11dd0,5d4be3ffcf0b3a0f3f33f500,prompted,roof,Q2,af,cm,Cameroon
+7bf2d77e1372dbab,5d4bf2fbcf0b3a0f3f359462,baseline,roof,Q2,am,bo,Bolivia
+759cfee4cb57f877,5d4bf2fbcf0b3a0f3f359462,prompted,roof,Q2,am,bo,Bolivia
+e0b502d881c4d431,5d4bf131cf0b3a0f3f356206,baseline,roof,Q2,as,id,Indonesia
+dae5d0a9c58529c9,5d4bf131cf0b3a0f3f356206,prompted,roof,Q2,as,id,Indonesia
+dbbda4300520494a,5ec4f9e2f0611d7ddd741b33,baseline,roof,Q3,af,et,Ethiopia
+78ccb4cf816a2332,5ec4f9e2f0611d7ddd741b33,prompted,roof,Q3,af,et,Ethiopia
+b7cd42790def53d0,5fa329ada4fd6103df5dff73,baseline,roof,Q3,am,co,Colombia
+4af5778c46ea30bd,5fa329ada4fd6103df5dff73,prompted,roof,Q3,am,co,Colombia
+a7a893f8f7e73c22,5d4be103cf0b3a0f3f33a4af,baseline,roof,Q3,as,in,India
+7f7249f17f8b94d3,5d4be103cf0b3a0f3f33a4af,prompted,roof,Q3,as,in,India
+108a77c12bec78b4,5d4be02fcf0b3a0f3f338c7c,baseline,roof,Q3,eu,nl,Netherlands
+982f21ea03c0094b,5d4be02fcf0b3a0f3f338c7c,prompted,roof,Q3,eu,nl,Netherlands
+dc79d13f0c83f4de,5ec4f97ef0611d7ddd7417d1,baseline,roof,Q3,af,cm,Cameroon
+2cc3372510610e33,5ec4f97ef0611d7ddd7417d1,prompted,roof,Q3,af,cm,Cameroon
+b19648a259d77a93,5d4be09bcf0b3a0f3f3398ab,baseline,roof,Q3,am,br,Brazil
+96e06802abff940d,5d4be09bcf0b3a0f3f3398ab,prompted,roof,Q3,am,br,Brazil
+d69860036ab1660f,5ec4f86df0611d7ddd740eb2,baseline,roof,Q3,as,ir,Iran
+c365b8f2f5a0e8b4,5ec4f86df0611d7ddd740eb2,prompted,roof,Q3,as,ir,Iran
+86d80761f86d7a65,5d4be61ccf0b3a0f3f343139,baseline,roof,Q4,af,za,South Africa
+48279322de491c97,5d4be61ccf0b3a0f3f343139,prompted,roof,Q4,af,za,South Africa
+ddaf763c89dda1eb,5d4be42ccf0b3a0f3f33fa48,baseline,roof,Q4,am,us,United States
+514b680934ba77f9,5d4be42ccf0b3a0f3f33fa48,prompted,roof,Q4,am,us,United States
+cd5c7b61d13b7a56,5d4be0abcf0b3a0f3f339a79,baseline,roof,Q4,as,in,India
+75ed0e102c48ffaf,5d4be0abcf0b3a0f3f339a79,prompted,roof,Q4,as,in,India
+a123ff76a347e861,5d4be417cf0b3a0f3f33f7d4,baseline,roof,Q4,eu,gb,United Kingdom
+f33a176f3bc9e219,5d4be417cf0b3a0f3f33f7d4,prompted,roof,Q4,eu,gb,United Kingdom
+6b45f9af5defd004,5d4bebdccf0b3a0f3f34d03d,baseline,roof,Q4,am,us,United States
+99b4d550649af9f4,5d4bebdccf0b3a0f3f34d03d,prompted,roof,Q4,am,us,United States
+2f5ee8a24407a477,5d4be136cf0b3a0f3f33aa95,baseline,roof,Q4,as,in,India
+f729f54c92bc96ed,5d4be136cf0b3a0f3f33aa95,prompted,roof,Q4,as,in,India
+a68bb905e12fbe9f,5d4be404cf0b3a0f3f33f59c,baseline,roof,Q4,eu,gb,United Kingdom
+afb6afbe5e247208,5d4be404cf0b3a0f3f33f59c,prompted,roof,Q4,eu,gb,United Kingdom
+8a71aaa81e1c6cd4,5d4be1cbcf0b3a0f3f33ba21,baseline,light source,Q1,af,ke,Kenya
+a5147058350df1fa,5d4be1cbcf0b3a0f3f33ba21,prompted,light source,Q1,af,ke,Kenya
+f9c66f2e6320692b,5d4be664cf0b3a0f3f343977,baseline,light source,Q1,am,pe,Peru
+305790fc839e75bd,5d4be664cf0b3a0f3f343977,prompted,light source,Q1,am,pe,Peru
+422e77c374e41b0b,5d4beab0cf0b3a0f3f34ae70,baseline,light source,Q1,as,in,India
+bb21becb90ed84b1,5d4beab0cf0b3a0f3f34ae70,prompted,light source,Q1,as,in,India
+7b5f865d89ecde47,5d4becefcf0b3a0f3f34eb88,baseline,light source,Q1,af,zw,Zimbabwe
+e7181ff646185adb,5d4becefcf0b3a0f3f34eb88,prompted,light source,Q1,af,zw,Zimbabwe
+6a2a1a0b51c4cc7a,5d4bf271cf0b3a0f3f3583da,baseline,light source,Q1,am,co,Colombia
+d8ba05ef691208df,5d4bf271cf0b3a0f3f3583da,prompted,light source,Q1,am,co,Colombia
+bf054a8d00e9d4ed,5d4be752cf0b3a0f3f3453ca,baseline,light source,Q1,as,mm,Myanmar
+829beb26633aa0c5,5d4be752cf0b3a0f3f3453ca,prompted,light source,Q1,as,mm,Myanmar
+877a60eef78ccba9,5d4bf0b4cf0b3a0f3f3555cc,baseline,light source,Q1,af,ci,Cote d'Ivoire
+5e9e9bf5e2b6b671,5d4bf0b4cf0b3a0f3f3555cc,prompted,light source,Q1,af,ci,Cote d'Ivoire
+3c87c03592947b96,5d4bdfa0cf0b3a0f3f337f53,baseline,light source,Q2,am,pe,Peru
+2c470810caa71c80,5d4bdfa0cf0b3a0f3f337f53,prompted,light source,Q2,am,pe,Peru
+c0bcf7f27283f4b9,5f8dfa6069531c2f81fdef7f,baseline,light source,Q2,as,pk,Pakistan
+9168d256c859acc3,5f8dfa6069531c2f81fdef7f,prompted,light source,Q2,as,pk,Pakistan
+507b02d34be508fd,5d4be196cf0b3a0f3f33b4c3,baseline,light source,Q2,am,br,Brazil
+ef7ef50091d093ca,5d4be196cf0b3a0f3f33b4c3,prompted,light source,Q2,am,br,Brazil
+07b0bc3f9ff9c317,5d4be631cf0b3a0f3f343397,baseline,light source,Q2,as,in,India
+fe6efc5e797e6f26,5d4be631cf0b3a0f3f343397,prompted,light source,Q2,as,in,India
+0a7d14f8653f62dc,5ec4fb81f0611d7ddd7428b0,baseline,light source,Q2,am,co,Colombia
+098dbbd9661bd3dc,5ec4fb81f0611d7ddd7428b0,prompted,light source,Q2,am,co,Colombia
+db99ad5b4ca14a8a,5d4bdf05cf0b3a0f3f336fb3,baseline,light source,Q2,as,id,Indonesia
+ae8a6e07e5d19f84,5d4bdf05cf0b3a0f3f336fb3,prompted,light source,Q2,as,id,Indonesia
+2e44064f45d268c7,5ec4fa8ff0611d7ddd7420b5,baseline,light source,Q2,am,br,Brazil
+c3176aa8a08c3055,5ec4fa8ff0611d7ddd7420b5,prompted,light source,Q2,am,br,Brazil
+443aad2bc20222b4,5d4be03ccf0b3a0f3f338dde,baseline,light source,Q3,af,ng,Nigeria
+905733a434686ee9,5d4be03ccf0b3a0f3f338dde,prompted,light source,Q3,af,ng,Nigeria
+ec82d56c4ccb8add,5ec4fba1f0611d7ddd7429bc,baseline,light source,Q3,am,co,Colombia
+9ad7bd1a5bd9ce2e,5ec4fba1f0611d7ddd7429bc,prompted,light source,Q3,am,co,Colombia
+034f26ae4e350851,5d4be0b0cf0b3a0f3f339b0b,baseline,light source,Q3,as,in,India
+a8dfd59f795ea04b,5d4be0b0cf0b3a0f3f339b0b,prompted,light source,Q3,as,in,India
+1e33dd6357c6ed52,5d4bdfb1cf0b3a0f3f33809d,baseline,light source,Q3,eu,nl,Netherlands
+2ab1a6e2955af7bf,5d4bdfb1cf0b3a0f3f33809d,prompted,light source,Q3,eu,nl,Netherlands
+89e279f9ee766994,5d4be672cf0b3a0f3f343b19,baseline,light source,Q3,af,tz,Tanzania
+5367dea563641165,5d4be672cf0b3a0f3f343b19,prompted,light source,Q3,af,tz,Tanzania
+ac849a9834b0909c,5d4bde4dcf0b3a0f3f335e25,baseline,light source,Q3,am,us,United States
+877285ea5b4cac87,5d4bde4dcf0b3a0f3f335e25,prompted,light source,Q3,am,us,United States
+43d84397d8efe842,5d4be657cf0b3a0f3f3437e9,baseline,light source,Q3,as,cn,China
+ea0c77ef5e254dbe,5d4be657cf0b3a0f3f3437e9,prompted,light source,Q3,as,cn,China
+bc9950fa03dcfab6,5ec4f834f0611d7ddd740cc3,baseline,light source,Q4,am,us,United States
+317c5c1f2aea7936,5ec4f834f0611d7ddd740cc3,prompted,light source,Q4,am,us,United States
+19d1f8e7a899d4a0,5d4be118cf0b3a0f3f33a717,baseline,light source,Q4,as,in,India
+e16e400feead5927,5d4be118cf0b3a0f3f33a717,prompted,light source,Q4,as,in,India
+e4ec767f2ee46b1c,5ec4f91cf0611d7ddd74148c,baseline,light source,Q4,eu,es,Spain
+b38a7aa18c06203f,5ec4f91cf0611d7ddd74148c,prompted,light source,Q4,eu,es,Spain
+6f193c18d6a5e700,5d4be53dcf0b3a0f3f341904,baseline,light source,Q4,am,us,United States
+9c9041b992bbed4c,5d4be53dcf0b3a0f3f341904,prompted,light source,Q4,am,us,United States
+3188e2596a0cb58b,5d4bf2a9cf0b3a0f3f358a8e,baseline,light source,Q4,as,cn,China
+8b7717f5bc78fd79,5d4bf2a9cf0b3a0f3f358a8e,prompted,light source,Q4,as,cn,China
+467fd6f1aa2c8f05,5ec4f90ef0611d7ddd741415,baseline,light source,Q4,eu,es,Spain
+c49e8efcf828de35,5ec4f90ef0611d7ddd741415,prompted,light source,Q4,eu,es,Spain
+b1d3cbb255ae9d90,5d4bebfdcf0b3a0f3f34d421,baseline,light source,Q4,am,us,United States
+7b63221281cf0ebb,5d4bebfdcf0b3a0f3f34d421,prompted,light source,Q4,am,us,United States
+c2d43b298e80ccf3,5d4befc5cf0b3a0f3f353ce2,baseline,stove,Q1,af,mw,Malawi
+2f83ecc594d5dd39,5d4befc5cf0b3a0f3f353ce2,prompted,stove,Q1,af,mw,Malawi
+6eaa3cc7b69fa736,5d4bf150cf0b3a0f3f356534,baseline,stove,Q1,as,id,Indonesia
+b545b93f9296e3e5,5d4bf150cf0b3a0f3f356534,prompted,stove,Q1,as,id,Indonesia
+b4b92de8b445f2bd,5d4bed75cf0b3a0f3f34fa6a,baseline,stove,Q1,af,tn,Tunisia
+623c031f7bdd86e4,5d4bed75cf0b3a0f3f34fa6a,prompted,stove,Q1,af,tn,Tunisia
+f5f9ab9428b55cd1,5d4be7b3cf0b3a0f3f345ec4,baseline,stove,Q1,as,bd,Bangladesh
+fc3ec03294b2b4d6,5d4be7b3cf0b3a0f3f345ec4,prompted,stove,Q1,as,bd,Bangladesh
+b9868a5ef5ad7813,5d4bee22cf0b3a0f3f350e6a,baseline,stove,Q1,af,rw,Rwanda
+59b6f1b31c70e776,5d4bee22cf0b3a0f3f350e6a,prompted,stove,Q1,af,rw,Rwanda
+0f11808bef9ee6f2,5d4bef59cf0b3a0f3f353156,baseline,stove,Q1,as,np,Nepal
+2d07a05aecd44b68,5d4bef59cf0b3a0f3f353156,prompted,stove,Q1,as,np,Nepal
+486a13b8c40244db,5d4beff5cf0b3a0f3f354210,baseline,stove,Q1,af,mw,Malawi
+045bc3d08acab64b,5d4beff5cf0b3a0f3f354210,prompted,stove,Q1,af,mw,Malawi
+23c382736a2dba0d,5ec4fa30f0611d7ddd741dbe,baseline,stove,Q2,af,et,Ethiopia
+a6f7333f49e0f310,5ec4fa30f0611d7ddd741dbe,prompted,stove,Q2,af,et,Ethiopia
+c6c21e8a0864b1fd,5ec4fa7bf0611d7ddd74200b,baseline,stove,Q2,am,br,Brazil
+c74dd23ed5177383,5ec4fa7bf0611d7ddd74200b,prompted,stove,Q2,am,br,Brazil
+7b23463d1831f1c6,5d4bf2b2cf0b3a0f3f358bb0,baseline,stove,Q2,as,cn,China
+26a80e369ec646dc,5d4bf2b2cf0b3a0f3f358bb0,prompted,stove,Q2,as,cn,China
+af66a9999c02ffaa,5d4be176cf0b3a0f3f33b207,baseline,stove,Q2,am,br,Brazil
+e8695be994a2acef,5d4be176cf0b3a0f3f33b207,prompted,stove,Q2,am,br,Brazil
+ae0ec422b7c68350,5d4be76ecf0b3a0f3f3456e8,baseline,stove,Q2,as,id,Indonesia
+6b2df531511a2dbb,5d4be76ecf0b3a0f3f3456e8,prompted,stove,Q2,as,id,Indonesia
+cc2eea62a6b55d7c,5d4be15bcf0b3a0f3f33aee7,baseline,stove,Q2,am,br,Brazil
+17d085dd7ce04c93,5d4be15bcf0b3a0f3f33aee7,prompted,stove,Q2,am,br,Brazil
+a536aa59e17d9b7c,5d4bed05cf0b3a0f3f34edce,baseline,stove,Q2,as,vn,Vietnam
+20f616349854144c,5d4bed05cf0b3a0f3f34edce,prompted,stove,Q2,as,vn,Vietnam
+d90e7e20ebe0c04b,5d4be672cf0b3a0f3f343b13,baseline,stove,Q3,af,tz,Tanzania
+bf17a59d8f35f7c9,5d4be672cf0b3a0f3f343b13,prompted,stove,Q3,af,tz,Tanzania
+344bfd7a23c2bc3d,5ec4fb73f0611d7ddd742836,baseline,stove,Q3,am,co,Colombia
+470e73bc0b71ba17,5ec4fb73f0611d7ddd742836,prompted,stove,Q3,am,co,Colombia
+62c5ebaa11361cab,5d4bef4dcf0b3a0f3f352fe2,baseline,stove,Q3,as,np,Nepal
+def4f30f682c8a4f,5d4bef4dcf0b3a0f3f352fe2,prompted,stove,Q3,as,np,Nepal
+d8fba9ba22e239f2,5d4be22ecf0b3a0f3f33c475,baseline,stove,Q3,af,eg,Egypt
+00ac34b9ae62e017,5d4be22ecf0b3a0f3f33c475,prompted,stove,Q3,af,eg,Egypt
+2a07a2fa2f52e531,5d4bde4dcf0b3a0f3f335e21,baseline,stove,Q3,am,us,United States
+c3a19a5bcdded8fb,5d4bde4dcf0b3a0f3f335e21,prompted,stove,Q3,am,us,United States
+01d5d57d52f3a069,5d4be0fecf0b3a0f3f33a415,baseline,stove,Q3,as,in,India
+ac52aa77940917af,5d4be0fecf0b3a0f3f33a415,prompted,stove,Q3,as,in,India
+ee37d5d8ab19b2df,5ec4fb02f0611d7ddd742487,baseline,stove,Q3,am,co,Colombia
+d3a78b47f95b69a5,5ec4fb02f0611d7ddd742487,prompted,stove,Q3,am,co,Colombia
+2a6ea88fb66276b7,5d4befa8cf0b3a0f3f353974,baseline,stove,Q4,am,mx,Mexico
+09c1654535ebc192,5d4befa8cf0b3a0f3f353974,prompted,stove,Q4,am,mx,Mexico
+a93d1991d712cf9a,5d4be106cf0b3a0f3f33a4fb,baseline,stove,Q4,as,in,India
+b1a18f34eff5675b,5d4be106cf0b3a0f3f33a4fb,prompted,stove,Q4,as,in,India
+e3a39412fdee3a9c,5ec4f5caf4a4fb7dc0387a0c,baseline,stove,Q4,eu,ru,Russia
+77561b7da08706ea,5ec4f5caf4a4fb7dc0387a0c,prompted,stove,Q4,eu,ru,Russia
+0c875d43c7d00d87,5d4be048cf0b3a0f3f338f18,baseline,stove,Q4,am,us,United States
+5aaf26c6f3327dcc,5d4be048cf0b3a0f3f338f18,prompted,stove,Q4,am,us,United States
+94418404c1a775b0,5ec4f948f0611d7ddd741601,baseline,stove,Q4,as,in,India
+061db7ee42bc2123,5ec4f948f0611d7ddd741601,prompted,stove,Q4,as,in,India
+44e4561487037ff4,5d4be0ddcf0b3a0f3f33a03d,baseline,stove,Q4,eu,nl,Netherlands
+04f5f4721da7583c,5d4be0ddcf0b3a0f3f33a03d,prompted,stove,Q4,eu,nl,Netherlands
+216c75837da29065,5d4be1bbcf0b3a0f3f33b8c9,baseline,stove,Q4,am,br,Brazil
+949d8d9de32154a4,5d4be1bbcf0b3a0f3f33b8c9,prompted,stove,Q4,am,br,Brazil
+9751631e30467ee3,5d4beee5cf0b3a0f3f3523d2,baseline,trash container,Q1,af,ng,Nigeria
+febfab15e7d5be97,5d4beee5cf0b3a0f3f3523d2,prompted,trash container,Q1,af,ng,Nigeria
+ab65cfca9fb41e18,5d4bf27dcf0b3a0f3f358554,baseline,trash container,Q1,am,co,Colombia
+e00316bb64801c72,5d4bf27dcf0b3a0f3f358554,prompted,trash container,Q1,am,co,Colombia
+cf04993091e04ea4,5d4beeb5cf0b3a0f3f351e3c,baseline,trash container,Q1,as,ph,Philippines
+501cb32d82294ff2,5d4beeb5cf0b3a0f3f351e3c,prompted,trash container,Q1,as,ph,Philippines
+35363d427e13efd0,5d4bf349cf0b3a0f3f359cee,baseline,trash container,Q1,af,bi,Burundi
+da8e56098e0a4d6f,5d4bf349cf0b3a0f3f359cee,prompted,trash container,Q1,af,bi,Burundi
+ca312b6315969d38,5d4be7b6cf0b3a0f3f345f1c,baseline,trash container,Q1,as,bd,Bangladesh
+d2a34adf540b39f6,5d4be7b6cf0b3a0f3f345f1c,prompted,trash container,Q1,as,bd,Bangladesh
+795e4f8cd52d8129,5d4be1c8cf0b3a0f3f33b9cf,baseline,trash container,Q1,af,ke,Kenya
+64b4328e3de52c38,5d4be1c8cf0b3a0f3f33b9cf,prompted,trash container,Q1,af,ke,Kenya
+8dff067f2d506f5c,5d4be7afcf0b3a0f3f345e48,baseline,trash container,Q1,as,bd,Bangladesh
+ac671ab227049c0a,5d4be7afcf0b3a0f3f345e48,prompted,trash container,Q1,as,bd,Bangladesh
+a642beb689d09f28,5d4bdf69cf0b3a0f3f337997,baseline,trash container,Q2,af,tz,Tanzania
+dc188658dc35b17c,5d4bdf69cf0b3a0f3f337997,prompted,trash container,Q2,af,tz,Tanzania
+7509bdc348bd7664,5ec4fb83f0611d7ddd7428c0,baseline,trash container,Q2,am,co,Colombia
+7147c0a744203888,5ec4fb83f0611d7ddd7428c0,prompted,trash container,Q2,am,co,Colombia
+6b6f81003ee71e76,5d4becffcf0b3a0f3f34ed6c,baseline,trash container,Q2,as,vn,Vietnam
+4eca8ea6a77bd67f,5d4becffcf0b3a0f3f34ed6c,prompted,trash container,Q2,as,vn,Vietnam
+48079badec5f8ff6,5d4bee51cf0b3a0f3f3512b8,baseline,trash container,Q2,af,rw,Rwanda
+ce24514258e37e85,5d4bee51cf0b3a0f3f3512b8,prompted,trash container,Q2,af,rw,Rwanda
+8f42ed0c718e0dfa,5d4bf3e7cf0b3a0f3f35abe2,baseline,trash container,Q2,am,bo,Bolivia
+5fdf63051012168d,5d4bf3e7cf0b3a0f3f35abe2,prompted,trash container,Q2,am,bo,Bolivia
+192c715a6bb90164,5d4be76ecf0b3a0f3f3456d4,baseline,trash container,Q2,as,id,Indonesia
+4ea58714bec2b31f,5d4be76ecf0b3a0f3f3456d4,prompted,trash container,Q2,as,id,Indonesia
+5b94404c3fb6c764,5d4bf191cf0b3a0f3f356bb4,baseline,trash container,Q2,as,in,India
+549fb091a1b4a064,5d4bf191cf0b3a0f3f356bb4,prompted,trash container,Q2,as,in,India
+56e738265a847140,5ec4f9e1f0611d7ddd741b27,baseline,trash container,Q3,af,et,Ethiopia
+438b3fe512309e94,5ec4f9e1f0611d7ddd741b27,prompted,trash container,Q3,af,et,Ethiopia
+09e14bc649601e7d,5d4bef87cf0b3a0f3f3536b6,baseline,trash container,Q3,am,mx,Mexico
+a66e16f6fef9ff39,5d4bef87cf0b3a0f3f3536b6,prompted,trash container,Q3,am,mx,Mexico
+5e29fc324d7a7aef,5d4bdfefcf0b3a0f3f33871e,baseline,trash container,Q3,as,pk,Pakistan
+973d697ae9acfce9,5d4bdfefcf0b3a0f3f33871e,prompted,trash container,Q3,as,pk,Pakistan
+393183e3caf2d822,5d4bdf79cf0b3a0f3f337b57,baseline,trash container,Q3,eu,rs,Serbia
+2759dccdff0b2316,5d4bdf79cf0b3a0f3f337b57,prompted,trash container,Q3,eu,rs,Serbia
+0277976e8f1e482f,5d4bf40ecf0b3a0f3f35afd2,baseline,trash container,Q3,as,cn,China
+ec8e3e42b8afa36b,5d4bf40ecf0b3a0f3f35afd2,prompted,trash container,Q3,as,cn,China
+8f6f71b7dd94fafa,5d4be956cf0b3a0f3f3486e4,baseline,trash container,Q3,eu,ua,Ukraine
+f109940fc80689f3,5d4be956cf0b3a0f3f3486e4,prompted,trash container,Q3,eu,ua,Ukraine
+82b316bbc747e9c9,5d4bf18bcf0b3a0f3f356b06,baseline,trash container,Q3,as,in,India
+007d55b2a282e84a,5d4bf18bcf0b3a0f3f356b06,prompted,trash container,Q3,as,in,India
+94a5b7e9581f9752,5ec4fa3cf0611d7ddd741e2c,baseline,trash container,Q4,af,et,Ethiopia
+b0c6ac2e45b17aa1,5ec4fa3cf0611d7ddd741e2c,prompted,trash container,Q4,af,et,Ethiopia
+a1b78dfae0ab559c,5ec4f845f0611d7ddd740d5c,baseline,trash container,Q4,am,us,United States
+ad12e54719001872,5ec4f845f0611d7ddd740d5c,prompted,trash container,Q4,am,us,United States
+c1ab7fe7d88ee134,5d4be134cf0b3a0f3f33aa59,baseline,trash container,Q4,as,in,India
+0d2f07fb59226545,5d4be134cf0b3a0f3f33aa59,prompted,trash container,Q4,as,in,India
+3fb4fa3adf224d71,5d4be8dccf0b3a0f3f3478b6,baseline,trash container,Q4,eu,ua,Ukraine
+da724e7fe06249cf,5d4be8dccf0b3a0f3f3478b6,prompted,trash container,Q4,eu,ua,Ukraine
+3a3117d3921e195e,5d4befa5cf0b3a0f3f353924,baseline,trash container,Q4,am,mx,Mexico
+8845a53a5c6ac320,5d4befa5cf0b3a0f3f353924,prompted,trash container,Q4,am,mx,Mexico
+144d747196d6ca19,5d4be0becf0b3a0f3f339caf,baseline,trash container,Q4,as,in,India
+2d1099ce901cad75,5d4be0becf0b3a0f3f339caf,prompted,trash container,Q4,as,in,India
+5e87f4fa749561f3,5ec4f5c4f4a4fb7dc03879d4,baseline,trash container,Q4,eu,ru,Russia
+d2cf023f8a192ae4,5ec4f5c4f4a4fb7dc03879d4,prompted,trash container,Q4,eu,ru,Russia
+ca98ffe3ac2069be,5d4bed80cf0b3a0f3f34fbb2,baseline,switch,Q1,af,tn,Tunisia
+e26b53839fdb7c24,5d4bed80cf0b3a0f3f34fbb2,prompted,switch,Q1,af,tn,Tunisia
+dd47348572965b1a,5d4bf260cf0b3a0f3f3582cc,baseline,switch,Q1,am,co,Colombia
+42b625991a934b7c,5d4bf260cf0b3a0f3f3582cc,prompted,switch,Q1,am,co,Colombia
+8cb9cb8173b2d9be,5d4beab2cf0b3a0f3f34aea4,baseline,switch,Q1,as,in,India
+7d4ede7edfc39ad6,5d4beab2cf0b3a0f3f34aea4,prompted,switch,Q1,as,in,India
+b9c03b8d4ab74dc3,5d4bec7acf0b3a0f3f34dfca,baseline,switch,Q1,as,bd,Bangladesh
+338be5e52e492b8e,5d4bec7acf0b3a0f3f34dfca,prompted,switch,Q1,as,bd,Bangladesh
+e0f5dd6f1533cc9c,5d4bf151cf0b3a0f3f356556,baseline,switch,Q1,as,id,Indonesia
+36cab193b34a4cbe,5d4bf151cf0b3a0f3f356556,prompted,switch,Q1,as,id,Indonesia
+92ed1674c2b60f3d,5d4beecccf0b3a0f3f3520d2,baseline,switch,Q1,as,ph,Philippines
+27e7e98384cc28ae,5d4beecccf0b3a0f3f3520d2,prompted,switch,Q1,as,ph,Philippines
+956a8b1bd73c8ec2,5ec4f81af0611d7ddd740be2,baseline,switch,Q1,as,np,Nepal
+229e76e7fd4a75d2,5ec4f81af0611d7ddd740be2,prompted,switch,Q1,as,np,Nepal
+0e1d9bfd6ee4517a,5ec4f989f0611d7ddd74182b,baseline,switch,Q2,af,cm,Cameroon
+0739e57660ceccce,5ec4f989f0611d7ddd74182b,prompted,switch,Q2,af,cm,Cameroon
+8b6025494e0e7934,5ec4fb68f0611d7ddd7427d4,baseline,switch,Q2,am,co,Colombia
+fbdf39cc601ede75,5ec4fb68f0611d7ddd7427d4,prompted,switch,Q2,am,co,Colombia
+1c5bc16f8a5acd7e,5d4bf185cf0b3a0f3f356a5e,baseline,switch,Q2,as,in,India
+9a7e9369d3fde64b,5d4bf185cf0b3a0f3f356a5e,prompted,switch,Q2,as,in,India
+136e36648b589b82,5d4be3ffcf0b3a0f3f33f4fa,baseline,switch,Q2,af,cm,Cameroon
+1f91a01c278c32bb,5d4be3ffcf0b3a0f3f33f4fa,prompted,switch,Q2,af,cm,Cameroon
+d13185a7d8047560,5d4bdf17cf0b3a0f3f337195,baseline,switch,Q2,as,id,Indonesia
+94aa437818737630,5d4bdf17cf0b3a0f3f337195,prompted,switch,Q2,as,id,Indonesia
+912bc6ea1917cdd6,5d4bf168cf0b3a0f3f356784,baseline,switch,Q2,as,id,Indonesia
+6b7324a197eb9ca6,5d4bf168cf0b3a0f3f356784,prompted,switch,Q2,as,id,Indonesia
+f373913fcd41d6eb,5f8c634fe894f07b8477dfbe,baseline,switch,Q2,as,pk,Pakistan
+31683c8e4b32719d,5f8c634fe894f07b8477dfbe,prompted,switch,Q2,as,pk,Pakistan
+723c6a68e5036855,5d4bef89cf0b3a0f3f3536f2,baseline,switch,Q3,am,mx,Mexico
+4f6ab4187633216f,5d4bef89cf0b3a0f3f3536f2,prompted,switch,Q3,am,mx,Mexico
+1600007dc56d1c35,5d4bf28fcf0b3a0f3f358788,baseline,switch,Q3,as,cn,China
+06f8a871b939307d,5d4bf28fcf0b3a0f3f358788,prompted,switch,Q3,as,cn,China
+4b8a6e03b85439d9,5d4be02ecf0b3a0f3f338c56,baseline,switch,Q3,eu,nl,Netherlands
+abd7393a993f829b,5d4be02ecf0b3a0f3f338c56,prompted,switch,Q3,eu,nl,Netherlands
+5e282a9a24000573,5fa325b3a4fd6154365dfcd4,baseline,switch,Q3,am,co,Colombia
+9a820e9a11c9f967,5fa325b3a4fd6154365dfcd4,prompted,switch,Q3,am,co,Colombia
+3d2c294b6d37b25a,5d4be2ffcf0b3a0f3f33d901,baseline,switch,Q3,as,in,India
+1910673ffeb1c440,5d4be2ffcf0b3a0f3f33d901,prompted,switch,Q3,as,in,India
+7d2fc8d499ddaba9,5d4be034cf0b3a0f3f338d08,baseline,switch,Q3,eu,nl,Netherlands
+b36f2bb489a6ec75,5d4be034cf0b3a0f3f338d08,prompted,switch,Q3,eu,nl,Netherlands
+7a1001ee9f1befcb,5ec4f86df0611d7ddd740eb5,baseline,switch,Q3,as,ir,Iran
+5a0b8139596c0aa6,5ec4f86df0611d7ddd740eb5,prompted,switch,Q3,as,ir,Iran
+38f2a7fdf275f2f2,5d4be014cf0b3a0f3f338aa4,baseline,switch,Q4,af,ng,Nigeria
+c033c874d527dd50,5d4be014cf0b3a0f3f338aa4,prompted,switch,Q4,af,ng,Nigeria
+93d3d5f003293392,5ec4f831f0611d7ddd740cab,baseline,switch,Q4,am,us,United States
+ebca5f253e923e0d,5ec4f831f0611d7ddd740cab,prompted,switch,Q4,am,us,United States
+b9926bd974311691,5d4be977cf0b3a0f3f348ac0,baseline,switch,Q4,as,jo,Jordan
+cd5060b7a7886514,5d4be977cf0b3a0f3f348ac0,prompted,switch,Q4,as,jo,Jordan
+81798f51fc8f22d0,5ec4fa5ff0611d7ddd741f24,baseline,switch,Q4,eu,cz,Czech Republic
+cd3f7f1d28f86e0f,5ec4fa5ff0611d7ddd741f24,prompted,switch,Q4,eu,cz,Czech Republic
+c7a379eaa6f90318,5ec4f60af4a4fb7dc0387c46,baseline,switch,Q4,am,co,Colombia
+bc3f23f87975c051,5ec4f60af4a4fb7dc0387c46,prompted,switch,Q4,am,co,Colombia
+01ef2ddb27c7dd26,5d4bef60cf0b3a0f3f353222,baseline,switch,Q4,as,np,Nepal
+8672789081878ea5,5d4bef60cf0b3a0f3f353222,prompted,switch,Q4,as,np,Nepal
+4fef6fde916bf494,5ec4f919f0611d7ddd741478,baseline,switch,Q4,eu,es,Spain
+f0a0211a0afc228a,5ec4f919f0611d7ddd741478,prompted,switch,Q4,eu,es,Spain
+9a3fdf7bcb4653fd,5d4bf08acf0b3a0f3f355178,baseline,footwear,Q1,af,ci,Cote d'Ivoire
+c2d29a9497f84054,5d4bf08acf0b3a0f3f355178,prompted,footwear,Q1,af,ci,Cote d'Ivoire
+5786c2c07569de62,5d4bf24dcf0b3a0f3f3580a2,baseline,footwear,Q1,am,co,Colombia
+18e415caafe24b23,5d4bf24dcf0b3a0f3f3580a2,prompted,footwear,Q1,am,co,Colombia
+22c17763d990e171,5d4be78acf0b3a0f3f345a14,baseline,footwear,Q1,as,id,Indonesia
+21a4b7ce4581cc54,5d4be78acf0b3a0f3f345a14,prompted,footwear,Q1,as,id,Indonesia
+706cca6a1a78341f,5d4becb3cf0b3a0f3f34e59a,baseline,footwear,Q1,af,zw,Zimbabwe
+961e65bd5932d636,5d4becb3cf0b3a0f3f34e59a,prompted,footwear,Q1,af,zw,Zimbabwe
+24207598b5ebac16,5d4bf2c2cf0b3a0f3f358d9c,baseline,footwear,Q1,as,kh,Cambodia
+448cd788f8b087f4,5d4bf2c2cf0b3a0f3f358d9c,prompted,footwear,Q1,as,kh,Cambodia
+538cc7503a70e8c1,5d4beee9cf0b3a0f3f352444,baseline,footwear,Q1,af,ng,Nigeria
+5405d3de3dc16583,5d4beee9cf0b3a0f3f352444,prompted,footwear,Q1,af,ng,Nigeria
+eb773f46566cdf9f,5d4beebecf0b3a0f3f351f34,baseline,footwear,Q1,as,ph,Philippines
+879e18092dd02990,5d4beebecf0b3a0f3f351f34,prompted,footwear,Q1,as,ph,Philippines
+071ff5987080ff1c,5d4bdf26cf0b3a0f3f337341,baseline,footwear,Q2,af,tg,Togo
+137407f2c9c84d61,5d4bdf26cf0b3a0f3f337341,prompted,footwear,Q2,af,tg,Togo
+faad47a731028839,5ec4fb80f0611d7ddd7428aa,baseline,footwear,Q2,am,co,Colombia
+9870abd4ec664d02,5ec4fb80f0611d7ddd7428aa,prompted,footwear,Q2,am,co,Colombia
+db023bf3758e9ee9,5d4bf2d6cf0b3a0f3f358fea,baseline,footwear,Q2,as,kh,Cambodia
+5636c72501c001e9,5d4bf2d6cf0b3a0f3f358fea,prompted,footwear,Q2,as,kh,Cambodia
+ed1d4086a9640e47,5d4bee44cf0b3a0f3f351150,baseline,footwear,Q2,af,rw,Rwanda
+00ba8d5f3aa6ce8b,5d4bee44cf0b3a0f3f351150,prompted,footwear,Q2,af,rw,Rwanda
+669d85adeeb9703f,5ec4fb67f0611d7ddd7427d0,baseline,footwear,Q2,am,co,Colombia
+d027dd10f7204092,5ec4fb67f0611d7ddd7427d0,prompted,footwear,Q2,am,co,Colombia
+57724be783205fbd,5d4bed15cf0b3a0f3f34ef8a,baseline,footwear,Q2,as,vn,Vietnam
+3f8eed89e23056d1,5d4bed15cf0b3a0f3f34ef8a,prompted,footwear,Q2,as,vn,Vietnam
+498b32916eadfd86,5ec4fad3f0611d7ddd7422fa,baseline,footwear,Q2,af,gh,Ghana
+33b48d5b09e49b57,5ec4fad3f0611d7ddd7422fa,prompted,footwear,Q2,af,gh,Ghana
+03a25e9f58209704,5d4be672cf0b3a0f3f343b09,baseline,footwear,Q3,af,tz,Tanzania
+b9982276a7623326,5d4be672cf0b3a0f3f343b09,prompted,footwear,Q3,af,tz,Tanzania
+7c3770fbb51f0b4a,5d4be09ccf0b3a0f3f3398bb,baseline,footwear,Q3,am,br,Brazil
+0c29d96cb572056e,5d4be09ccf0b3a0f3f3398bb,prompted,footwear,Q3,am,br,Brazil
+94cd8c804c65295e,5edfe79012a022abbc87ea5a,baseline,footwear,Q3,as,np,Nepal
+e243cbcca236a156,5edfe79012a022abbc87ea5a,prompted,footwear,Q3,as,np,Nepal
+5e2acab5bc976729,5d4be092cf0b3a0f3f3397a5,baseline,footwear,Q3,eu,nl,Netherlands
+ffbee4e8956096e6,5d4be092cf0b3a0f3f3397a5,prompted,footwear,Q3,eu,nl,Netherlands
+f558a32af72dcdb0,5ec4fb75f0611d7ddd74284a,baseline,footwear,Q3,am,co,Colombia
+1a9f886a15cbe2aa,5ec4fb75f0611d7ddd74284a,prompted,footwear,Q3,am,co,Colombia
+d84188c9ff201b03,5d4bf296cf0b3a0f3f35885a,baseline,footwear,Q3,as,cn,China
+cfa344c5c71b5f0e,5d4bf296cf0b3a0f3f35885a,prompted,footwear,Q3,as,cn,China
+78d76989523505e3,5d4bef4dcf0b3a0f3f352ff2,baseline,footwear,Q3,as,np,Nepal
+2905623d479b2539,5d4bef4dcf0b3a0f3f352ff2,prompted,footwear,Q3,as,np,Nepal
+1c8c4a67a071abe4,5d4bdfc3cf0b3a0f3f33824f,baseline,footwear,Q4,am,co,Colombia
+127f836645d538a5,5d4bdfc3cf0b3a0f3f33824f,prompted,footwear,Q4,am,co,Colombia
+5905ec0e858c673c,5d4be6b3cf0b3a0f3f344270,baseline,footwear,Q4,as,cn,China
+124d8df2a2ccb4b5,5d4be6b3cf0b3a0f3f344270,prompted,footwear,Q4,as,cn,China
+41bf777bd39e7d87,5d4bdf81cf0b3a0f3f337c37,baseline,footwear,Q4,eu,ro,Romania
+6e57aa27a3fd944f,5d4bdf81cf0b3a0f3f337c37,prompted,footwear,Q4,eu,ro,Romania
+5c67a454e13434da,5d4bef5fcf0b3a0f3f353214,baseline,footwear,Q4,as,np,Nepal
+ee1aa67fb7bcf3aa,5d4bef5fcf0b3a0f3f353214,prompted,footwear,Q4,as,np,Nepal
+ae85a0433e7a28a6,5d4bdf9ecf0b3a0f3f337f0b,baseline,footwear,Q4,eu,ch,Switzerland
+3f2d5c5ce0f74904,5d4bdf9ecf0b3a0f3f337f0b,prompted,footwear,Q4,eu,ch,Switzerland
+e1de5e6e7aa4afeb,5d4be0e9cf0b3a0f3f33a1a1,baseline,footwear,Q4,as,in,India
+06deaa50bb36a4a8,5d4be0e9cf0b3a0f3f33a1a1,prompted,footwear,Q4,as,in,India
+20de7f3f02adc3dc,5d4be0dccf0b3a0f3f33a033,baseline,footwear,Q4,eu,nl,Netherlands
+94378a61cb793490,5d4be0dccf0b3a0f3f33a033,prompted,footwear,Q4,eu,nl,Netherlands

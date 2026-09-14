@@ -1,0 +1,3 @@
+model,task,study_label,n,metric,primary_score
+qwen,captioning,roof,1,accepted_term_recall,1.0
+qwen,classification,roof,1,top1_accuracy,1.0

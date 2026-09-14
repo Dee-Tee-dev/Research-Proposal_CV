@@ -1,24 +1,29 @@
-# Socioeconomic and Regional Performance Gaps in Vision-Language Models
+# Income-Related Performance Gaps in Vision-Language Models
 
 This repository contains the code, proposal, and reproducible data split for a
-Computer Vision course project. The study compares CLIP zero-shot
-classification and BLIP image captioning on household-object images from Dollar
-Street.
+Computer Vision course project. The study compares contrastive, generative,
+and detection baselines on household-object images from Dollar Street.
 
 The main comparison is across four income quartiles. Regional results are
 secondary because the available images are not balanced equally across regions.
 
 ## Study design
 
-- Models: `openai/clip-vit-base-patch32` and
-  `Salesforce/blip-image-captioning-base`
+- Models: CLIP, BLIP, Qwen2.5-VL-3B, InternVL3.5-2B, and YOLO-World
 - Categories: roof, light source, stove, trash container, switch, footwear
 - Sample: 168 unique images
 - Balance: 7 images per category in each of 4 income quartiles
 - CLIP metrics: top-1 accuracy and correct-label rank
-- BLIP metrics: accepted-term recall and a later blinded manual review
+- BLIP/Qwen/InternVL caption metric: accepted-term recall plus semantic review
+- Qwen/InternVL classification metric: forced-choice top-1 accuracy
+- YOLO-World metric: image-level correct-class detection rate
 - BLIP intervention: the label-free prefix
   `the main household object in this image is`
+
+The general-purpose VLMs use the same forced-choice instruction and
+deterministic decoding. YOLO-World uses the same six text categories. Because
+Dollar Street does not include bounding boxes, detections are evaluated at the
+image level; mAP and IoU are deliberately not reported.
 
 The category names used for evaluation are intentionally broader than some
 ImageNet labels. For example, a correct caption containing "lantern" should not
@@ -36,6 +41,7 @@ src/vlm_gap/       Reusable data, model, and metric code
 scripts/           Download, validation, and evaluation commands
 tests/             Fast tests that do not download models
 results/           Generated predictions and summaries (ignored by Git)
+docs/              Experiment log, method notes, and literature review
 ```
 
 ## Setup
@@ -47,6 +53,12 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m pip install -e .
+```
+
+To run Qwen, InternVL, or YOLO-World, install the optional model packages:
+
+```bash
+python -m pip install -r requirements-models.txt
 ```
 
 On Apple Silicon, PyTorch will use MPS when it is available. The code also
@@ -83,39 +95,103 @@ requirements.
 python scripts/run_evaluation.py --limit 4
 ```
 
-Then run the full fixed subset:
+This legacy command runs the original CLIP/BLIP experiment. The expanded
+benchmark can be checked with selected models before a full run:
 
 ```bash
-python scripts/run_evaluation.py
+python scripts/run_benchmark.py --models clip blip --limit 4
+python scripts/run_benchmark.py --models yolo_world --limit 4
+python scripts/run_benchmark.py --models qwen internvl --limit 1
+```
+
+For Divya's full Qwen run, use the resumable runner. It saves both tasks after
+every completed image and safely skips those images when restarted:
+
+```bash
+PYTHONPATH=.qwen-deps python scripts/run_qwen_resumable.py --device cpu
+```
+
+YOLO-World uses a predeclared confidence threshold of 0.25. Optional threshold
+sensitivity checks can be run with `--yolo-confidence 0.05` or `0.50`; they
+must be reported separately from the primary result.
+
+Then run the full fixed subset. A CUDA machine or Colab runtime is recommended
+for Qwen and InternVL:
+
+```bash
+python scripts/run_benchmark.py \
+  --models clip blip qwen internvl yolo_world
 ```
 
 Outputs are written to:
 
-- `results/predictions.csv`
-- `results/summary_by_income.csv`
-- `results/summary_by_category.csv`
+- `results/benchmark_predictions.csv`
+- `results/benchmark_by_income.csv`
+- `results/benchmark_by_category.csv`
+- `results/income_gap_estimates.csv`
+- `results/failure_cases.csv`
+- `results/run_metadata.json`
 
-The first model run downloads pretrained weights from Hugging Face.
+The first run of each model downloads its pretrained weights. The result files
+used in the paper are stored in `results/combined_final/` and the model-specific
+result folders.
 
-## Current project status
+The separately executed CLIP, BLIP, and Qwen predictions can be combined with:
 
-- The fixed 168-image subset has been downloaded and validated locally.
-- All six fast repository tests pass.
-- A four-image end-to-end smoke test was completed on 2026-07-29.
-- Full balanced evaluation and blinded caption review are still pending.
+```bash
+python scripts/finalize_divya_results.py
+```
+
+The final combined results and paper can be checked with:
+
+```bash
+python scripts/check_combined_submission.py
+```
+
+## Results included in this repository
+
+- The combined benchmark is complete: 1,344 validated prediction rows across
+  eight model-task conditions and 168 images per condition.
+- CLIP, BLIP, Qwen2.5-VL, InternVL3.5, and YOLO-World results are integrated.
+- The full two-rater BLIP review contains 336 adjudicated captions; the separate
+  Qwen semantic audit covers a deterministic 84-image half-sample.
+- The final paper uses the official CVPR 2026 two-column template and stays
+  within the two-page course limit. Files are stored under `paper/cvpr2026/`
+  and `output/pdf/`.
+- The automated test suite and `scripts/check_combined_submission.py` pass.
+
+The final integration uses the exact proposal CLIP template
+`a photo of a {label}`. Its 145/168 result supersedes the earlier
+143/168 run that used different prompt wording.
 
 See [`docs/experiment_log.md`](docs/experiment_log.md) for the tested results
-and their interpretation limits.
+and their interpretation limits. See
+[`docs/literature_review.md`](docs/literature_review.md) for the baseline
+background and the difference from the closest Dollar Street study.
 
-## Launch the early demo
+## Launch the demo
+
+Hosted live demo: [Hugging Face Space](https://divyatw-vlm-income-gap-demo.hf.space)
 
 ```bash
 python app.py
 ```
 
-The initial demo supports an uploaded image and displays the CLIP prediction,
-an unprompted BLIP caption, and the prompted BLIP caption side by side.
-Aggregate charts will be added after the full evaluation has been run.
+The demo supports an uploaded image and a selectable live comparison of all five
+baselines. Public Hugging Face checkpoints download automatically on first use;
+the hosted Space is configured for ZeroGPU. Qwen, InternVL, and YOLO-World may
+take longer on their first run.
+Divya's validated aggregate tables and charts are stored under
+`results/divya/combined_full` and `paper/assets/divya`. Final cross-model tables
+are stored under `results/combined_final`, and demo screenshots are under
+`results/demo_evidence`.
+
+## Final paper
+
+- Editable source: `paper/final_short_paper.md`
+- Editable Word file: `output/Income_Gaps_VLM_Short_Paper.docx`
+- Submission PDF: `output/pdf/Income_Gaps_VLM_Short_Paper.pdf`
+- Paper checks: `python scripts/check_combined_submission.py`
 
 ## Reproducibility notes
 

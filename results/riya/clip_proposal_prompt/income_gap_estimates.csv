@@ -1,0 +1,2 @@
+model,task,q1_score,q4_score,q4_minus_q1_gap,gap_ci_95_low,gap_ci_95_high,bootstrap_samples
+clip,classification,0.7619047619047619,0.9285714285714286,0.16666666666666674,0.04761904761904756,0.2857142857142858,2000

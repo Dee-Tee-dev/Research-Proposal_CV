@@ -1,0 +1,5 @@
+-r requirements.txt
+accelerate>=0.34
+qwen-vl-utils>=0.0.8
+sentencepiece>=0.2
+ultralytics>=8.3

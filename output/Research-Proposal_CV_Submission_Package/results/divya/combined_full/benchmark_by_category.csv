@@ -1,0 +1,31 @@
+model,task,study_label,n,metric,primary_score
+blip_baseline,captioning,footwear,28,accepted_term_recall,0.7142857142857143
+blip_baseline,captioning,light source,28,accepted_term_recall,0.4642857142857143
+blip_baseline,captioning,roof,28,accepted_term_recall,0.4642857142857143
+blip_baseline,captioning,stove,28,accepted_term_recall,0.75
+blip_baseline,captioning,switch,28,accepted_term_recall,0.5714285714285714
+blip_baseline,captioning,trash container,28,accepted_term_recall,0.21428571428571427
+blip_prompted,captioning,footwear,28,accepted_term_recall,0.75
+blip_prompted,captioning,light source,28,accepted_term_recall,0.4642857142857143
+blip_prompted,captioning,roof,28,accepted_term_recall,0.32142857142857145
+blip_prompted,captioning,stove,28,accepted_term_recall,0.6785714285714286
+blip_prompted,captioning,switch,28,accepted_term_recall,0.75
+blip_prompted,captioning,trash container,28,accepted_term_recall,0.10714285714285714
+clip,classification,footwear,28,top1_accuracy,1.0
+clip,classification,light source,28,top1_accuracy,0.6785714285714286
+clip,classification,roof,28,top1_accuracy,0.75
+clip,classification,stove,28,top1_accuracy,0.8928571428571429
+clip,classification,switch,28,top1_accuracy,0.9642857142857143
+clip,classification,trash container,28,top1_accuracy,0.8214285714285714
+qwen,captioning,footwear,28,accepted_term_recall,0.5714285714285714
+qwen,captioning,light source,28,accepted_term_recall,0.7857142857142857
+qwen,captioning,roof,28,accepted_term_recall,0.42857142857142855
+qwen,captioning,stove,28,accepted_term_recall,0.8571428571428571
+qwen,captioning,switch,28,accepted_term_recall,0.6428571428571429
+qwen,captioning,trash container,28,accepted_term_recall,0.5
+qwen,classification,footwear,28,top1_accuracy,1.0
+qwen,classification,light source,28,top1_accuracy,0.8571428571428571
+qwen,classification,roof,28,top1_accuracy,0.39285714285714285
+qwen,classification,stove,28,top1_accuracy,1.0
+qwen,classification,switch,28,top1_accuracy,0.9285714285714286
+qwen,classification,trash container,28,top1_accuracy,1.0

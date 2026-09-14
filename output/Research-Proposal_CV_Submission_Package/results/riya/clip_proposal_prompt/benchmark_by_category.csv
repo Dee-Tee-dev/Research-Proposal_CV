@@ -1,0 +1,7 @@
+model,task,study_label,n,metric,primary_score
+clip,classification,footwear,28,top1_accuracy,1.0
+clip,classification,light source,28,top1_accuracy,0.6071428571428571
+clip,classification,roof,28,top1_accuracy,0.7857142857142857
+clip,classification,stove,28,top1_accuracy,1.0
+clip,classification,switch,28,top1_accuracy,0.9285714285714286
+clip,classification,trash container,28,top1_accuracy,0.8571428571428571

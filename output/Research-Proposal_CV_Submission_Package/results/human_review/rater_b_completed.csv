@@ -1,0 +1,337 @@
+review_id,image_file,caption,object_correct,non_informative,hallucination,reviewer_notes,open_image
+db023bf3758e9ee9,data/images/5d4bf2d6cf0b3a0f3f358fea.jpg,a pair of shoes laying on the ground,1,0,0,,Open image
+f9c66f2e6320692b,data/images/5d4be664cf0b3a0f3f343977.JPG,a close up of a white plastic pipe,0,0,1,,Open image
+7b23463d1831f1c6,data/images/5d4bf2b2cf0b3a0f3f358bb0.jpg,a brick oven with a large pan on top,1,0,0,,Open image
+e3327c7a170863b5,data/images/5d4bf0bfcf0b3a0f3f355712.jpg,the main household object in this image is a house,1,0,0,,Open image
+db99ad5b4ca14a8a,data/images/5d4bdf05cf0b3a0f3f336fb3.JPG,a light that is on a wooden floor,1,0,0,,Open image
+1e33dd6357c6ed52,data/images/5d4bdfb1cf0b3a0f3f33809d.jpg,a lamp on a table next to a bottle,1,0,0,,Open image
+229e76e7fd4a75d2,data/images/5ec4f81af0611d7ddd740be2.jpg,the main household object in this image is a white electrical device,1,0,0,,Open image
+a6f7333f49e0f310,data/images/5ec4fa30f0611d7ddd741dbe.JPG,the main household object in this image is a gas stove,1,0,1,,Open image
+5786c2c07569de62,data/images/5d4bf24dcf0b3a0f3f3580a2.jpg,a pair of dirty shoes on the ground,1,0,0,,Open image
+fbdf39cc601ede75,data/images/5ec4fb68f0611d7ddd7427d4.jpg,the main household object in this image is a wall switch,1,0,0,,Open image
+edb0cf92b69d85fd,data/images/5d4beacdcf0b3a0f3f34b1d8.jpg,the main household object in this image is a dirty room,0,1,0,,Open image
+4b8a6e03b85439d9,data/images/5d4be02ecf0b3a0f3f338c56.JPG,two speakers on a brick wall,0,0,1,,Open image
+06f8a871b939307d,data/images/5d4bf28fcf0b3a0f3f358788.jpg,the main household object in this image is a switch,1,0,0,,Open image
+192c715a6bb90164,data/images/5d4be76ecf0b3a0f3f3456d4.jpg,a bag of garbage sitting on the ground,1,0,0,,Open image
+c2d43b298e80ccf3,data/images/5d4befc5cf0b3a0f3f353ce2.jpg,a person is using a knife to cut a piece of wood,0,0,1,,Open image
+62c5ebaa11361cab,data/images/5d4bef4dcf0b3a0f3f352fe2.jpg,a black stove top,1,0,0,,Open image
+507b02d34be508fd,data/images/5d4be196cf0b3a0f3f33b4c3.jpg,a bathroom with a shower head and a shower curtain,0,0,1,,Open image
+a642beb689d09f28,data/images/5d4bdf69cf0b3a0f3f337997.jpg,a white basket with a bunch of beer bottles,1,0,1,,Open image
+41bf777bd39e7d87,data/images/5d4bdf81cf0b3a0f3f337c37.jpg,a pair of shoes on a rug,1,0,0,,Open image
+1600007dc56d1c35,data/images/5d4bf28fcf0b3a0f3f358788.jpg,a blue and white sign with a white and blue sign,0,0,0,,Open image
+905733a434686ee9,data/images/5d4be03ccf0b3a0f3f338dde.JPG,the main household object in this image is a chandel,1,0,0,,Open image
+dc188658dc35b17c,data/images/5d4bdf69cf0b3a0f3f337997.jpg,the main household object in this image is a basket of beer bottles,1,0,1,,Open image
+cfa344c5c71b5f0e,data/images/5d4bf296cf0b3a0f3f35885a.jpg,the main household object in this image is a rack of shoes,1,0,0,,Open image
+6f193c18d6a5e700,data/images/5d4be53dcf0b3a0f3f341904.JPG,a kitchen with a white ceiling and a window,1,0,1,,Open image
+ce24514258e37e85,data/images/5d4bee51cf0b3a0f3f3512b8.jpg,the main household object in this image is a pile of dirt,1,0,0,,Open image
+42b625991a934b7c,data/images/5d4bf260cf0b3a0f3f3582cc.jpg,the main household object in this image is a bottle of water,0,0,1,,Open image
+7b63221281cf0ebb,data/images/5d4bebfdcf0b3a0f3f34d421.jpg,the main household object in this image is a ceiling light,1,0,0,,Open image
+ffbee4e8956096e6,data/images/5d4be092cf0b3a0f3f3397a5.JPG,the main household object in this image is a pair of adidas ' s shoes,1,0,0,,Open image
+1f91a01c278c32bb,data/images/5d4be3ffcf0b3a0f3f33f4fa.jpg,the main household object in this image is a picture of a woman,1,0,0,,Open image
+982f21ea03c0094b,data/images/5d4be02fcf0b3a0f3f338c7c.JPG,the main household object in this image is a white wall,1,0,0,,Open image
+afb6afbe5e247208,data/images/5d4be404cf0b3a0f3f33f59c.JPG,the main household object in this image is a house,1,0,0,,Open image
+93d3d5f003293392,data/images/5ec4f831f0611d7ddd740cab.JPG,a white light switch on a wall,1,0,0,,Open image
+8d3d6f75ccf12235,data/images/5d4bf377cf0b3a0f3f35a144.jpg,the main household object in this image is a metal curtain,0,0,0,,Open image
+c7a379eaa6f90318,data/images/5ec4f60af4a4fb7dc0387c46.JPG,how to install a light switch,1,0,0,,Open image
+5e29fc324d7a7aef,data/images/5d4bdfefcf0b3a0f3f33871e.jpg,a white bag with a black handle,1,0,1,,Open image
+94a5b7e9581f9752,data/images/5ec4fa3cf0611d7ddd741e2c.JPG,a purple trash can sitting on a tiled floor,1,0,0,,Open image
+00ac34b9ae62e017,data/images/5d4be22ecf0b3a0f3f33c475.JPG,the main household object in this image is a stove,1,0,0,,Open image
+dc79d13f0c83f4de,data/images/5ec4f97ef0611d7ddd7417d1.jpg,a pink wall with a small hole in it,0,0,0,,Open image
+514b680934ba77f9,data/images/5d4be42ccf0b3a0f3f33fa48.JPG,the main household object in this image is a toothbrush,0,0,1,,Open image
+cd5060b7a7886514,data/images/5d4be977cf0b3a0f3f348ac0.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+3fb4fa3adf224d71,data/images/5d4be8dccf0b3a0f3f3478b6.jpg,a blue trash bag,1,0,0,,Open image
+c0bcf7f27283f4b9,data/images/5f8dfa6069531c2f81fdef7f.jpg,a white toilet sitting in a dark room,0,0,1,,Open image
+bc9950fa03dcfab6,data/images/5ec4f834f0611d7ddd740cc3.JPG,a lamp on a table next to a computer,1,0,1,,Open image
+22c17763d990e171,data/images/5d4be78acf0b3a0f3f345a14.jpg,a pair of red shoes on the ground,1,0,0,,Open image
+09e14bc649601e7d,data/images/5d4bef87cf0b3a0f3f3536b6.jpg,a green trash can with a plastic container,1,0,0,,Open image
+9870abd4ec664d02,data/images/5ec4fb80f0611d7ddd7428aa.jpg,the main household object in this image is a pair of crocy sandals,1,0,0,,Open image
+956a8b1bd73c8ec2,data/images/5ec4f81af0611d7ddd740be2.jpg,a person is holding a white electrical device,1,0,0,,Open image
+94378a61cb793490,data/images/5d4be0dccf0b3a0f3f33a033.JPG,the main household object in this image is a pair of shoes,1,0,0,,Open image
+9c9041b992bbed4c,data/images/5d4be53dcf0b3a0f3f341904.JPG,the main household object in this image is a ceiling,1,0,0,,Open image
+829beb26633aa0c5,data/images/5d4be752cf0b3a0f3f3453ca.jpg,the main household object in this image is a water well,0,0,0,,Open image
+26a80e369ec646dc,data/images/5d4bf2b2cf0b3a0f3f358bb0.jpg,the main household object in this image is a large pan,0,0,0,,Open image
+7d4ede7edfc39ad6,data/images/5d4beab2cf0b3a0f3f34aea4.jpg,the main household object in this image is a switch box,1,0,0,,Open image
+2d07a05aecd44b68,data/images/5d4bef59cf0b3a0f3f353156.jpg,the main household object in this image is a frying pan,1,0,0,,Open image
+0c875d43c7d00d87,data/images/5d4be048cf0b3a0f3f338f18.jpg,a white stove with a kettle on top,1,0,0,,Open image
+e26b53839fdb7c24,data/images/5d4bed80cf0b3a0f3f34fbb2.jpg,the main household object in this image is a white light switch,1,0,0,,Open image
+098dbbd9661bd3dc,data/images/5ec4fb81f0611d7ddd7428b0.jpg,the main household object in this image is a toilet,0,0,1,,Open image
+cd5c7b61d13b7a56,data/images/5d4be0abcf0b3a0f3f339a79.jpg,a ceiling fan in a room with a yellow wall,1,0,0,,Open image
+c6c21e8a0864b1fd,data/images/5ec4fa7bf0611d7ddd74200b.jpg,a stove and oven in a kitchen with a lot of dirty stuff,1,0,0,,Open image
+795e4f8cd52d8129,data/images/5d4be1c8cf0b3a0f3f33b9cf.JPG,a pile of trash sitting in the grass,1,0,0,,Open image
+59b6f1b31c70e776,data/images/5d4bee22cf0b3a0f3f350e6a.jpg,the main household object in this image is a broken oven,0,0,0,,Open image
+57724be783205fbd,data/images/5d4bed15cf0b3a0f3f34ef8a.jpg,a pair of yellow shoes on the ground,1,0,0,,Open image
+c49e8efcf828de35,data/images/5ec4f90ef0611d7ddd741415.jpg,the main household object in this image is a lamp,1,0,0,,Open image
+0739e57660ceccce,data/images/5ec4f989f0611d7ddd74182b.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+2a07a2fa2f52e531,data/images/5d4bde4dcf0b3a0f3f335e21.jpg,a pot of water is on the stove,1,0,0,,Open image
+5a0b8139596c0aa6,data/images/5ec4f86df0611d7ddd740eb5.jpg,the main household object in this image is a toilet,0,0,1,,Open image
+ddaf763c89dda1eb,data/images/5d4be42ccf0b3a0f3f33fa48.JPG,a person holding a cell phone in their hand,0,0,1,,Open image
+2cc3372510610e33,data/images/5ec4f97ef0611d7ddd7417d1.jpg,the main household object in this image is a door handle,0,0,0,,Open image
+1a9f886a15cbe2aa,data/images/5ec4fb75f0611d7ddd74284a.jpg,the main household object in this image is a pair of crocy crocy crocy crocy crocy crocy crocy crocy crocy,1,0,0,,Open image
+2a6ea88fb66276b7,data/images/5d4befa8cf0b3a0f3f353974.jpg,a stove with a rack of cooking uts in it,1,0,0,,Open image
+ed1d4086a9640e47,data/images/5d4bee44cf0b3a0f3f351150.jpg,a pair of blue shoes sitting on the floor,1,0,0,,Open image
+e1de5e6e7aa4afeb,data/images/5d4be0e9cf0b3a0f3f33a1a1.jpg,a group of shoes sitting on the floor,1,0,0,,Open image
+5e2acab5bc976729,data/images/5d4be092cf0b3a0f3f3397a5.JPG,a pair of white sneakers on a wooden floor,1,0,0,,Open image
+b1d3cbb255ae9d90,data/images/5d4bebfdcf0b3a0f3f34d421.jpg,a kitchen with two lights on the ceiling,1,0,1,,Open image
+c365b8f2f5a0e8b4,data/images/5ec4f86df0611d7ddd740eb2.jpg,the main household object in this image is a roof,1,0,0,,Open image
+b7cd42790def53d0,data/images/5fa329ada4fd6103df5dff73.jpeg,a ceiling with a hole in it,1,0,0,,Open image
+216c75837da29065,data/images/5d4be1bbcf0b3a0f3f33b8c9.jpg,a woman is standing in front of a stove,1,0,0,,Open image
+c3a19a5bcdded8fb,data/images/5d4bde4dcf0b3a0f3f335e21.jpg,the main household object in this image is a pot on the stove,1,0,0,,Open image
+ee1aa67fb7bcf3aa,data/images/5d4bef5fcf0b3a0f3f353214.jpg,the main household object in this image is a pair of black and green sandals,1,0,0,,Open image
+f5f9ab9428b55cd1,data/images/5d4be7b3cf0b3a0f3f345ec4.jpg,a black pot sitting on top of a cement,1,0,0,,Open image
+7509bdc348bd7664,data/images/5ec4fb83f0611d7ddd7428c0.jpg,a black trash bag sitting on the floor,1,0,0,,Open image
+b1ff854e3875604d,data/images/5d4bf0bfcf0b3a0f3f355712.jpg,a house with a tar tar covering it,1,0,0,,Open image
+ac52aa77940917af,data/images/5d4be0fecf0b3a0f3f33a415.jpeg,the main household object in this image is the gas stove,1,0,0,,Open image
+94418404c1a775b0,data/images/5ec4f948f0611d7ddd741601.JPG,a black stove,1,0,0,,Open image
+d8ba05ef691208df,data/images/5d4bf271cf0b3a0f3f3583da.jpg,the main household object in this image is a ceiling,1,0,0,,Open image
+f44bc0bf5543a2bb,data/images/5d4bdefccf0b3a0f3f336ec5.jpg,a roof with a roof venter,1,0,0,,Open image
+77561b7da08706ea,data/images/5ec4f5caf4a4fb7dc0387a0c.jpg,the main household object in this image is a stove,1,0,0,,Open image
+2905623d479b2539,data/images/5d4bef4dcf0b3a0f3f352ff2.jpg,the main household object in this image is a shelf of shoes,1,0,0,,Open image
+a7a893f8f7e73c22,data/images/5d4be103cf0b3a0f3f33a4af.jpg,a ceiling with a clock on it,0,0,1,,Open image
+317c5c1f2aea7936,data/images/5ec4f834f0611d7ddd740cc3.JPG,the main household object in this image is a lamp,1,0,0,,Open image
+973d697ae9acfce9,data/images/5d4bdfefcf0b3a0f3f33871e.jpg,the main household object in this image is a trash bag,1,0,0,,Open image
+cd3f7f1d28f86e0f,data/images/5ec4fa5ff0611d7ddd741f24.jpg,the main household object in this image is a white light switch,1,0,0,,Open image
+01ef2ddb27c7dd26,data/images/5d4bef60cf0b3a0f3f353222.jpg,a white light switch on a wall,1,0,0,,Open image
+75ed0e102c48ffaf,data/images/5d4be0abcf0b3a0f3f339a79.jpg,the main household object in this image is a ceiling fan,1,0,0,,Open image
+78d76989523505e3,data/images/5d4bef4dcf0b3a0f3f352ff2.jpg,a shelf with a bunch of shoes on it,1,0,0,,Open image
+ec82d56c4ccb8add,data/images/5ec4fba1f0611d7ddd7429bc.jpg,a kitchen with a ceiling that has been painted,1,0,0,,Open image
+7f7249f17f8b94d3,data/images/5d4be103cf0b3a0f3f33a4af.jpg,the main household object in this image is a dont,0,1,0,,Open image
+4ea58714bec2b31f,data/images/5d4be76ecf0b3a0f3f3456d4.jpg,the main household object in this image is a bag of garbage,1,0,0,,Open image
+121828b3322bb1cd,data/images/5d4bf05ccf0b3a0f3f354caa.jpg,a wooden ceiling with a metal pole and a string,1,0,0,,Open image
+4f6ab4187633216f,data/images/5d4bef89cf0b3a0f3f3536f2.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+febfab15e7d5be97,data/images/5d4beee5cf0b3a0f3f3523d2.jpg,the main household object in this image is garbage,1,0,0,,Open image
+9a7e9369d3fde64b,data/images/5d4bf185cf0b3a0f3f356a5e.jpg,the main household object in this image is a switch box,1,0,0,,Open image
+def4f30f682c8a4f,data/images/5d4bef4dcf0b3a0f3f352fe2.jpg,the main household object in this image is a gas stove,1,0,0,,Open image
+7c3770fbb51f0b4a,data/images/5d4be09ccf0b3a0f3f3398bb.JPG,a pair of black flip flops on a towel,1,0,0,,Open image
+ca98ffe3ac2069be,data/images/5d4bed80cf0b3a0f3f34fbb2.jpg,a light switch in a white wall,1,0,0,,Open image
+a68bb905e12fbe9f,data/images/5d4be404cf0b3a0f3f33f59c.JPG,a clear blue sky,0,0,0,,Open image
+1c5bc16f8a5acd7e,data/images/5d4bf185cf0b3a0f3f356a5e.jpg,a white wall,0,1,0,,Open image
+ab65cfca9fb41e18,data/images/5d4bf27dcf0b3a0f3f358554.jpg,a pile of garbage in a wooden box,1,0,0,,Open image
+1c8c4a67a071abe4,data/images/5d4bdfc3cf0b3a0f3f33824f.jpg,a person wearing blue shoes and jeans,1,0,0,,Open image
+5b94404c3fb6c764,data/images/5d4bf191cf0b3a0f3f356bb4.jpg,a dog standing on a dirt road next to a pile of garbage,1,0,0,,Open image
+3c87c03592947b96,data/images/5d4bdfa0cf0b3a0f3f337f53.jpg,a person is standing in a room with a light,0,0,1,,Open image
+fe6efc5e797e6f26,data/images/5d4be631cf0b3a0f3f343397.JPG,the main household object in this image is a light bulb,1,0,0,,Open image
+669d85adeeb9703f,data/images/5ec4fb67f0611d7ddd7427d0.jpg,a bunch of shoes,1,0,0,,Open image
+470e73bc0b71ba17,data/images/5ec4fb73f0611d7ddd742836.jpg,the main household object in this image is a microwave,1,0,0,,Open image
+486a13b8c40244db,data/images/5d4beff5cf0b3a0f3f354210.jpg,a pile of rocks and sticks on the ground,1,0,0,,Open image
+e00316bb64801c72,data/images/5d4bf27dcf0b3a0f3f358554.jpg,the main household object in this image is a wooden box with a bunch of flowers inside,1,0,1,,Open image
+b9868a5ef5ad7813,data/images/5d4bee22cf0b3a0f3f350e6a.jpg,a pile of trash on a dirt road,0,0,0,,Open image
+144d747196d6ca19,data/images/5d4be0becf0b3a0f3f339caf.jpg,a trash can be seen in the picture,1,0,0,,Open image
+3f8eed89e23056d1,data/images/5d4bed15cf0b3a0f3f34ef8a.jpg,the main household object in this image is a pair of yellow shoes,1,0,0,,Open image
+7b5f865d89ecde47,data/images/5d4becefcf0b3a0f3f34eb88.jpg,a plane flying through a cloudy sky,0,0,1,,Open image
+44e4561487037ff4,data/images/5d4be0ddcf0b3a0f3f33a03d.JPG,a stove with a pot on top of it,1,0,0,,Open image
+7147c0a744203888,data/images/5ec4fb83f0611d7ddd7428c0.jpg,the main household object in this image is a trash bag,1,0,0,,Open image
+338be5e52e492b8e,data/images/5d4bec7acf0b3a0f3f34dfca.jpg,the main household object in this image is a switch box,1,0,0,,Open image
+344bfd7a23c2bc3d,data/images/5ec4fb73f0611d7ddd742836.jpg,a microwave sitting on a table with a green and white cover,1,0,0,,Open image
+06deaa50bb36a4a8,data/images/5d4be0e9cf0b3a0f3f33a1a1.jpg,the main household object in this image is the sandals,1,0,0,,Open image
+07b0bc3f9ff9c317,data/images/5d4be631cf0b3a0f3f343397.JPG,a light that is on a wall,1,0,0,,Open image
+7d2fc8d499ddaba9,data/images/5d4be034cf0b3a0f3f338d08.JPG,a white light switch on a wall,1,0,0,,Open image
+0c29d96cb572056e,data/images/5d4be09ccf0b3a0f3f3398bb.JPG,the main household object in this image is a pair of flip flops,1,0,0,,Open image
+c3176aa8a08c3055,data/images/5ec4fa8ff0611d7ddd7420b5.jpg,the main household object in this image is a bird cage,1,0,0,,Open image
+1910673ffeb1c440,data/images/5d4be2ffcf0b3a0f3f33d901.jpg,the main household object in this image is a switch box,1,0,0,,Open image
+ae8a6e07e5d19f84,data/images/5d4bdf05cf0b3a0f3f336fb3.JPG,the main household object in this image is a light bulb,1,0,0,,Open image
+b36f2bb489a6ec75,data/images/5d4be034cf0b3a0f3f338d08.JPG,the main household object in this image is a white wall switch,1,0,0,,Open image
+cc2eea62a6b55d7c,data/images/5d4be15bcf0b3a0f3f33aee7.JPG,a stove and a stove top in a kitchen,1,0,0,,Open image
+09c1654535ebc192,data/images/5d4befa8cf0b3a0f3f353974.jpg,the main household object in this image is a stove,1,0,0,,Open image
+b1a18f34eff5675b,data/images/5d4be106cf0b3a0f3f33a4fb.JPG,the main household object in this image is a gas stove,1,0,0,,Open image
+bc3f23f87975c051,data/images/5ec4f60af4a4fb7dc0387c46.JPG,the main household object in this image is a wall light switch,1,0,0,,Open image
+48410c1dd58323dd,data/images/5d4bf3a8cf0b3a0f3f35a67c.jpg,the main household object in this image is a large piece of wood,1,0,0,,Open image
+a536aa59e17d9b7c,data/images/5d4bed05cf0b3a0f3f34edce.jpg,a stove sitting on a table with a pot on it,1,0,1,,Open image
+5636c72501c001e9,data/images/5d4bf2d6cf0b3a0f3f358fea.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+03a25e9f58209704,data/images/5d4be672cf0b3a0f3f343b09.jpg,a pair of white sneakers on a tiled floor,1,0,0,,Open image
+1012b38e3f64ccdc,data/images/5d4beacdcf0b3a0f3f34b1d8.jpg,a room with clothes hanging on a line,0,0,0,,Open image
+dbbda4300520494a,data/images/5ec4f9e2f0611d7ddd741b33.JPG,a light that is on the ceiling,1,0,0,,Open image
+8f6f71b7dd94fafa,data/images/5d4be956cf0b3a0f3f3486e4.jpg,a pile of garbage on the side of a road,1,0,0,,Open image
+706cca6a1a78341f,data/images/5d4becb3cf0b3a0f3f34e59a.jpg,a pair of pink flip flops on a dirt covered ground,1,0,0,,Open image
+8b6025494e0e7934,data/images/5ec4fb68f0611d7ddd7427d4.jpg,a white light switch on a wall,1,0,0,,Open image
+c2d29a9497f84054,data/images/5d4bf08acf0b3a0f3f355178.jpg,the main household object in this image is a pair of flip flops,1,0,0,,Open image
+35363d427e13efd0,data/images/5d4bf349cf0b3a0f3f359cee.jpg,a small blue toy is in the dirt,0,0,0,,Open image
+d84188c9ff201b03,data/images/5d4bf296cf0b3a0f3f35885a.jpg,a rack of shoes,1,0,0,,Open image
+912bc6ea1917cdd6,data/images/5d4bf168cf0b3a0f3f356784.jpg,a white wall outlet with a black cord,1,0,0,,Open image
+dae5d0a9c58529c9,data/images/5d4bf131cf0b3a0f3f356206.jpg,the main household object in this image is a roof,1,0,0,,Open image
+2f5ee8a24407a477,data/images/5d4be136cf0b3a0f3f33aa95.jpg,a ceiling fan and a ceiling fan in a room,1,0,0,,Open image
+4ed2594345777de0,data/images/5d4bef5dcf0b3a0f3f3531c6.jpg,a cross on a wooden cross,1,0,0,,Open image
+c033c874d527dd50,data/images/5d4be014cf0b3a0f3f338aa4.JPG,the main household object in this image is a switch,1,0,0,,Open image
+8672789081878ea5,data/images/5d4bef60cf0b3a0f3f353222.jpg,the main household object in this image is a white switch,1,0,0,,Open image
+6b6f81003ee71e76,data/images/5d4becffcf0b3a0f3f34ed6c.jpg,a green basket filled with ice and a bottle of water,1,0,1,,Open image
+64b4328e3de52c38,data/images/5d4be1c8cf0b3a0f3f33b9cf.JPG,the main household object in this image is a pile of garbage,1,0,0,,Open image
+0d2f07fb59226545,data/images/5d4be134cf0b3a0f3f33aa59.jpg,the main household object in this image is a basket of food,1,0,0,,Open image
+877285ea5b4cac87,data/images/5d4bde4dcf0b3a0f3f335e25.jpg,the main household object in this image is a light,1,0,0,,Open image
+034f26ae4e350851,data/images/5d4be0b0cf0b3a0f3f339b0b.jpg,a room with a refrigerator and a sink,1,0,0,,Open image
+3a3117d3921e195e,data/images/5d4befa5cf0b3a0f3f353924.jpg,a trash can be seen in the corner of a door,1,0,0,,Open image
+a66e16f6fef9ff39,data/images/5d4bef87cf0b3a0f3f3536b6.jpg,the main household object in this image is a plastic container with a plastic ball inside,0,0,1,,Open image
+d3a78b47f95b69a5,data/images/5ec4fb02f0611d7ddd742487.jpg,the main household object in this image is a gas stove,1,0,0,,Open image
+467fd6f1aa2c8f05,data/images/5ec4f90ef0611d7ddd741415.jpg,a lamp on a nightstand next to a bed,1,0,0,,Open image
+da8e56098e0a4d6f,data/images/5d4bf349cf0b3a0f3f359cee.jpg,the main household object in this image is a blue plastic cup,1,0,0,,Open image
+4af5778c46ea30bd,data/images/5fa329ada4fd6103df5dff73.jpeg,the main household object in this image is a broken ceiling,1,0,1,,Open image
+28cd3828db12d420,data/images/5ec4f9f2f0611d7ddd741bae.JPG,a large tunnel with a long metal tube,0,0,1,,Open image
+136e36648b589b82,data/images/5d4be3ffcf0b3a0f3f33f4fa.jpg,a picture of a woman hanging on a wall,1,0,0,,Open image
+061db7ee42bc2123,data/images/5ec4f948f0611d7ddd741601.JPG,the main household object in this image is a gas stove,1,0,0,,Open image
+5e282a9a24000573,data/images/5fa325b3a4fd6154365dfcd4.jpeg,a white light switch and a white light switch,1,0,1,,Open image
+9ad7bd1a5bd9ce2e,data/images/5ec4fba1f0611d7ddd7429bc.jpg,the main household object in this image is a ceiling,1,0,0,,Open image
+f373913fcd41d6eb,data/images/5f8c634fe894f07b8477dfbe.jpg,a white electrical outlet with a white light,1,0,0,,Open image
+04f5f4721da7583c,data/images/5d4be0ddcf0b3a0f3f33a03d.JPG,the main household object in this image is a stove,1,0,0,,Open image
+dd47348572965b1a,data/images/5d4bf260cf0b3a0f3f3582cc.jpg,a bottle of beer is being held up,0,0,1,,Open image
+549fb091a1b4a064,data/images/5d4bf191cf0b3a0f3f356bb4.jpg,the main household object in this image is a dog,1,0,0,,Open image
+8845a53a5c6ac320,data/images/5d4befa5cf0b3a0f3f353924.jpg,the main household object in this image is a trash can,1,0,0,,Open image
+e243cbcca236a156,data/images/5edfe79012a022abbc87ea5a.jpg,the main household object in this image is a broom,1,0,0,,Open image
+ca466f1dbc74f288,data/images/5d4be798cf0b3a0f3f345bb4.jpg,the main household object in this image is a wooden box,0,0,0,,Open image
+94cd8c804c65295e,data/images/5edfe79012a022abbc87ea5a.jpg,a woman is cleaning a room with a broom,1,0,0,,Open image
+e0b502d881c4d431,data/images/5d4bf131cf0b3a0f3f356206.jpg,a roof with a broken tile on it,1,0,0,,Open image
+3cc4034c478bcd67,data/images/5d4be798cf0b3a0f3f345bb4.jpg,a pile of wood,1,0,0,,Open image
+877a60eef78ccba9,data/images/5d4bf0b4cf0b3a0f3f3555cc.jpg,a red stove on the ground,0,0,1,,Open image
+961952dc2ab269d6,data/images/5ec4f9f2f0611d7ddd741bae.JPG,the main household object in this image is a large tube,0,0,0,,Open image
+d69860036ab1660f,data/images/5ec4f86df0611d7ddd740eb2.jpg,a roof with a broken roof and a broken roof,1,0,0,,Open image
+021fa48fa814840f,data/images/5d4bea54cf0b3a0f3f34a3ac.jpg,the main household object in this image is a wooden pole,1,0,0,,Open image
+045bc3d08acab64b,data/images/5d4beff5cf0b3a0f3f354210.jpg,the main household object in this image is a fire pit,1,0,0,,Open image
+3f2d5c5ce0f74904,data/images/5d4bdf9ecf0b3a0f3f337f0b.JPG,the main household object in this image is a pair of shoes,1,0,0,,Open image
+ac849a9834b0909c,data/images/5d4bde4dcf0b3a0f3f335e25.jpg,a light that is on above a sink,1,0,0,,Open image
+f109940fc80689f3,data/images/5d4be956cf0b3a0f3f3486e4.jpg,the main household object in this image is a dump,1,0,0,,Open image
+3d2c294b6d37b25a,data/images/5d4be2ffcf0b3a0f3f33d901.jpg,a white light switch,1,0,0,,Open image
+5aaf26c6f3327dcc,data/images/5d4be048cf0b3a0f3f338f18.jpg,the main household object in this image is a kettle and a kettle on the stove,1,0,0,,Open image
+a8915041de0974b0,data/images/5d4bf377cf0b3a0f3f35a144.jpg,a close up of a metal curtain with rust,0,0,0,,Open image
+ee37d5d8ab19b2df,data/images/5ec4fb02f0611d7ddd742487.jpg,a stove with a pot on top of it,1,0,0,,Open image
+a000989306273eed,data/images/5d4bea54cf0b3a0f3f34a3ac.jpg,a wall with a wooden beam in it,1,0,0,,Open image
+498b32916eadfd86,data/images/5ec4fad3f0611d7ddd7422fa.jpg,a man standing on a dirt covered ground,1,0,0,,Open image
+b38a7aa18c06203f,data/images/5ec4f91cf0611d7ddd74148c.jpg,the main household object in this image is a lamp,1,0,0,,Open image
+8f42ed0c718e0dfa,data/images/5d4bf3e7cf0b3a0f3f35abe2.jpg,a pile of trash on the side of a road,1,0,0,,Open image
+38f2a7fdf275f2f2,data/images/5d4be014cf0b3a0f3f338aa4.JPG,a white light switch and a white wall,1,0,0,,Open image
+7bf2d77e1372dbab,data/images/5d4bf2fbcf0b3a0f3f359462.jpg,a cat is sitting on a red floor,0,0,1,,Open image
+393183e3caf2d822,data/images/5d4bdf79cf0b3a0f3f337b57.jpg,a plastic bag filled with food and a bag of chips,1,0,0,,Open image
+ef7ef50091d093ca,data/images/5d4be196cf0b3a0f3f33b4c3.jpg,the main household object in this image is a shower head,0,0,1,,Open image
+8a71aaa81e1c6cd4,data/images/5d4be1cbcf0b3a0f3f33ba21.JPG,a small red can sitting on a ledge,1,0,0,,Open image
+2ab1a6e2955af7bf,data/images/5d4bdfb1cf0b3a0f3f33809d.jpg,the main household object in this image is a lamp,1,0,0,,Open image
+43d84397d8efe842,data/images/5d4be657cf0b3a0f3f3437e9.JPG,a light that is on the ceiling in a room,1,0,0,,Open image
+124d8df2a2ccb4b5,data/images/5d4be6b3cf0b3a0f3f344270.JPG,the main household object in this image is a shoe rack,1,0,0,,Open image
+e3ba39a9979eb5b3,data/images/5ec4fa89f0611d7ddd742087.jpg,the main household object in this image is a television,0,0,1,,Open image
+96e06802abff940d,data/images/5d4be09bcf0b3a0f3f3398ab.JPG,the main household object in this image is a light,1,0,0,,Open image
+9a3fdf7bcb4653fd,data/images/5d4bf08acf0b3a0f3f355178.jpg,a pair of dirty shoes on the ground,1,0,0,,Open image
+6b2df531511a2dbb,data/images/5d4be76ecf0b3a0f3f3456e8.jpg,the main household object in this image is a pan and a bowl,1,0,0,,Open image
+949d8d9de32154a4,data/images/5d4be1bbcf0b3a0f3f33b8c9.jpg,the main household object in this image is a stove,1,0,0,,Open image
+fd4c26115d59a6e6,data/images/5d4bf05ccf0b3a0f3f354caa.jpg,the main household object in this image is a wooden ceiling,1,0,0,,Open image
+24207598b5ebac16,data/images/5d4bf2c2cf0b3a0f3f358d9c.jpg,a pair of red and white shoes on the ground,1,0,0,,Open image
+a8dfd59f795ea04b,data/images/5d4be0b0cf0b3a0f3f339b0b.jpg,the main household object in this image is a refrigerator,1,0,0,,Open image
+ae85a0433e7a28a6,data/images/5d4bdf9ecf0b3a0f3f337f0b.JPG,a pair of shoes on the ground,1,0,0,,Open image
+b0c6ac2e45b17aa1,data/images/5ec4fa3cf0611d7ddd741e2c.JPG,the main household object in this image is a purple trash can,1,0,0,,Open image
+56e738265a847140,data/images/5ec4f9e1f0611d7ddd741b27.JPG,a bag of garbage sitting in front of a green wall,1,0,0,,Open image
+ec8e3e42b8afa36b,data/images/5d4bf40ecf0b3a0f3f35afd2.jpg,the main household object in this image is a toilet,0,0,1,,Open image
+0a7d14f8653f62dc,data/images/5ec4fb81f0611d7ddd7428b0.jpg,a white ceiling with a light on it,1,0,0,,Open image
+faad47a731028839,data/images/5ec4fb80f0611d7ddd7428aa.jpg,a pair of white sandals on a wooden floor,1,0,1,,Open image
+6e57aa27a3fd944f,data/images/5d4bdf81cf0b3a0f3f337c37.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+501cb32d82294ff2,data/images/5d4beeb5cf0b3a0f3f351e3c.jpg,the main household object in this image is a green plastic container,1,0,0,,Open image
+ebca5f253e923e0d,data/images/5ec4f831f0611d7ddd740cab.JPG,the main household object in this image is a light switch,1,0,0,,Open image
+2759dccdff0b2316,data/images/5d4bdf79cf0b3a0f3f337b57.jpg,the main household object in this image is a plastic bag,1,0,0,,Open image
+89e279f9ee766994,data/images/5d4be672cf0b3a0f3f343b19.jpg,a light that is on the ceiling,1,0,0,,Open image
+0e1d9bfd6ee4517a,data/images/5ec4f989f0611d7ddd74182b.jpg,a light switch on the wall in a room,1,0,0,,Open image
+4dc7d3863812f16e,data/images/5d4bdefccf0b3a0f3f336ec5.jpg,the main household object in this image is a roof,1,0,0,,Open image
+2f83ecc594d5dd39,data/images/5d4befc5cf0b3a0f3f353ce2.jpg,"the main household object in this image is a knife, a knife, and a knife in the fore",0,0,1,,Open image
+5c67a454e13434da,data/images/5d4bef5fcf0b3a0f3f353214.jpg,a pair of black and green sandals,1,0,0,,Open image
+6a2a1a0b51c4cc7a,data/images/5d4bf271cf0b3a0f3f3583da.jpg,a room with a ceiling and a light,1,0,0,,Open image
+f33a176f3bc9e219,data/images/5d4be417cf0b3a0f3f33f7d4.JPG,the main household object in this image is a ceiling light,1,0,0,,Open image
+4fef6fde916bf494,data/images/5ec4f919f0611d7ddd741478.jpg,a white light switch on a tiled wall,1,0,0,,Open image
+a5147058350df1fa,data/images/5d4be1cbcf0b3a0f3f33ba21.JPG,the main household object in this image is a can of coke,1,0,1,,Open image
+c74dd23ed5177383,data/images/5ec4fa7bf0611d7ddd74200b.jpg,the main household object in this image is a stove,1,0,0,,Open image
+448cd788f8b087f4,data/images/5d4bf2c2cf0b3a0f3f358d9c.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+99b4d550649af9f4,data/images/5d4bebdccf0b3a0f3f34d03d.jpg,the main household object in this image is a window,1,0,0,,Open image
+759cfee4cb57f877,data/images/5d4bf2fbcf0b3a0f3f359462.jpg,the main household object in this image is a red wall,1,0,0,,Open image
+879e18092dd02990,data/images/5d4beebecf0b3a0f3f351f34.jpg,the main household object in this image is a pair of flip flops,1,0,0,,Open image
+a1b78dfae0ab559c,data/images/5ec4f845f0611d7ddd740d5c.JPG,a stainless refrigerator sitting on a wooden floor,0,0,1,,Open image
+78ccb4cf816a2332,data/images/5ec4f9e2f0611d7ddd741b33.JPG,the main household object in this image is a light bulb,1,0,0,,Open image
+19d1f8e7a899d4a0,data/images/5d4be118cf0b3a0f3f33a717.jpeg,a black light on a table,1,0,0,,Open image
+443aad2bc20222b4,data/images/5d4be03ccf0b3a0f3f338dde.JPG,a chandel with three lights on a ceiling,1,0,1,,Open image
+5e9e9bf5e2b6b671,data/images/5d4bf0b4cf0b3a0f3f3555cc.jpg,the main household object in this image is a red gas stove,0,0,1,,Open image
+ca312b6315969d38,data/images/5d4be7b6cf0b3a0f3f345f1c.jpg,a pile of trash on the ground,1,0,0,,Open image
+623c031f7bdd86e4,data/images/5d4bed75cf0b3a0f3f34fa6a.jpg,the main household object in this image is a gas can,1,0,0,,Open image
+6eaa3cc7b69fa736,data/images/5d4bf150cf0b3a0f3f356534.jpg,a table with a stove and a pot on it,1,0,0,,Open image
+6b7324a197eb9ca6,data/images/5d4bf168cf0b3a0f3f356784.jpg,the main household object in this image is a plug,1,0,0,,Open image
+92ed1674c2b60f3d,data/images/5d4beecccf0b3a0f3f3520d2.jpg,a white light switch on a wooden wall,1,0,0,,Open image
+c8436cc5dc545604,data/images/5d4bef5dcf0b3a0f3f3531c6.jpg,the main household object in this image is a cross,1,0,0,,Open image
+5367dea563641165,data/images/5d4be672cf0b3a0f3f343b19.jpg,the main household object in this image is a light fixture,1,0,0,,Open image
+0f11808bef9ee6f2,data/images/5d4bef59cf0b3a0f3f353156.jpg,a frying pan on a stove in a kitchen,1,0,0,,Open image
+e8695be994a2acef,data/images/5d4be176cf0b3a0f3f33b207.jpg,the main household object in this image is a stove,1,0,0,,Open image
+5905ec0e858c673c,data/images/5d4be6b3cf0b3a0f3f344270.JPG,a shelf with a bunch of shoes on it,1,0,0,,Open image
+a93d1991d712cf9a,data/images/5d4be106cf0b3a0f3f33a4fb.JPG,a stove with blue flames on it,1,0,0,,Open image
+961e65bd5932d636,data/images/5d4becb3cf0b3a0f3f34e59a.jpg,the main household object in this image is a pair of flip flops,1,0,0,,Open image
+4eca8ea6a77bd67f,data/images/5d4becffcf0b3a0f3f34ed6c.jpg,the main household object in this image is a basket of ice,1,0,1,,Open image
+8b7717f5bc78fd79,data/images/5d4bf2a9cf0b3a0f3f358a8e.jpg,the main household object in this image is a ceiling light,1,0,0,,Open image
+e7181ff646185adb,data/images/5d4becefcf0b3a0f3f34eb88.jpg,the main household object in this image is a plane flying through the clouds,0,0,1,,Open image
+bf17a59d8f35f7c9,data/images/5d4be672cf0b3a0f3f343b13.jpg,the main household object in this image is a microwave,1,0,0,,Open image
+8cb9cb8173b2d9be,data/images/5d4beab2cf0b3a0f3f34aea4.jpg,a green electrical panel,1,0,0,,Open image
+137407f2c9c84d61,data/images/5d4bdf26cf0b3a0f3f337341.JPG,the main household object in this image is a pair of sandals,1,0,0,,Open image
+108a77c12bec78b4,data/images/5d4be02fcf0b3a0f3f338c7c.JPG,a white wall with a light on it,1,0,0,,Open image
+ac671ab227049c0a,data/images/5d4be7afcf0b3a0f3f345e48.jpg,the main household object in this image is a bucket,1,0,0,,Open image
+9168d256c859acc3,data/images/5f8dfa6069531c2f81fdef7f.jpg,the main household object in this image is a white refrigerator,0,0,1,,Open image
+d8fba9ba22e239f2,data/images/5d4be22ecf0b3a0f3f33c475.JPG,a stove with a blue kettle on top of it,1,0,0,,Open image
+20f616349854144c,data/images/5d4bed05cf0b3a0f3f34edce.jpg,the main household object in this image is a stove,1,0,0,,Open image
+d027dd10f7204092,data/images/5ec4fb67f0611d7ddd7427d0.jpg,the main household object in this image is a rack of shoes,1,0,0,,Open image
+bf054a8d00e9d4ed,data/images/5d4be752cf0b3a0f3f3453ca.jpg,a view of a river from a hut,1,0,0,,Open image
+6b45f9af5defd004,data/images/5d4bebdccf0b3a0f3f34d03d.jpg,a roof with a window,1,0,0,,Open image
+bb21becb90ed84b1,data/images/5d4beab0cf0b3a0f3f34ae70.jpg,the main household object in this image is a ceiling,1,0,0,,Open image
+007d55b2a282e84a,data/images/5d4bf18bcf0b3a0f3f356b06.jpg,the main household object in this image is a paper bag,1,0,0,,Open image
+f729f54c92bc96ed,data/images/5d4be136cf0b3a0f3f33aa95.jpg,the main household object in this image is a ceiling fan,1,0,0,,Open image
+7a1001ee9f1befcb,data/images/5ec4f86df0611d7ddd740eb5.jpg,a white toilet with a white toilet seat,0,0,1,,Open image
+b9982276a7623326,data/images/5d4be672cf0b3a0f3f343b09.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+0277976e8f1e482f,data/images/5d4bf40ecf0b3a0f3f35afd2.jpg,a dirty toilet with a plastic bag on the floor,0,0,1,,Open image
+b9c03b8d4ab74dc3,data/images/5d4bec7acf0b3a0f3f34dfca.jpg,a white electrical outlet on a metal surface,1,0,0,,Open image
+2e44064f45d268c7,data/images/5ec4fa8ff0611d7ddd7420b5.jpg,a bird cage hanging from the ceiling of a room,1,0,0,,Open image
+305790fc839e75bd,data/images/5d4be664cf0b3a0f3f343977.JPG,the main household object in this image is a white plastic pipe,0,0,1,,Open image
+eb773f46566cdf9f,data/images/5d4beebecf0b3a0f3f351f34.jpg,a pair of flip flops sitting on the ground,1,0,0,,Open image
+ea0c77ef5e254dbe,data/images/5d4be657cf0b3a0f3f3437e9.JPG,the main household object in this image is a light,1,0,0,,Open image
+d13185a7d8047560,data/images/5d4bdf17cf0b3a0f3f337195.JPG,a broken light switch on a wall,1,0,1,,Open image
+fc3ec03294b2b4d6,data/images/5d4be7b3cf0b3a0f3f345ec4.jpg,the main household object in this image is a pot,1,0,0,,Open image
+23c382736a2dba0d,data/images/5ec4fa30f0611d7ddd741dbe.JPG,a stove with two burners on a table,1,0,0,,Open image
+94aa437818737630,data/images/5d4bdf17cf0b3a0f3f337195.JPG,the main household object in this image is a broken light switch,1,0,1,,Open image
+ae0ec422b7c68350,data/images/5d4be76ecf0b3a0f3f3456e8.jpg,a kitchen with a stove and a pan on the stove,1,0,0,,Open image
+d2cf023f8a192ae4,data/images/5ec4f5c4f4a4fb7dc03879d4.jpg,the main household object in this image is a yellow trash can,1,0,0,,Open image
+071ff5987080ff1c,data/images/5d4bdf26cf0b3a0f3f337341.JPG,a person standing on a step with their feet up,1,0,0,,Open image
+27e7e98384cc28ae,data/images/5d4beecccf0b3a0f3f3520d2.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+029a99ec4d6caf30,data/images/5d4bf3a8cf0b3a0f3f35a67c.jpg,a close up of a table with a bunch of bamboo sticks,0,0,1,,Open image
+82b316bbc747e9c9,data/images/5d4bf18bcf0b3a0f3f356b06.jpg,a toilet with a paper bag on the floor,0,0,1,,Open image
+54a4d7224fbbb457,data/images/5ec4fa89f0611d7ddd742087.jpg,a room with a ladder and a television,0,0,1,,Open image
+20de7f3f02adc3dc,data/images/5d4be0dccf0b3a0f3f33a033.JPG,a man standing on a kitchen floor next to a pair of shoes,1,0,0,,Open image
+f0a0211a0afc228a,data/images/5ec4f919f0611d7ddd741478.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+5fdf63051012168d,data/images/5d4bf3e7cf0b3a0f3f35abe2.jpg,the main household object in this image is a pile of garbage,1,0,0,,Open image
+da724e7fe06249cf,data/images/5d4be8dccf0b3a0f3f3478b6.jpg,the main household object in this image is a blue bag,1,0,0,,Open image
+48079badec5f8ff6,data/images/5d4bee51cf0b3a0f3f3512b8.jpg,a pile of dirt with a blue cloth on it,1,0,0,,Open image
+48279322de491c97,data/images/5d4be61ccf0b3a0f3f343139.jpg,the main household object in this image is a toilet,0,0,1,,Open image
+81798f51fc8f22d0,data/images/5ec4fa5ff0611d7ddd741f24.jpg,a white light switch on a wall,1,0,0,,Open image
+36cab193b34a4cbe,data/images/5d4bf151cf0b3a0f3f356556.jpg,the main household object in this image is a light switch,1,0,0,,Open image
+01d5d57d52f3a069,data/images/5d4be0fecf0b3a0f3f33a415.jpeg,a stove with three pots on top of it,1,0,0,,Open image
+9a820e9a11c9f967,data/images/5fa325b3a4fd6154365dfcd4.jpeg,the main household object in this image is a plug and socket,1,0,0,,Open image
+17d085dd7ce04c93,data/images/5d4be15bcf0b3a0f3f33aee7.JPG,the main household object in this image is a stove,1,0,0,,Open image
+31683c8e4b32719d,data/images/5f8c634fe894f07b8477dfbe.jpg,the main household object in this image is a white electrical outlet with a white light switch,1,0,0,,Open image
+abd7393a993f829b,data/images/5d4be02ecf0b3a0f3f338c56.JPG,the main household object in this image is a black and gold double - socket socket,1,0,0,,Open image
+cf04993091e04ea4,data/images/5d4beeb5cf0b3a0f3f351e3c.jpg,a green trash can sitting next to a blue trash can,1,0,0,,Open image
+21a4b7ce4581cc54,data/images/5d4be78acf0b3a0f3f345a14.jpg,the main household object in this image is a pair of red shoes,1,0,0,,Open image
+5405d3de3dc16583,data/images/5d4beee9cf0b3a0f3f352444.jpg,the main household object in this image is a pair of flip flops,1,0,0,,Open image
+127f836645d538a5,data/images/5d4bdfc3cf0b3a0f3f33824f.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+723c6a68e5036855,data/images/5d4bef89cf0b3a0f3f3536f2.jpg,a white light switch on a wall,1,0,0,,Open image
+c1ab7fe7d88ee134,data/images/5d4be134cf0b3a0f3f33aa59.jpg,a metal basket with a piece of fruit inside,1,0,0,,Open image
+e4ec767f2ee46b1c,data/images/5ec4f91cf0611d7ddd74148c.jpg,a lamp on a table next to a cell,1,0,0,,Open image
+a123ff76a347e861,data/images/5d4be417cf0b3a0f3f33f7d4.JPG,a ceiling with a light on it,1,0,0,,Open image
+e0f5dd6f1533cc9c,data/images/5d4bf151cf0b3a0f3f356556.jpg,a white light switch on a brick wall,1,0,0,,Open image
+b4b92de8b445f2bd,data/images/5d4bed75cf0b3a0f3f34fa6a.jpg,a large metal jug sitting on top of a table,1,0,0,,Open image
+ab9bf1e6eea14794,data/images/5d4be3ffcf0b3a0f3f33f500.jpg,a room with a ceiling that has been stripped off,1,0,0,,Open image
+e16e400feead5927,data/images/5d4be118cf0b3a0f3f33a717.jpeg,the main household object in this image is a lantern,1,0,0,,Open image
+b19648a259d77a93,data/images/5d4be09bcf0b3a0f3f3398ab.JPG,a light that is on the ceiling in a room,1,0,0,,Open image
+33b48d5b09e49b57,data/images/5ec4fad3f0611d7ddd7422fa.jpg,the main household object in this image is a pair of sandals,1,0,0,,Open image
+d90e7e20ebe0c04b,data/images/5d4be672cf0b3a0f3f343b13.jpg,a woman is standing in front of a microwave,1,0,0,,Open image
+438b3fe512309e94,data/images/5ec4f9e1f0611d7ddd741b27.JPG,the main household object in this image is a basket,1,0,0,,Open image
+8dff067f2d506f5c,data/images/5d4be7afcf0b3a0f3f345e48.jpg,a bucket is sitting on the ground,1,0,0,,Open image
+00ba8d5f3aa6ce8b,data/images/5d4bee44cf0b3a0f3f351150.jpg,the main household object in this image is a pair of blue rubber shoes,1,0,0,,Open image
+b9926bd974311691,data/images/5d4be977cf0b3a0f3f348ac0.jpg,two white switches on a wall,1,0,0,,Open image
+538cc7503a70e8c1,data/images/5d4beee9cf0b3a0f3f352444.jpg,a pair of flip flops on a rock,1,0,0,,Open image
+e3a39412fdee3a9c,data/images/5ec4f5caf4a4fb7dc0387a0c.jpg,a black oven with a blue handle,1,0,0,,Open image
+af66a9999c02ffaa,data/images/5d4be176cf0b3a0f3f33b207.jpg,a stove with a pot on top of it,1,0,0,,Open image
+9751631e30467ee3,data/images/5d4beee5cf0b3a0f3f3523d2.jpg,a dirt road with trash and trash on it,1,0,0,,Open image
+b545b93f9296e3e5,data/images/5d4bf150cf0b3a0f3f356534.jpg,"the main household object in this image is a stove, a pot, a pan, a bowl, a bowl, a bowl, a bowl",1,0,0,,Open image
+18e415caafe24b23,data/images/5d4bf24dcf0b3a0f3f3580a2.jpg,the main household object in this image is a pair of shoes,1,0,0,,Open image
+2d1099ce901cad75,data/images/5d4be0becf0b3a0f3f339caf.jpg,the main household object in this image is a trash bin,1,0,0,,Open image
+86d80761f86d7a65,data/images/5d4be61ccf0b3a0f3f343139.jpg,a white wall with a black and white cat,0,0,1,,Open image
+5e87f4fa749561f3,data/images/5ec4f5c4f4a4fb7dc03879d4.jpg,a trash can be found in a kitchen,1,0,0,,Open image
+be644282a8b11dd0,data/images/5d4be3ffcf0b3a0f3f33f500.jpg,the main household object in this image is a ceiling,1,0,0,,Open image
+d2a34adf540b39f6,data/images/5d4be7b6cf0b3a0f3f345f1c.jpg,the main household object in this image is a pile of garbage,1,0,0,,Open image
+f558a32af72dcdb0,data/images/5ec4fb75f0611d7ddd74284a.jpg,a pair of blue crocs with colorful animals on them,1,0,0,,Open image
+2c470810caa71c80,data/images/5d4bdfa0cf0b3a0f3f337f53.jpg,the main household object in this image is a lamp,1,0,0,,Open image
+ad12e54719001872,data/images/5ec4f845f0611d7ddd740d5c.JPG,the main household object in this image is a refrigerator,0,0,1,,Open image
+3188e2596a0cb58b,data/images/5d4bf2a9cf0b3a0f3f358a8e.jpg,a ceiling with a bunch of lights on it,1,0,0,,Open image
+422e77c374e41b0b,data/images/5d4beab0cf0b3a0f3f34ae70.jpg,a room with a ceiling and a ceiling fan,1,0,1,,Open image
