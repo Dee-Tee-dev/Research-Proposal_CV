@@ -1,0 +1,3 @@
+model,task,income_quartile,n,metric,primary_score
+qwen,captioning,Q1,1,accepted_term_recall,1.0
+qwen,classification,Q1,1,top1_accuracy,1.0

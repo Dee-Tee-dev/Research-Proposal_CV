@@ -1,0 +1,1 @@
+image_id,image_name,study_label,income,income_quartile,region,country_id,country_name,model,accepted_caption_terms,task,raw_output,predicted_label,confidence,correct_rank,boxes,metric_value

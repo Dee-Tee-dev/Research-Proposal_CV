@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-08-25T14:14:10.623309+00:00",
+  "models": [
+    "clip",
+    "blip"
+  ],
+  "model_checkpoints": {
+    "qwen": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "internvl": "OpenGVLab/InternVL3_5-2B",
+    "yolo_world": "yolov8s-worldv2.pt"
+  },
+  "categories": [
+    "roof",
+    "light source",
+    "stove",
+    "trash container",
+    "switch",
+    "footwear"
+  ],
+  "classification_prompt": "Look at the image and identify the main household object.\nChoose exactly one label from: roof, light source, stove, trash container, switch, footwear.\nAnswer with the label only.",
+  "caption_prompt": "Describe the main household object in this image in one short sentence. Do not guess the country, region, or income level.",
+  "device": "cpu",
+  "manifest": "/Users/divyatiwari/.codex/.chatgpt-projects/g-p-6a69f7716ddc8191b066e196261ea9ad/Research-Proposal_CV/data/splits/balanced_subset_manifest.csv",
+  "image_dir": "/Users/divyatiwari/Downloads/Research Proposal_CV/data/images",
+  "rows_evaluated": 168,
+  "bootstrap_seed": 2026,
+  "bootstrap_samples": 2000,
+  "yolo_world_confidence_threshold": 0.25
+}

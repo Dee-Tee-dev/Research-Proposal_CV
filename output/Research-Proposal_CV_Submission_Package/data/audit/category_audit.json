@@ -1,0 +1,2087 @@
+{
+  "dataset_rows": 1600,
+  "eligible_rows": 1555,
+  "quartile_cutpoints": {
+    "q1": 210.6664995,
+    "q2": 685.0,
+    "q3": 1841.0
+  },
+  "recommendations": [
+    {
+      "class_id": "831",
+      "label": "day bed",
+      "total": 74,
+      "balanced_n": 60,
+      "min_quartile": 15,
+      "quartiles": {
+        "Q1": 15,
+        "Q2": 22,
+        "Q3": 16,
+        "Q4": 21
+      },
+      "regions": {
+        "af": 16,
+        "am": 15,
+        "as": 33,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 37,
+      "synonyms": [
+        "day bed",
+        "studio couch"
+      ],
+      "topics": [
+        "bed",
+        "bed kids",
+        "bedroom",
+        "children room",
+        "couch",
+        "guest bed",
+        "instrument",
+        "living room",
+        "sitting area",
+        "sofa",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "846",
+      "label": "table lamp",
+      "total": 73,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 22,
+        "Q2": 12,
+        "Q3": 17,
+        "Q4": 22
+      },
+      "regions": {
+        "af": 13,
+        "am": 17,
+        "as": 33,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 27,
+      "synonyms": [
+        "table lamp"
+      ],
+      "topics": [
+        "light source in kitchen",
+        "light source in livingroom",
+        "light sources",
+        "lightsources by bed",
+        "reading light",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "858",
+      "label": "tile roof",
+      "total": 52,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 14,
+        "Q2": 14,
+        "Q3": 12,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 17,
+        "am": 10,
+        "as": 19,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "tile roof"
+      ],
+      "topics": [
+        "ceiling",
+        "roof",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "532",
+      "label": "dining table",
+      "total": 49,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 13,
+        "Q2": 12,
+        "Q3": 12,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 11,
+        "am": 9,
+        "as": 24,
+        "eu": 5
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 28,
+      "synonyms": [
+        "dining table"
+      ],
+      "topics": [
+        "baking tables",
+        "family",
+        "floor",
+        "kitchen",
+        "place where eating dinner",
+        "table with food",
+        "visit",
+        "wall inside",
+        "work area"
+      ]
+    },
+    {
+      "class_id": "804",
+      "label": "soap dispenser",
+      "total": 55,
+      "balanced_n": 36,
+      "min_quartile": 9,
+      "quartiles": {
+        "Q1": 16,
+        "Q2": 19,
+        "Q3": 9,
+        "Q4": 11
+      },
+      "regions": {
+        "af": 11,
+        "am": 11,
+        "as": 29,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "soap dispenser"
+      ],
+      "topics": [
+        "dish washing soap",
+        "shampoo",
+        "soap for hands and body",
+        "visit",
+        "washing detergent"
+      ]
+    },
+    {
+      "class_id": "923",
+      "label": "plate",
+      "total": 44,
+      "balanced_n": 36,
+      "min_quartile": 9,
+      "quartiles": {
+        "Q1": 11,
+        "Q2": 9,
+        "Q3": 14,
+        "Q4": 10
+      },
+      "regions": {
+        "af": 8,
+        "am": 8,
+        "as": 25,
+        "eu": 3
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 25,
+      "synonyms": [
+        "plate"
+      ],
+      "topics": [
+        "bowls",
+        "plate of food",
+        "plates",
+        "visit"
+      ]
+    }
+  ],
+  "curated_study_classes": [
+    {
+      "class_id": "858",
+      "label": "tile roof",
+      "total": 52,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 14,
+        "Q2": 14,
+        "Q3": 12,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 17,
+        "am": 10,
+        "as": 19,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "tile roof"
+      ],
+      "topics": [
+        "ceiling",
+        "roof",
+        "visit"
+      ],
+      "study_label": "roof",
+      "accepted_caption_terms": [
+        "roof",
+        "roofing",
+        "ceiling"
+      ]
+    },
+    {
+      "class_id": "846",
+      "label": "table lamp",
+      "total": 73,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 22,
+        "Q2": 12,
+        "Q3": 17,
+        "Q4": 22
+      },
+      "regions": {
+        "af": 13,
+        "am": 17,
+        "as": 33,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 27,
+      "synonyms": [
+        "table lamp"
+      ],
+      "topics": [
+        "light source in kitchen",
+        "light source in livingroom",
+        "light sources",
+        "lightsources by bed",
+        "reading light",
+        "visit"
+      ],
+      "study_label": "light source",
+      "accepted_caption_terms": [
+        "light",
+        "lamp",
+        "bulb",
+        "lantern",
+        "candle"
+      ]
+    },
+    {
+      "class_id": "827",
+      "label": "stove",
+      "total": 42,
+      "balanced_n": 32,
+      "min_quartile": 8,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 8,
+        "Q3": 14,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 7,
+        "am": 9,
+        "as": 21,
+        "eu": 5
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 24,
+      "synonyms": [
+        "stove"
+      ],
+      "topics": [
+        "oven",
+        "stove/hob"
+      ],
+      "study_label": "stove",
+      "accepted_caption_terms": [
+        "stove",
+        "oven",
+        "cooker",
+        "cooktop",
+        "hob"
+      ]
+    },
+    {
+      "class_id": "412",
+      "label": "trash can",
+      "total": 42,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 12,
+        "Q2": 7,
+        "Q3": 8,
+        "Q4": 15
+      },
+      "regions": {
+        "af": 9,
+        "am": 6,
+        "as": 17,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 28,
+      "synonyms": [
+        "trash can"
+      ],
+      "topics": [
+        "trash/waste",
+        "waste dumps"
+      ],
+      "study_label": "trash container",
+      "accepted_caption_terms": [
+        "trash can",
+        "garbage can",
+        "garbage bin",
+        "waste bin",
+        "dustbin",
+        "dumpster"
+      ]
+    },
+    {
+      "class_id": "844",
+      "label": "switch",
+      "total": 41,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 7,
+        "Q2": 11,
+        "Q3": 10,
+        "Q4": 13
+      },
+      "regions": {
+        "af": 4,
+        "am": 6,
+        "as": 23,
+        "eu": 8
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 23,
+      "synonyms": [
+        "switch"
+      ],
+      "topics": [
+        "switch on/off",
+        "visit",
+        "wall inside"
+      ],
+      "study_label": "switch",
+      "accepted_caption_terms": [
+        "switch",
+        "light switch",
+        "power switch"
+      ]
+    },
+    {
+      "class_id": "770",
+      "label": "running shoe",
+      "total": 39,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 12,
+        "Q2": 11,
+        "Q3": 7,
+        "Q4": 9
+      },
+      "regions": {
+        "af": 8,
+        "am": 8,
+        "as": 17,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 24,
+      "synonyms": [
+        "running shoe"
+      ],
+      "topics": [
+        "everyday shoes",
+        "nicest shoes",
+        "visit"
+      ],
+      "study_label": "footwear",
+      "accepted_caption_terms": [
+        "shoe",
+        "shoes",
+        "sandal",
+        "sandals",
+        "slipper",
+        "slippers",
+        "sneaker",
+        "sneakers",
+        "boot",
+        "boots",
+        "footwear"
+      ]
+    }
+  ],
+  "common_per_quartile": 7,
+  "controlled_subset_size": 168,
+  "all_categories": [
+    {
+      "class_id": "831",
+      "label": "day bed",
+      "total": 74,
+      "balanced_n": 60,
+      "min_quartile": 15,
+      "quartiles": {
+        "Q1": 15,
+        "Q2": 22,
+        "Q3": 16,
+        "Q4": 21
+      },
+      "regions": {
+        "af": 16,
+        "am": 15,
+        "as": 33,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 37,
+      "synonyms": [
+        "day bed",
+        "studio couch"
+      ],
+      "topics": [
+        "bed",
+        "bed kids",
+        "bedroom",
+        "children room",
+        "couch",
+        "guest bed",
+        "instrument",
+        "living room",
+        "sitting area",
+        "sofa",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "846",
+      "label": "table lamp",
+      "total": 73,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 22,
+        "Q2": 12,
+        "Q3": 17,
+        "Q4": 22
+      },
+      "regions": {
+        "af": 13,
+        "am": 17,
+        "as": 33,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 27,
+      "synonyms": [
+        "table lamp"
+      ],
+      "topics": [
+        "light source in kitchen",
+        "light source in livingroom",
+        "light sources",
+        "lightsources by bed",
+        "reading light",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "858",
+      "label": "tile roof",
+      "total": 52,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 14,
+        "Q2": 14,
+        "Q3": 12,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 17,
+        "am": 10,
+        "as": 19,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "tile roof"
+      ],
+      "topics": [
+        "ceiling",
+        "roof",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "532",
+      "label": "dining table",
+      "total": 49,
+      "balanced_n": 48,
+      "min_quartile": 12,
+      "quartiles": {
+        "Q1": 13,
+        "Q2": 12,
+        "Q3": 12,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 11,
+        "am": 9,
+        "as": 24,
+        "eu": 5
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 28,
+      "synonyms": [
+        "dining table"
+      ],
+      "topics": [
+        "baking tables",
+        "family",
+        "floor",
+        "kitchen",
+        "place where eating dinner",
+        "table with food",
+        "visit",
+        "wall inside",
+        "work area"
+      ]
+    },
+    {
+      "class_id": "804",
+      "label": "soap dispenser",
+      "total": 55,
+      "balanced_n": 36,
+      "min_quartile": 9,
+      "quartiles": {
+        "Q1": 16,
+        "Q2": 19,
+        "Q3": 9,
+        "Q4": 11
+      },
+      "regions": {
+        "af": 11,
+        "am": 11,
+        "as": 29,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "soap dispenser"
+      ],
+      "topics": [
+        "dish washing soap",
+        "shampoo",
+        "soap for hands and body",
+        "visit",
+        "washing detergent"
+      ]
+    },
+    {
+      "class_id": "923",
+      "label": "plate",
+      "total": 44,
+      "balanced_n": 36,
+      "min_quartile": 9,
+      "quartiles": {
+        "Q1": 11,
+        "Q2": 9,
+        "Q3": 14,
+        "Q4": 10
+      },
+      "regions": {
+        "af": 8,
+        "am": 8,
+        "as": 25,
+        "eu": 3
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 25,
+      "synonyms": [
+        "plate"
+      ],
+      "topics": [
+        "bowls",
+        "plate of food",
+        "plates",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "919",
+      "label": "street sign",
+      "total": 54,
+      "balanced_n": 32,
+      "min_quartile": 8,
+      "quartiles": {
+        "Q1": 19,
+        "Q2": 15,
+        "Q3": 12,
+        "Q4": 8
+      },
+      "regions": {
+        "af": 12,
+        "am": 13,
+        "as": 19,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 30,
+      "synonyms": [
+        "street sign"
+      ],
+      "topics": [
+        "street detail",
+        "street view",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "827",
+      "label": "stove",
+      "total": 42,
+      "balanced_n": 32,
+      "min_quartile": 8,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 8,
+        "Q3": 14,
+        "Q4": 12
+      },
+      "regions": {
+        "af": 7,
+        "am": 9,
+        "as": 21,
+        "eu": 5
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 24,
+      "synonyms": [
+        "stove"
+      ],
+      "topics": [
+        "oven",
+        "stove/hob"
+      ]
+    },
+    {
+      "class_id": "773",
+      "label": "salt shaker",
+      "total": 38,
+      "balanced_n": 32,
+      "min_quartile": 8,
+      "quartiles": {
+        "Q1": 10,
+        "Q2": 8,
+        "Q3": 12,
+        "Q4": 8
+      },
+      "regions": {
+        "af": 4,
+        "am": 7,
+        "as": 20,
+        "eu": 7
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 23,
+      "synonyms": [
+        "salt shaker"
+      ],
+      "topics": [
+        "salt",
+        "spices",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "412",
+      "label": "trash can",
+      "total": 42,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 12,
+        "Q2": 7,
+        "Q3": 8,
+        "Q4": 15
+      },
+      "regions": {
+        "af": 9,
+        "am": 6,
+        "as": 17,
+        "eu": 10
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 28,
+      "synonyms": [
+        "trash can"
+      ],
+      "topics": [
+        "trash/waste",
+        "waste dumps"
+      ]
+    },
+    {
+      "class_id": "844",
+      "label": "switch",
+      "total": 41,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 7,
+        "Q2": 11,
+        "Q3": 10,
+        "Q4": 13
+      },
+      "regions": {
+        "af": 4,
+        "am": 6,
+        "as": 23,
+        "eu": 8
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 23,
+      "synonyms": [
+        "switch"
+      ],
+      "topics": [
+        "switch on/off",
+        "visit",
+        "wall inside"
+      ]
+    },
+    {
+      "class_id": "770",
+      "label": "running shoe",
+      "total": 39,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 12,
+        "Q2": 11,
+        "Q3": 7,
+        "Q4": 9
+      },
+      "regions": {
+        "af": 8,
+        "am": 8,
+        "as": 17,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 24,
+      "synonyms": [
+        "running shoe"
+      ],
+      "topics": [
+        "everyday shoes",
+        "nicest shoes",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "453",
+      "label": "bookcase",
+      "total": 35,
+      "balanced_n": 28,
+      "min_quartile": 7,
+      "quartiles": {
+        "Q1": 7,
+        "Q2": 11,
+        "Q3": 7,
+        "Q4": 10
+      },
+      "regions": {
+        "af": 4,
+        "am": 10,
+        "as": 15,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 20,
+      "synonyms": [
+        "bookcase"
+      ],
+      "topics": [
+        "books",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "894",
+      "label": "wardrobe",
+      "total": 36,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 9,
+        "Q2": 5,
+        "Q3": 6,
+        "Q4": 16
+      },
+      "regions": {
+        "af": 8,
+        "am": 6,
+        "as": 14,
+        "eu": 8
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 26,
+      "synonyms": [
+        "wardrobe"
+      ],
+      "topics": [
+        "bedroom",
+        "clothes",
+        "visit",
+        "wardrobe"
+      ]
+    },
+    {
+      "class_id": "567",
+      "label": "skillet",
+      "total": 35,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 16,
+        "Q3": 5,
+        "Q4": 6
+      },
+      "regions": {
+        "af": 6,
+        "am": 6,
+        "as": 19,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 22,
+      "synonyms": [
+        "skillet"
+      ],
+      "topics": [
+        "cooking pots",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "660",
+      "label": "manufactured home",
+      "total": 29,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 5,
+        "Q2": 12,
+        "Q3": 6,
+        "Q4": 6
+      },
+      "regions": {
+        "af": 4,
+        "am": 9,
+        "as": 13,
+        "eu": 3
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 21,
+      "synonyms": [
+        "manufactured home"
+      ],
+      "topics": [
+        "home",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "896",
+      "label": "washbasin",
+      "total": 28,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 7,
+        "Q2": 9,
+        "Q3": 5,
+        "Q4": 7
+      },
+      "regions": {
+        "af": 5,
+        "am": 7,
+        "as": 12,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 19,
+      "synonyms": [
+        "washbasin"
+      ],
+      "topics": [
+        "hand washing",
+        "kitchen sink",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "910",
+      "label": "wooden spoon",
+      "total": 26,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 6,
+        "Q2": 5,
+        "Q3": 7,
+        "Q4": 8
+      },
+      "regions": {
+        "af": 4,
+        "am": 8,
+        "as": 10,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 18,
+      "synonyms": [
+        "wooden spoon"
+      ],
+      "topics": [
+        "cutlery",
+        "toothbrush",
+        "vegetables",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "737",
+      "label": "soda bottle",
+      "total": 25,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 5,
+        "Q3": 7,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 1,
+        "am": 3,
+        "as": 18,
+        "eu": 3
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 15,
+      "synonyms": [
+        "soda bottle"
+      ],
+      "topics": [
+        "social drink",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "729",
+      "label": "plate rack",
+      "total": 20,
+      "balanced_n": 20,
+      "min_quartile": 5,
+      "quartiles": {
+        "Q1": 5,
+        "Q2": 5,
+        "Q3": 5,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 2,
+        "am": 6,
+        "as": 7,
+        "eu": 5
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 18,
+      "synonyms": [
+        "plate rack"
+      ],
+      "topics": [
+        "dish racks",
+        "kitchen",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "477",
+      "label": "tool kit",
+      "total": 19,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 5,
+        "Q2": 6,
+        "Q3": 4,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 3,
+        "am": 3,
+        "as": 9,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 17,
+      "synonyms": [
+        "tool kit"
+      ],
+      "topics": [
+        "tools"
+      ]
+    },
+    {
+      "class_id": "861",
+      "label": "toilet seat",
+      "total": 49,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 16,
+        "Q2": 14,
+        "Q3": 15,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 13,
+        "am": 12,
+        "as": 22,
+        "eu": 2
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 28,
+      "synonyms": [
+        "toilet seat"
+      ],
+      "topics": [
+        "bathroom privacy",
+        "bathroom/toilet",
+        "toilet"
+      ]
+    },
+    {
+      "class_id": "533",
+      "label": "dishrag",
+      "total": 49,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 20,
+        "Q2": 14,
+        "Q3": 11,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 14,
+        "am": 4,
+        "as": 29,
+        "eu": 2
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 31,
+      "synonyms": [
+        "dishrag"
+      ],
+      "topics": [
+        "cleaning equipment",
+        "cleaning floors",
+        "dish washing brush/cloth",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "487",
+      "label": "cellphone",
+      "total": 29,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 11,
+        "Q2": 8,
+        "Q3": 4,
+        "Q4": 6
+      },
+      "regions": {
+        "af": 9,
+        "am": 1,
+        "as": 16,
+        "eu": 3
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 22,
+      "synonyms": [
+        "cellphone"
+      ],
+      "topics": [
+        "most loved item",
+        "phone"
+      ]
+    },
+    {
+      "class_id": "648",
+      "label": "medicine cabinet",
+      "total": 24,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 5,
+        "Q2": 7,
+        "Q3": 8,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 5,
+        "am": 8,
+        "as": 10,
+        "eu": 1
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 19,
+      "synonyms": [
+        "medicine cabinet"
+      ],
+      "topics": [
+        "medication"
+      ]
+    },
+    {
+      "class_id": "865",
+      "label": "toyshop",
+      "total": 23,
+      "balanced_n": 16,
+      "min_quartile": 4,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 5,
+        "Q3": 6,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 6,
+        "am": 1,
+        "as": 14,
+        "eu": 2
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 18,
+      "synonyms": [
+        "toyshop"
+      ],
+      "topics": [
+        "most loved toy",
+        "play area",
+        "soccer balls",
+        "tabloids",
+        "toys"
+      ]
+    },
+    {
+      "class_id": "794",
+      "label": "shower curtain",
+      "total": 32,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 10,
+        "Q2": 3,
+        "Q3": 10,
+        "Q4": 9
+      },
+      "regions": {
+        "af": 5,
+        "am": 7,
+        "as": 14,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 23,
+      "synonyms": [
+        "shower curtain"
+      ],
+      "topics": [
+        "shampoo",
+        "shower",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "418",
+      "label": "ballpoint",
+      "total": 26,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 6,
+        "Q2": 4,
+        "Q3": 3,
+        "Q4": 13
+      },
+      "regions": {
+        "af": 4,
+        "am": 3,
+        "as": 13,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 20,
+      "synonyms": [
+        "ballpoint"
+      ],
+      "topics": [
+        "pen/pencils",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "679",
+      "label": "necklace",
+      "total": 26,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 3,
+        "Q2": 3,
+        "Q3": 9,
+        "Q4": 11
+      },
+      "regions": {
+        "af": 5,
+        "am": 4,
+        "as": 9,
+        "eu": 8
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 14,
+      "synonyms": [
+        "necklace"
+      ],
+      "topics": [
+        "earings",
+        "jewelry",
+        "necklaces"
+      ]
+    },
+    {
+      "class_id": "813",
+      "label": "spatula",
+      "total": 23,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 3,
+        "Q2": 6,
+        "Q3": 6,
+        "Q4": 8
+      },
+      "regions": {
+        "af": 6,
+        "am": 6,
+        "as": 5,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 17,
+      "synonyms": [
+        "spatula"
+      ],
+      "topics": [
+        "cooking utensils",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "671",
+      "label": "all-terrain bike",
+      "total": 18,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 3,
+        "Q2": 3,
+        "Q3": 8,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 4,
+        "am": 3,
+        "as": 6,
+        "eu": 5
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 15,
+      "synonyms": [
+        "all-terrain bike"
+      ],
+      "topics": [
+        "bike"
+      ]
+    },
+    {
+      "class_id": "695",
+      "label": "padlock",
+      "total": 28,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 10,
+        "Q2": 11,
+        "Q3": 4,
+        "Q4": 3
+      },
+      "regions": {
+        "af": 6,
+        "am": 6,
+        "as": 16
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 20,
+      "synonyms": [
+        "padlock"
+      ],
+      "topics": [
+        "lock on front door",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "968",
+      "label": "cup",
+      "total": 24,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 8,
+        "Q2": 3,
+        "Q3": 7,
+        "Q4": 6
+      },
+      "regions": {
+        "af": 6,
+        "am": 5,
+        "as": 12,
+        "eu": 1
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 17,
+      "synonyms": [
+        "cup"
+      ],
+      "topics": [
+        "cups/mugs/glasses"
+      ]
+    },
+    {
+      "class_id": "700",
+      "label": "paper towel",
+      "total": 21,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 7,
+        "Q2": 6,
+        "Q3": 3,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 6,
+        "am": 2,
+        "as": 10,
+        "eu": 3
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 15,
+      "synonyms": [
+        "paper towel"
+      ],
+      "topics": [
+        "paper"
+      ]
+    },
+    {
+      "class_id": "765",
+      "label": "rocking chair",
+      "total": 19,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 6,
+        "Q2": 5,
+        "Q3": 3,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 5,
+        "am": 1,
+        "as": 8,
+        "eu": 5
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 13,
+      "synonyms": [
+        "rocking chair"
+      ],
+      "topics": [
+        "armchair",
+        "hallway",
+        "latest furniture bought",
+        "rug",
+        "sitting area",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "669",
+      "label": "mosquito net",
+      "total": 19,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 6,
+        "Q2": 6,
+        "Q3": 4,
+        "Q4": 3
+      },
+      "regions": {
+        "af": 6,
+        "am": 2,
+        "as": 10,
+        "eu": 1
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 15,
+      "synonyms": [
+        "mosquito net"
+      ],
+      "topics": [
+        "mosquito protection",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "545",
+      "label": "electric fan",
+      "total": 19,
+      "balanced_n": 12,
+      "min_quartile": 3,
+      "quartiles": {
+        "Q1": 6,
+        "Q2": 6,
+        "Q3": 4,
+        "Q4": 3
+      },
+      "regions": {
+        "af": 2,
+        "am": 9,
+        "as": 6,
+        "eu": 2
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 14,
+      "synonyms": [
+        "electric fan"
+      ],
+      "topics": [
+        "source of cool"
+      ]
+    },
+    {
+      "class_id": "898",
+      "label": "water bottle",
+      "total": 25,
+      "balanced_n": 8,
+      "min_quartile": 2,
+      "quartiles": {
+        "Q1": 11,
+        "Q2": 5,
+        "Q3": 7,
+        "Q4": 2
+      },
+      "regions": {
+        "af": 6,
+        "am": 7,
+        "as": 8,
+        "eu": 4
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 16,
+      "synonyms": [
+        "water bottle"
+      ],
+      "topics": [
+        "backyard",
+        "drinking water",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "897",
+      "label": "washing machine",
+      "total": 28,
+      "balanced_n": 8,
+      "min_quartile": 2,
+      "quartiles": {
+        "Q1": 9,
+        "Q2": 12,
+        "Q3": 5,
+        "Q4": 2
+      },
+      "regions": {
+        "af": 3,
+        "am": 2,
+        "as": 20,
+        "eu": 3
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 17,
+      "synonyms": [
+        "washing machine"
+      ],
+      "topics": [
+        "visit",
+        "washing clothes/cleaning"
+      ]
+    },
+    {
+      "class_id": "851",
+      "label": "television",
+      "total": 15,
+      "balanced_n": 8,
+      "min_quartile": 2,
+      "quartiles": {
+        "Q1": 2,
+        "Q2": 3,
+        "Q3": 6,
+        "Q4": 4
+      },
+      "regions": {
+        "af": 1,
+        "am": 1,
+        "as": 10,
+        "eu": 3
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 12,
+      "synonyms": [
+        "television"
+      ],
+      "topics": [
+        "tv"
+      ]
+    },
+    {
+      "class_id": "754",
+      "label": "radio",
+      "total": 11,
+      "balanced_n": 8,
+      "min_quartile": 2,
+      "quartiles": {
+        "Q1": 2,
+        "Q2": 3,
+        "Q3": 3,
+        "Q4": 3
+      },
+      "regions": {
+        "af": 1,
+        "am": 5,
+        "as": 3,
+        "eu": 2
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 9,
+      "synonyms": [
+        "radio"
+      ],
+      "topics": [
+        "radio",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "999",
+      "label": "toilet paper",
+      "total": 21,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 4,
+        "Q2": 1,
+        "Q3": 9,
+        "Q4": 7
+      },
+      "regions": {
+        "af": 5,
+        "am": 9,
+        "as": 6,
+        "eu": 1
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 12,
+      "synonyms": [
+        "toilet paper"
+      ],
+      "topics": [
+        "cleaning after toilet",
+        "toilet paper",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "527",
+      "label": "desktop computer",
+      "total": 19,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 4,
+        "Q3": 7,
+        "Q4": 7
+      },
+      "regions": {
+        "af": 1,
+        "am": 4,
+        "as": 10,
+        "eu": 4
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 14,
+      "synonyms": [
+        "desktop computer"
+      ],
+      "topics": [
+        "computer",
+        "most loved item",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "632",
+      "label": "speaker",
+      "total": 15,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 3,
+        "Q2": 1,
+        "Q3": 5,
+        "Q4": 6
+      },
+      "regions": {
+        "af": 3,
+        "am": 1,
+        "as": 6,
+        "eu": 5
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 14,
+      "synonyms": [
+        "speaker"
+      ],
+      "topics": [
+        "equipment",
+        "idols",
+        "music equipment",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "531",
+      "label": "digital watch",
+      "total": 12,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 2,
+        "Q3": 4,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 1,
+        "am": 1,
+        "as": 7,
+        "eu": 3
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 9,
+      "synonyms": [
+        "digital watch"
+      ],
+      "topics": [
+        "arm watch"
+      ]
+    },
+    {
+      "class_id": "529",
+      "label": "diaper",
+      "total": 6,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 1,
+        "Q3": 1,
+        "Q4": 3
+      },
+      "regions": {
+        "am": 3,
+        "as": 3
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 5,
+      "synonyms": [
+        "diaper"
+      ],
+      "topics": [
+        "diapers (or baby-pants)"
+      ]
+    },
+    {
+      "class_id": "623",
+      "label": "paper knife",
+      "total": 9,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 2,
+        "Q3": 5,
+        "Q4": 1
+      },
+      "regions": {
+        "af": 3,
+        "am": 2,
+        "as": 2,
+        "eu": 2
+      },
+      "region_coverage_ge3": 1,
+      "country_count": 9,
+      "synonyms": [
+        "paper knife"
+      ],
+      "topics": [
+        "knifes"
+      ]
+    },
+    {
+      "class_id": "665",
+      "label": "moped",
+      "total": 7,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 2,
+        "Q2": 2,
+        "Q3": 2,
+        "Q4": 1
+      },
+      "regions": {
+        "as": 6,
+        "eu": 1
+      },
+      "region_coverage_ge3": 1,
+      "country_count": 5,
+      "synonyms": [
+        "moped"
+      ],
+      "topics": [
+        "moped/motorcycle",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "811",
+      "label": "space heater",
+      "total": 6,
+      "balanced_n": 4,
+      "min_quartile": 1,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 2,
+        "Q3": 1,
+        "Q4": 2
+      },
+      "regions": {
+        "am": 1,
+        "as": 4,
+        "eu": 1
+      },
+      "region_coverage_ge3": 1,
+      "country_count": 5,
+      "synonyms": [
+        "space heater"
+      ],
+      "topics": [
+        "source of heat"
+      ]
+    },
+    {
+      "class_id": "760",
+      "label": "refrigerator",
+      "total": 34,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 10,
+        "Q3": 14,
+        "Q4": 10
+      },
+      "regions": {
+        "af": 3,
+        "am": 10,
+        "as": 15,
+        "eu": 6
+      },
+      "region_coverage_ge3": 4,
+      "country_count": 19,
+      "synonyms": [
+        "icebox",
+        "refrigerator"
+      ],
+      "topics": [
+        "freezer",
+        "refrigerator"
+      ]
+    },
+    {
+      "class_id": "837",
+      "label": "dark glasses",
+      "total": 12,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 7,
+        "Q3": 1,
+        "Q4": 4
+      },
+      "regions": {
+        "am": 3,
+        "as": 6,
+        "eu": 3
+      },
+      "region_coverage_ge3": 3,
+      "country_count": 9,
+      "synonyms": [
+        "dark glasses"
+      ],
+      "topics": [
+        "glasses or lenses",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "892",
+      "label": "wall clock",
+      "total": 13,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 2,
+        "Q3": 6,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 1,
+        "as": 7,
+        "eu": 5
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 10,
+      "synonyms": [
+        "wall clock"
+      ],
+      "topics": [
+        "visit",
+        "wall clock"
+      ]
+    },
+    {
+      "class_id": "534",
+      "label": "dishwasher",
+      "total": 7,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 0,
+        "Q3": 2,
+        "Q4": 5
+      },
+      "regions": {
+        "am": 1,
+        "as": 3,
+        "eu": 3
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 7,
+      "synonyms": [
+        "dishwasher"
+      ],
+      "topics": [
+        "dishwasher"
+      ]
+    },
+    {
+      "class_id": "704",
+      "label": "parking meter",
+      "total": 6,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 1,
+        "Q3": 1,
+        "Q4": 4
+      },
+      "regions": {
+        "as": 3,
+        "eu": 3
+      },
+      "region_coverage_ge3": 2,
+      "country_count": 6,
+      "synonyms": [
+        "parking meter"
+      ],
+      "topics": [
+        "parking lot"
+      ]
+    },
+    {
+      "class_id": "762",
+      "label": "eating place",
+      "total": 8,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 2,
+        "Q2": 4,
+        "Q3": 2,
+        "Q4": 0
+      },
+      "regions": {
+        "af": 1,
+        "am": 2,
+        "as": 5
+      },
+      "region_coverage_ge3": 1,
+      "country_count": 6,
+      "synonyms": [
+        "eating place"
+      ],
+      "topics": [
+        "dinner guests",
+        "place where serving guests"
+      ]
+    },
+    {
+      "class_id": "899",
+      "label": "water jug",
+      "total": 7,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 4,
+        "Q2": 2,
+        "Q3": 0,
+        "Q4": 1
+      },
+      "regions": {
+        "af": 4,
+        "as": 2,
+        "eu": 1
+      },
+      "region_coverage_ge3": 1,
+      "country_count": 7,
+      "synonyms": [
+        "water jug"
+      ],
+      "topics": [
+        "get water",
+        "visit"
+      ]
+    },
+    {
+      "class_id": "705",
+      "label": "passenger car",
+      "total": 7,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 0,
+        "Q2": 0,
+        "Q3": 2,
+        "Q4": 5
+      },
+      "regions": {
+        "af": 2,
+        "am": 2,
+        "as": 2,
+        "eu": 1
+      },
+      "region_coverage_ge3": 0,
+      "country_count": 6,
+      "synonyms": [
+        "passenger car"
+      ],
+      "topics": [
+        "car"
+      ]
+    },
+    {
+      "class_id": "428",
+      "label": "wheelbarrow",
+      "total": 2,
+      "balanced_n": 0,
+      "min_quartile": 0,
+      "quartiles": {
+        "Q1": 1,
+        "Q2": 1,
+        "Q3": 0,
+        "Q4": 0
+      },
+      "regions": {
+        "as": 1,
+        "eu": 1
+      },
+      "region_coverage_ge3": 0,
+      "country_count": 2,
+      "synonyms": [
+        "wheelbarrow"
+      ],
+      "topics": [
+        "wheel barrow"
+      ]
+    }
+  ]
+}

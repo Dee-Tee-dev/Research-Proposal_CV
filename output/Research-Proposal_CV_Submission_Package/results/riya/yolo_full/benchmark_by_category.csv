@@ -1,0 +1,7 @@
+model,task,study_label,n,metric,primary_score
+yolo_world,detection,footwear,28,image_level_hit_rate,0.5714285714285714
+yolo_world,detection,light source,28,image_level_hit_rate,0.0
+yolo_world,detection,roof,28,image_level_hit_rate,0.0
+yolo_world,detection,stove,28,image_level_hit_rate,0.25
+yolo_world,detection,switch,28,image_level_hit_rate,0.0
+yolo_world,detection,trash container,28,image_level_hit_rate,0.10714285714285714
