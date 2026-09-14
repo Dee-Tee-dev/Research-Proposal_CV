@@ -105,34 +105,52 @@ def analyse(image: Image.Image, selected_models: list[str]):
                 "Details": str(error),
             })
 
-    return pd.DataFrame(rows), annotated
+    frame = pd.DataFrame(rows, columns=["Model", "Task", "Output", "Details"])
+    return frame, annotated, (
+        f"Completed {len(selected_models)} model run(s). Models are cached after "
+        "their first load; later comparisons are faster."
+    )
 
 
-with gr.Blocks(title="VLM Income-Gap Benchmark") as demo:
+with gr.Blocks(
+    title="VLM Income-Gap Benchmark",
+    theme=gr.themes.Soft(primary_hue="blue", secondary_hue="slate"),
+    css="""
+    .hero {background: linear-gradient(120deg,#123d62,#217eaf); color: white;
+           border-radius: 14px; padding: 18px 22px; margin-bottom: 12px;}
+    .note {color: #536273; font-size: 0.92rem;}
+    """,
+) as demo:
     gr.Markdown(
-        "# Household-object benchmark\n"
-        "Compare classification, captioning, and open-vocabulary detection. "
-        "The six candidate labels are fixed and no income or location is "
-        "provided to any model."
+        "<div class='hero'><h1>Household-object VLM benchmark</h1>"
+        "<p>Run live comparisons across classification, captioning, and "
+        "open-vocabulary detection.</p></div>"
+        "<p class='note'>The six candidate labels are fixed. No income, country, "
+        "or location is provided to any model. This demo runs inference on the "
+        "uploaded image; the paper's quartile results are precomputed separately.</p>"
     )
     with gr.Row():
-        image_input = gr.Image(type="pil", label="Household-object image")
+        image_input = gr.Image(type="pil", sources=["upload", "clipboard"], label="Upload an image")
         model_input = gr.CheckboxGroup(
             choices=list(MODEL_FACTORIES),
             value=["CLIP", "BLIP"],
-            label="Models to compare",
+            label="Models to compare (select one or more)",
         )
-    run_button = gr.Button("Run comparison", variant="primary")
+    gr.Markdown("**Tip:** CLIP and BLIP are the lightest starting choices. Qwen, InternVL, and YOLO-World may take longer on first use while checkpoints load.", elem_classes=["note"])
+    with gr.Row():
+        run_button = gr.Button("Run live comparison", variant="primary")
     comparison = gr.Dataframe(
         headers=["Model", "Task", "Output", "Details"],
         interactive=False,
         label="Model outputs",
     )
+    clear_button = gr.ClearButton([image_input, comparison], value="Clear")
     annotated_image = gr.Image(label="YOLO-World detections")
+    status = gr.Markdown("Upload an image and select at least one model.", elem_classes=["note"])
     run_button.click(
         analyse,
         inputs=[image_input, model_input],
-        outputs=[comparison, annotated_image],
+        outputs=[comparison, annotated_image, status],
     )
 
 
