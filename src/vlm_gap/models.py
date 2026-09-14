@@ -238,6 +238,13 @@ class InternVisionLanguageModel:
     ):
         from transformers import AutoModel, AutoTokenizer
 
+        # InternVL's remote class predates a Transformers 5.x bookkeeping
+        # attribute.  Transformers accesses it while loading the checkpoint;
+        # supplying an empty mapping preserves loading without changing
+        # inference behaviour.
+        if not hasattr(torch.nn.Module, "all_tied_weights_keys"):
+            torch.nn.Module.all_tied_weights_keys = {}
+
         self.device = device or choose_device()
         dtype = torch.bfloat16 if self.device == "cuda" else torch.float32
         self.model = AutoModel.from_pretrained(
